@@ -1,5 +1,4 @@
-#ifndef GL_DOC_HPP
-#define GL_DOC_HPP
+#pragma once
 
 #if __has_include(<glad/gl.h>)
 #include <glad/gl.h>
@@ -3367,8 +3366,7 @@ constexpr auto GL_ZERO_TO_ONE{0x935F};
  * @param [program] Specifies the program object to set as the active program
  * pipeline object pipeline.
  */
-static inline void glActiveShaderProgram(GLuint pipeline, GLuint program)
-{
+static inline void glActiveShaderProgram(GLuint pipeline, GLuint program) {
   glad_glActiveShaderProgram(pipeline, program);
 }
 /**
@@ -3380,8 +3378,7 @@ static inline void glActiveShaderProgram(GLuint pipeline, GLuint program)
  * GL_MAX_COMBINED_TEXTURE_IMAGE_UNITS minus one. The initial value is
  * GL_TEXTURE0.
  */
-static inline void glActiveTexture(GLenum texture)
-{
+static inline void glActiveTexture(GLenum texture) {
   glad_glActiveTexture(texture);
 }
 /**
@@ -3392,29 +3389,25 @@ static inline void glActiveTexture(GLenum texture)
  *
  * @param [shader] Specifies the shader object that is to be attached.
  */
-static inline void glAttachShader(GLuint program, GLuint shader)
-{
+static inline void glAttachShader(GLuint program, GLuint shader) {
   glad_glAttachShader(program, shader);
 }
 /**
  * glBeginConditionalRender — start conditional rendering
  */
-static inline void glBeginConditionalRender(GLuint id, GLenum mode)
-{
+static inline void glBeginConditionalRender(GLuint id, GLenum mode) {
   glad_glBeginConditionalRender(id, mode);
 }
 /**
  * glBeginConditionalRender — start conditional rendering
  */
-static inline void glEndConditionalRender(void)
-{
+static inline void glEndConditionalRender(void) {
   glad_glEndConditionalRender();
 }
 /**
  * glBeginQuery — delimit the boundaries of a query object
  */
-static inline void glBeginQuery(GLenum target, GLuint id)
-{
+static inline void glBeginQuery(GLenum target, GLuint id) {
   glad_glBeginQuery(target, id);
 }
 /**
@@ -3425,30 +3418,26 @@ static inline void glEndQuery(GLenum target) { glad_glEndQuery(target); }
  * glBeginQueryIndexed, glEndQueryIndexed — delimit the boundaries of a query
  * object on an indexed target
  */
-static inline void glBeginQueryIndexed(GLenum target, GLuint index, GLuint id)
-{
+static inline void glBeginQueryIndexed(GLenum target, GLuint index, GLuint id) {
   glad_glBeginQueryIndexed(target, index, id);
 }
 /**
  * glBeginQueryIndexed, glEndQueryIndexed — delimit the boundaries of a query
  * object on an indexed target
  */
-static inline void glEndQueryIndexed(GLenum target, GLuint index)
-{
+static inline void glEndQueryIndexed(GLenum target, GLuint index) {
   glad_glEndQueryIndexed(target, index);
 }
 /**
  * glBeginTransformFeedback — start transform feedback operation
  */
-static inline void glBeginTransformFeedback(GLenum primitiveMode)
-{
+static inline void glBeginTransformFeedback(GLenum primitiveMode) {
   glad_glBeginTransformFeedback(primitiveMode);
 }
 /**
  * glBeginTransformFeedback — start transform feedback operation
  */
-static inline void glEndTransformFeedback(void)
-{
+static inline void glEndTransformFeedback(void) {
   glad_glEndTransformFeedback();
 }
 /**
@@ -3465,8 +3454,7 @@ static inline void glEndTransformFeedback(void)
  * vertex shader attribute variable to which index is to be bound.
  */
 static inline void glBindAttribLocation(GLuint program, GLuint index,
-                                        const GLchar *name)
-{
+                                        const GLchar *name) {
   glad_glBindAttribLocation(program, index, name);
 }
 /**
@@ -3492,8 +3480,7 @@ static inline void glBindAttribLocation(GLuint program, GLuint index,
  *
  * @param [buffer] Specifies the name of a buffer object.
  */
-static inline void glBindBuffer(GLenum target, GLuint buffer)
-{
+static inline void glBindBuffer(GLenum target, GLuint buffer) {
   glad_glBindBuffer(target, buffer);
 }
 /**
@@ -3509,8 +3496,8 @@ static inline void glBindBuffer(GLenum target, GLuint buffer)
  * @param [buffer] The name of a buffer object to bind to the specified
  * binding point.
  */
-static inline void glBindBufferBase(GLenum target, GLuint index, GLuint buffer)
-{
+static inline void glBindBufferBase(GLenum target, GLuint index,
+                                    GLuint buffer) {
   glad_glBindBufferBase(target, index, buffer);
 }
 /**
@@ -3534,8 +3521,7 @@ static inline void glBindBufferBase(GLenum target, GLuint index, GLuint buffer)
  * buffer object while used as an indexed target.
  */
 static inline void glBindBufferRange(GLenum target, GLuint index, GLuint buffer,
-                                     GLintptr offset, GLsizeiptr size)
-{
+                                     GLintptr offset, GLsizeiptr size) {
   glad_glBindBufferRange(target, index, buffer, offset, size);
 }
 /**
@@ -3556,8 +3542,7 @@ static inline void glBindBufferRange(GLenum target, GLuint index, GLuint buffer,
  * to the targets on the specified binding point, or NULL.
  */
 static inline void glBindBuffersBase(GLenum target, GLuint first, GLsizei count,
-                                     const GLuint *buffers)
-{
+                                     const GLuint *buffers) {
   glad_glBindBuffersBase(target, first, count, buffers);
 }
 /**
@@ -3580,8 +3565,7 @@ static inline void glBindBuffersBase(GLenum target, GLuint first, GLsizei count,
 static inline void glBindBuffersRange(GLenum target, GLuint first,
                                       GLsizei count, const GLuint *buffers,
                                       const GLintptr *offsets,
-                                      const GLintptr *sizes)
-{
+                                      const GLintptr *sizes) {
   glad_glBindBuffersRange(target, first, count, buffers, offsets, sizes);
 }
 /**
@@ -3598,8 +3582,7 @@ static inline void glBindBuffersRange(GLenum target, GLuint first,
  * binding to modify
  */
 static inline void glBindFragDataLocation(GLuint program, GLuint colorNumber,
-                                          const char *name)
-{
+                                          const char *name) {
   glad_glBindFragDataLocation(program, colorNumber, name);
 }
 /**
@@ -3620,8 +3603,8 @@ static inline void glBindFragDataLocation(GLuint program, GLuint colorNumber,
  */
 static inline void glBindFragDataLocationIndexed(GLuint program,
                                                  GLuint colorNumber,
-                                                 GLuint index, const char *name)
-{
+                                                 GLuint index,
+                                                 const char *name) {
   glad_glBindFragDataLocationIndexed(program, colorNumber, index, name);
 }
 /**
@@ -3631,8 +3614,7 @@ static inline void glBindFragDataLocationIndexed(GLuint program,
  *
  * @param [framebuffer] Specifies the name of the framebuffer object to bind.
  */
-static inline void glBindFramebuffer(GLenum target, GLuint framebuffer)
-{
+static inline void glBindFramebuffer(GLenum target, GLuint framebuffer) {
   glad_glBindFramebuffer(target, framebuffer);
 }
 /**
@@ -3660,8 +3642,7 @@ static inline void glBindFramebuffer(GLenum target, GLuint framebuffer)
  */
 static inline void glBindImageTexture(GLuint unit, GLuint texture, GLint level,
                                       GLboolean layered, GLint layer,
-                                      GLenum access, GLenum format)
-{
+                                      GLenum access, GLenum format) {
   glad_glBindImageTexture(unit, texture, level, layered, layer, access, format);
 }
 /**
@@ -3677,8 +3658,7 @@ static inline void glBindImageTexture(GLuint unit, GLuint texture, GLint level,
  * texture objects.
  */
 static inline void glBindImageTextures(GLuint first, GLsizei count,
-                                       const GLuint *textures)
-{
+                                       const GLuint *textures) {
   glad_glBindImageTextures(first, count, textures);
 }
 /**
@@ -3687,8 +3667,7 @@ static inline void glBindImageTextures(GLuint first, GLsizei count,
  * @param [pipeline] Specifies the name of the pipeline object to bind to the
  * context.
  */
-static inline void glBindProgramPipeline(GLuint pipeline)
-{
+static inline void glBindProgramPipeline(GLuint pipeline) {
   glad_glBindProgramPipeline(pipeline);
 }
 /**
@@ -3700,8 +3679,7 @@ static inline void glBindProgramPipeline(GLuint pipeline)
  * @param [renderbuffer] Specifies the name of the renderbuffer object to
  * bind.
  */
-static inline void glBindRenderbuffer(GLenum target, GLuint renderbuffer)
-{
+static inline void glBindRenderbuffer(GLenum target, GLuint renderbuffer) {
   glad_glBindRenderbuffer(target, renderbuffer);
 }
 /**
@@ -3712,8 +3690,7 @@ static inline void glBindRenderbuffer(GLenum target, GLuint renderbuffer)
  *
  * @param [sampler] Specifies the name of a sampler.
  */
-static inline void glBindSampler(GLuint unit, GLuint sampler)
-{
+static inline void glBindSampler(GLuint unit, GLuint sampler) {
   glad_glBindSampler(unit, sampler);
 }
 /**
@@ -3729,8 +3706,7 @@ static inline void glBindSampler(GLuint unit, GLuint sampler)
  * sampler objects.
  */
 static inline void glBindSamplers(GLuint first, GLsizei count,
-                                  const GLuint *samplers)
-{
+                                  const GLuint *samplers) {
   glad_glBindSamplers(first, count, samplers);
 }
 /**
@@ -3744,8 +3720,7 @@ static inline void glBindSamplers(GLuint first, GLsizei count,
  *
  * @param [texture] Specifies the name of a texture.
  */
-static inline void glBindTexture(GLenum target, GLuint texture)
-{
+static inline void glBindTexture(GLenum target, GLuint texture) {
   glad_glBindTexture(target, texture);
 }
 /**
@@ -3757,8 +3732,7 @@ static inline void glBindTexture(GLenum target, GLuint texture)
  *
  * @param [texture] Specifies the name of a texture.
  */
-static inline void glBindTextureUnit(GLuint unit, GLuint texture)
-{
+static inline void glBindTextureUnit(GLuint unit, GLuint texture) {
   glad_glBindTextureUnit(unit, texture);
 }
 /**
@@ -3774,8 +3748,7 @@ static inline void glBindTextureUnit(GLuint unit, GLuint texture)
  * texture objects.
  */
 static inline void glBindTextures(GLuint first, GLsizei count,
-                                  const GLuint *textures)
-{
+                                  const GLuint *textures) {
   glad_glBindTextures(first, count, textures);
 }
 /**
@@ -3787,8 +3760,7 @@ static inline void glBindTextures(GLuint first, GLsizei count,
  * @param [id] Specifies the name of a transform feedback object reserved by
  * glGenTransformFeedbacks.
  */
-static inline void glBindTransformFeedback(GLenum target, GLuint id)
-{
+static inline void glBindTransformFeedback(GLenum target, GLuint id) {
   glad_glBindTransformFeedback(target, id);
 }
 /**
@@ -3796,8 +3768,7 @@ static inline void glBindTransformFeedback(GLenum target, GLuint id)
  *
  * @param [array] Specifies the name of the vertex array to bind.
  */
-static inline void glBindVertexArray(GLuint array)
-{
+static inline void glBindVertexArray(GLuint array) {
   glad_glBindVertexArray(array);
 }
 /**
@@ -3818,8 +3789,7 @@ static inline void glBindVertexArray(GLuint array)
  * @param [stride] The distance between elements within the buffer.
  */
 static inline void glBindVertexBuffer(GLuint bindingindex, GLuint buffer,
-                                      GLintptr offset, GLint stride)
-{
+                                      GLintptr offset, GLint stride) {
   glad_glBindVertexBuffer(bindingindex, buffer, offset, stride);
 }
 /**
@@ -3841,8 +3811,7 @@ static inline void glBindVertexBuffer(GLuint bindingindex, GLuint buffer,
  */
 static inline void glVertexArrayVertexBuffer(GLuint vaobj, GLuint bindingindex,
                                              GLuint buffer, GLintptr offset,
-                                             GLsizei stride)
-{
+                                             GLsizei stride) {
   glad_glVertexArrayVertexBuffer(vaobj, bindingindex, buffer, offset, stride);
 }
 /**
@@ -3869,8 +3838,7 @@ static inline void glVertexArrayVertexBuffer(GLuint vaobj, GLuint bindingindex,
 static inline void glBindVertexBuffers(GLuint first, GLsizei count,
                                        const GLuint *buffers,
                                        const GLintptr *offsets,
-                                       const GLsizei *strides)
-{
+                                       const GLsizei *strides) {
   glad_glBindVertexBuffers(first, count, buffers, offsets, strides);
 }
 /**
@@ -3898,8 +3866,7 @@ static inline void glVertexArrayVertexBuffers(GLuint vaobj, GLuint first,
                                               GLsizei count,
                                               const GLuint *buffers,
                                               const GLintptr *offsets,
-                                              const GLsizei *strides)
-{
+                                              const GLsizei *strides) {
   glad_glVertexArrayVertexBuffers(vaobj, first, count, buffers, offsets,
                                   strides);
 }
@@ -3909,8 +3876,7 @@ static inline void glVertexArrayVertexBuffers(GLuint vaobj, GLuint first,
  * @param [red, green, blue, alpha] specify the components of GL_BLEND_COLOR
  */
 static inline void glBlendColor(GLfloat red, GLfloat green, GLfloat blue,
-                                GLfloat alpha)
-{
+                                GLfloat alpha) {
   glad_glBlendColor(red, green, blue, alpha);
 }
 /**
@@ -3936,8 +3902,7 @@ static inline void glBlendEquation(GLenum mode) { glad_glBlendEquation(mode); }
  * must be GL_FUNC_ADD, GL_FUNC_SUBTRACT, GL_FUNC_REVERSE_SUBTRACT, GL_MIN,
  * GL_MAX.
  */
-static inline void glBlendEquationi(GLuint buf, GLenum mode)
-{
+static inline void glBlendEquationi(GLuint buf, GLenum mode) {
   glad_glBlendEquationi(buf, mode);
 }
 /**
@@ -3955,8 +3920,7 @@ static inline void glBlendEquationi(GLuint buf, GLenum mode)
  * component of the source and destination colors are combined. It must be
  * GL_FUNC_ADD, GL_FUNC_SUBTRACT, GL_FUNC_REVERSE_SUBTRACT, GL_MIN, GL_MAX.
  */
-static inline void glBlendEquationSeparate(GLenum modeRGB, GLenum modeAlpha)
-{
+static inline void glBlendEquationSeparate(GLenum modeRGB, GLenum modeAlpha) {
   glad_glBlendEquationSeparate(modeRGB, modeAlpha);
 }
 /**
@@ -3975,8 +3939,7 @@ static inline void glBlendEquationSeparate(GLenum modeRGB, GLenum modeAlpha)
  * GL_FUNC_ADD, GL_FUNC_SUBTRACT, GL_FUNC_REVERSE_SUBTRACT, GL_MIN, GL_MAX.
  */
 static inline void glBlendEquationSeparatei(GLuint buf, GLenum modeRGB,
-                                            GLenum modeAlpha)
-{
+                                            GLenum modeAlpha) {
   glad_glBlendEquationSeparatei(buf, modeRGB, modeAlpha);
 }
 /**
@@ -3996,8 +3959,7 @@ static inline void glBlendEquationSeparatei(GLuint buf, GLenum modeRGB,
  * GL_ONE_MINUS_CONSTANT_COLOR, GL_CONSTANT_ALPHA, and
  * GL_ONE_MINUS_CONSTANT_ALPHA. The initial value is GL_ZERO.
  */
-static inline void glBlendFunc(GLenum sfactor, GLenum dfactor)
-{
+static inline void glBlendFunc(GLenum sfactor, GLenum dfactor) {
   glad_glBlendFunc(sfactor, dfactor);
 }
 /**
@@ -4017,8 +3979,7 @@ static inline void glBlendFunc(GLenum sfactor, GLenum dfactor)
  * GL_ONE_MINUS_CONSTANT_COLOR, GL_CONSTANT_ALPHA, and
  * GL_ONE_MINUS_CONSTANT_ALPHA. The initial value is GL_ZERO.
  */
-static inline void glBlendFunci(GLuint buf, GLenum sfactor, GLenum dfactor)
-{
+static inline void glBlendFunci(GLuint buf, GLenum sfactor, GLenum dfactor) {
   glad_glBlendFunci(buf, sfactor, dfactor);
 }
 /**
@@ -4041,8 +4002,7 @@ static inline void glBlendFunci(GLuint buf, GLenum sfactor, GLenum dfactor)
  * computed. The initial value is GL_ZERO.
  */
 static inline void glBlendFuncSeparate(GLenum srcRGB, GLenum dstRGB,
-                                       GLenum srcAlpha, GLenum dstAlpha)
-{
+                                       GLenum srcAlpha, GLenum dstAlpha) {
   glad_glBlendFuncSeparate(srcRGB, dstRGB, srcAlpha, dstAlpha);
 }
 /**
@@ -4066,8 +4026,7 @@ static inline void glBlendFuncSeparate(GLenum srcRGB, GLenum dstRGB,
  */
 static inline void glBlendFuncSeparatei(GLuint buf, GLenum srcRGB,
                                         GLenum dstRGB, GLenum srcAlpha,
-                                        GLenum dstAlpha)
-{
+                                        GLenum dstAlpha) {
   glad_glBlendFuncSeparatei(buf, srcRGB, dstRGB, srcAlpha, dstAlpha);
 }
 /**
@@ -4096,8 +4055,7 @@ static inline void glBlendFuncSeparatei(GLuint buf, GLenum srcRGB,
 static inline void glBlitFramebuffer(GLint srcX0, GLint srcY0, GLint srcX1,
                                      GLint srcY1, GLint dstX0, GLint dstY0,
                                      GLint dstX1, GLint dstY1, GLbitfield mask,
-                                     GLenum filter)
-{
+                                     GLenum filter) {
   glad_glBlitFramebuffer(srcX0, srcY0, srcX1, srcY1, dstX0, dstY0, dstX1, dstY1,
                          mask, filter);
 }
@@ -4129,8 +4087,7 @@ static inline void glBlitNamedFramebuffer(GLuint readFramebuffer,
                                           GLint srcY0, GLint srcX1, GLint srcY1,
                                           GLint dstX0, GLint dstY0, GLint dstX1,
                                           GLint dstY1, GLbitfield mask,
-                                          GLenum filter)
-{
+                                          GLenum filter) {
   glad_glBlitNamedFramebuffer(readFramebuffer, drawFramebuffer, srcX0, srcY0,
                               srcX1, srcY1, dstX0, dstY0, dstX1, dstY1, mask,
                               filter);
@@ -4173,8 +4130,7 @@ static inline void glBlitNamedFramebuffer(GLuint readFramebuffer,
  GL_DYNAMIC_READ, or GL_DYNAMIC_COPY.
  */
 static inline void glBufferData(GLenum target, GLsizeiptr size,
-                                const GLvoid *data, GLenum usage)
-{
+                                const GLvoid *data, GLenum usage) {
   glad_glBufferData(target, size, data, usage);
 }
 /**
@@ -4215,8 +4171,7 @@ static inline void glBufferData(GLenum target, GLsizeiptr size,
  GL_DYNAMIC_READ, or GL_DYNAMIC_COPY.
  */
 static inline void glNamedBufferData(GLuint buffer, GLsizeiptr size,
-                                     const void *data, GLenum usage)
-{
+                                     const void *data, GLenum usage) {
   glad_glNamedBufferData(buffer, size, data, usage);
 }
 /**
@@ -4257,8 +4212,7 @@ static inline void glNamedBufferData(GLuint buffer, GLsizeiptr size,
  and GL_CLIENT_STORAGE_BIT.
  */
 static inline void glBufferStorage(GLenum target, GLsizeiptr size,
-                                   const GLvoid *data, GLbitfield flags)
-{
+                                   const GLvoid *data, GLbitfield flags) {
   glad_glBufferStorage(target, size, data, flags);
 }
 /**
@@ -4299,8 +4253,7 @@ static inline void glBufferStorage(GLenum target, GLsizeiptr size,
  and GL_CLIENT_STORAGE_BIT.
  */
 static inline void glNamedBufferStorage(GLuint buffer, GLsizeiptr size,
-                                        const void *data, GLbitfield flags)
-{
+                                        const void *data, GLbitfield flags) {
   glad_glNamedBufferStorage(buffer, size, data, flags);
 }
 /**
@@ -4339,8 +4292,7 @@ static inline void glNamedBufferStorage(GLuint buffer, GLsizeiptr size,
  * the data store.
  */
 static inline void glBufferSubData(GLenum target, GLintptr offset,
-                                   GLsizeiptr size, const GLvoid *data)
-{
+                                   GLsizeiptr size, const GLvoid *data) {
   glad_glBufferSubData(target, offset, size, data);
 }
 /**
@@ -4379,8 +4331,7 @@ static inline void glBufferSubData(GLenum target, GLintptr offset,
  * the data store.
  */
 static inline void glNamedBufferSubData(GLuint buffer, GLintptr offset,
-                                        GLsizei size, const void *data)
-{
+                                        GLsizei size, const void *data) {
   glad_glNamedBufferSubData(buffer, offset, size, data);
 }
 /**
@@ -4394,8 +4345,7 @@ static inline void glNamedBufferSubData(GLuint buffer, GLintptr offset,
  * @param [framebuffer] Specifies the name of the framebuffer object for
  * glCheckNamedFramebufferStatus
  */
-static inline GLenum glCheckFramebufferStatus(GLenum target)
-{
+static inline GLenum glCheckFramebufferStatus(GLenum target) {
   return glad_glCheckFramebufferStatus(target);
 }
 /**
@@ -4410,8 +4360,7 @@ static inline GLenum glCheckFramebufferStatus(GLenum target)
  * glCheckNamedFramebufferStatus
  */
 static inline GLenum glCheckNamedFramebufferStatus(GLuint framebuffer,
-                                                   GLenum target)
-{
+                                                   GLenum target) {
   return glad_glCheckNamedFramebufferStatus(framebuffer, target);
 }
 /**
@@ -4423,8 +4372,7 @@ static inline GLenum glCheckNamedFramebufferStatus(GLuint framebuffer,
  * @param [clamp] Specifies whether to apply color clamping. clamp must be
  * GL_TRUE or GL_FALSE.
  */
-static inline void glClampColor(GLenum target, GLenum clamp)
-{
+static inline void glClampColor(GLenum target, GLenum clamp) {
   glad_glClampColor(target, clamp);
 }
 /**
@@ -4452,8 +4400,7 @@ static inline void glClear(GLbitfield mask) { glad_glClear(mask); }
  * @param [stencil] The value to clear the stencil buffer to.
  */
 static inline void glClearBufferiv(GLenum buffer, GLint drawbuffer,
-                                   const GLint *value)
-{
+                                   const GLint *value) {
   glad_glClearBufferiv(buffer, drawbuffer, value);
 }
 /**
@@ -4473,8 +4420,7 @@ static inline void glClearBufferiv(GLenum buffer, GLint drawbuffer,
  * @param [stencil] The value to clear the stencil buffer to.
  */
 static inline void glClearBufferuiv(GLenum buffer, GLint drawbuffer,
-                                    const GLuint *value)
-{
+                                    const GLuint *value) {
   glad_glClearBufferuiv(buffer, drawbuffer, value);
 }
 /**
@@ -4494,8 +4440,7 @@ static inline void glClearBufferuiv(GLenum buffer, GLint drawbuffer,
  * @param [stencil] The value to clear the stencil buffer to.
  */
 static inline void glClearBufferfv(GLenum buffer, GLint drawbuffer,
-                                   const GLfloat *value)
-{
+                                   const GLfloat *value) {
   glad_glClearBufferfv(buffer, drawbuffer, value);
 }
 /**
@@ -4515,8 +4460,7 @@ static inline void glClearBufferfv(GLenum buffer, GLint drawbuffer,
  * @param [stencil] The value to clear the stencil buffer to.
  */
 static inline void glClearBufferfi(GLenum buffer, GLint drawbuffer,
-                                   GLfloat depth, GLint stencil)
-{
+                                   GLfloat depth, GLint stencil) {
   glad_glClearBufferfi(buffer, drawbuffer, depth, stencil);
 }
 /**
@@ -4537,8 +4481,7 @@ static inline void glClearBufferfi(GLenum buffer, GLint drawbuffer,
  */
 static inline void glClearNamedFramebufferiv(GLuint framebuffer, GLenum buffer,
                                              GLint drawbuffer,
-                                             const GLint *value)
-{
+                                             const GLint *value) {
   glad_glClearNamedFramebufferiv(framebuffer, buffer, drawbuffer, value);
 }
 /**
@@ -4559,8 +4502,7 @@ static inline void glClearNamedFramebufferiv(GLuint framebuffer, GLenum buffer,
  */
 static inline void glClearNamedFramebufferuiv(GLuint framebuffer, GLenum buffer,
                                               GLint drawbuffer,
-                                              const GLuint *value)
-{
+                                              const GLuint *value) {
   glad_glClearNamedFramebufferuiv(framebuffer, buffer, drawbuffer, value);
 }
 /**
@@ -4581,8 +4523,7 @@ static inline void glClearNamedFramebufferuiv(GLuint framebuffer, GLenum buffer,
  */
 static inline void glClearNamedFramebufferfv(GLuint framebuffer, GLenum buffer,
                                              GLint drawbuffer,
-                                             const GLfloat *value)
-{
+                                             const GLfloat *value) {
   glad_glClearNamedFramebufferfv(framebuffer, buffer, drawbuffer, value);
 }
 /**
@@ -4603,8 +4544,8 @@ static inline void glClearNamedFramebufferfv(GLuint framebuffer, GLenum buffer,
  */
 static inline void glClearNamedFramebufferfi(GLuint framebuffer, GLenum buffer,
                                              GLint drawbuffer,
-                                             const GLfloat depth, GLint stencil)
-{
+                                             const GLfloat depth,
+                                             GLint stencil) {
   glad_glClearNamedFramebufferfi(framebuffer, buffer, drawbuffer, depth,
                                  stencil);
 }
@@ -4646,8 +4587,7 @@ static inline void glClearNamedFramebufferfi(GLuint framebuffer, GLenum buffer,
  */
 static inline void glClearBufferData(GLenum target, GLenum internalformat,
                                      GLenum format, GLenum type,
-                                     const void *data)
-{
+                                     const void *data) {
   glad_glClearBufferData(target, internalformat, format, type, data);
 }
 /**
@@ -4688,8 +4628,7 @@ static inline void glClearBufferData(GLenum target, GLenum internalformat,
  */
 static inline void glClearNamedBufferData(GLuint buffer, GLenum internalformat,
                                           GLenum format, GLenum type,
-                                          const void *data)
-{
+                                          const void *data) {
   glad_glClearNamedBufferData(buffer, internalformat, format, type, data);
 }
 /**
@@ -4737,8 +4676,7 @@ static inline void glClearNamedBufferData(GLuint buffer, GLenum internalformat,
 static inline void glClearBufferSubData(GLenum target, GLenum internalformat,
                                         GLintptr offset, GLsizeiptr size,
                                         GLenum format, GLenum type,
-                                        const void *data)
-{
+                                        const void *data) {
   glad_glClearBufferSubData(target, internalformat, offset, size, format, type,
                             data);
 }
@@ -4788,8 +4726,7 @@ static inline void glClearNamedBufferSubData(GLuint buffer,
                                              GLenum internalformat,
                                              GLintptr offset, GLsizei size,
                                              GLenum format, GLenum type,
-                                             const void *data)
-{
+                                             const void *data) {
   glad_glClearNamedBufferSubData(buffer, internalformat, offset, size, format,
                                  type, data);
 }
@@ -4801,8 +4738,7 @@ static inline void glClearNamedBufferSubData(GLuint buffer,
  * 0.
  */
 static inline void glClearColor(GLfloat red, GLfloat green, GLfloat blue,
-                                GLfloat alpha)
-{
+                                GLfloat alpha) {
   glad_glClearColor(red, green, blue, alpha);
 }
 /**
@@ -4844,8 +4780,7 @@ static inline void glClearStencil(GLint s) { glad_glClearStencil(s); }
  * specified region.
  */
 static inline void glClearTexImage(GLuint texture, GLint level, GLenum format,
-                                   GLenum type, const void *data)
-{
+                                   GLenum type, const void *data) {
   glad_glClearTexImage(texture, level, format, type, data);
 }
 /**
@@ -4883,8 +4818,7 @@ static inline void glClearTexImage(GLuint texture, GLint level, GLenum format,
 static inline void
 glClearTexSubImage(GLuint texture, GLint level, GLint xoffset, GLint yoffset,
                    GLint zoffset, GLsizei width, GLsizei height, GLsizei depth,
-                   GLenum format, GLenum type, const void *data)
-{
+                   GLenum format, GLenum type, const void *data) {
   glad_glClearTexSubImage(texture, level, xoffset, yoffset, zoffset, width,
                           height, depth, format, type, data);
 }
@@ -4900,8 +4834,7 @@ glClearTexSubImage(GLuint texture, GLint level, GLint xoffset, GLint yoffset,
  * implementation should wait for sync to become signaled.
  */
 static inline GLenum glClientWaitSync(GLsync sync, GLbitfield flags,
-                                      GLuint64 timeout)
-{
+                                      GLuint64 timeout) {
   return glad_glClientWaitSync(sync, flags, timeout);
 }
 /**
@@ -4913,8 +4846,7 @@ static inline GLenum glClientWaitSync(GLsync sync, GLbitfield flags,
  * @param [depth] Specifies the clip control depth mode. Must be one of
  * GL_NEGATIVE_ONE_TO_ONE or GL_ZERO_TO_ONE.
  */
-static inline void glClipControl(GLenum origin, GLenum depth)
-{
+static inline void glClipControl(GLenum origin, GLenum depth) {
   glad_glClipControl(origin, depth);
 }
 /**
@@ -4929,8 +4861,7 @@ static inline void glClipControl(GLenum origin, GLenum depth)
  * GL_TRUE, indicating that the color components are written.
  */
 static inline void glColorMask(GLboolean red, GLboolean green, GLboolean blue,
-                               GLboolean alpha)
-{
+                               GLboolean alpha) {
   glad_glColorMask(red, green, blue, alpha);
 }
 /**
@@ -4945,8 +4876,7 @@ static inline void glColorMask(GLboolean red, GLboolean green, GLboolean blue,
  * GL_TRUE, indicating that the color components are written.
  */
 static inline void glColorMaski(GLuint buf, GLboolean red, GLboolean green,
-                                GLboolean blue, GLboolean alpha)
-{
+                                GLboolean blue, GLboolean alpha) {
   glad_glColorMaski(buf, red, green, blue, alpha);
 }
 /**
@@ -4954,8 +4884,7 @@ static inline void glColorMaski(GLuint buf, GLboolean red, GLboolean green,
  *
  * @param [shader] Specifies the shader object to be compiled.
  */
-static inline void glCompileShader(GLuint shader)
-{
+static inline void glCompileShader(GLuint shader) {
   glad_glCompileShader(shader);
 }
 /**
@@ -4985,8 +4914,7 @@ static inline void glCompileShader(GLuint shader)
 static inline void glCompressedTexImage1D(GLenum target, GLint level,
                                           GLenum internalformat, GLsizei width,
                                           GLint border, GLsizei imageSize,
-                                          const GLvoid *data)
-{
+                                          const GLvoid *data) {
   glad_glCompressedTexImage1D(target, level, internalformat, width, border,
                               imageSize, data);
 }
@@ -5025,8 +4953,8 @@ static inline void glCompressedTexImage1D(GLenum target, GLint level,
 static inline void glCompressedTexImage2D(GLenum target, GLint level,
                                           GLenum internalformat, GLsizei width,
                                           GLsizei height, GLint border,
-                                          GLsizei imageSize, const GLvoid *data)
-{
+                                          GLsizei imageSize,
+                                          const GLvoid *data) {
   glad_glCompressedTexImage2D(target, level, internalformat, width, height,
                               border, imageSize, data);
 }
@@ -5063,8 +4991,7 @@ static inline void glCompressedTexImage3D(GLenum target, GLint level,
                                           GLenum internalformat, GLsizei width,
                                           GLsizei height, GLsizei depth,
                                           GLint border, GLsizei imageSize,
-                                          const GLvoid *data)
-{
+                                          const GLvoid *data) {
   glad_glCompressedTexImage3D(target, level, internalformat, width, height,
                               depth, border, imageSize, data);
 }
@@ -5097,8 +5024,7 @@ static inline void glCompressedTexImage3D(GLenum target, GLint level,
 static inline void glCompressedTexSubImage1D(GLenum target, GLint level,
                                              GLint xoffset, GLsizei width,
                                              GLenum format, GLsizei imageSize,
-                                             const GLvoid *data)
-{
+                                             const GLvoid *data) {
   glad_glCompressedTexSubImage1D(target, level, xoffset, width, format,
                                  imageSize, data);
 }
@@ -5132,8 +5058,7 @@ static inline void glCompressedTextureSubImage1D(GLuint texture, GLint level,
                                                  GLint xoffset, GLsizei width,
                                                  GLenum format,
                                                  GLsizei imageSize,
-                                                 const void *data)
-{
+                                                 const void *data) {
   glad_glCompressedTextureSubImage1D(texture, level, xoffset, width, format,
                                      imageSize, data);
 }
@@ -5176,8 +5101,7 @@ static inline void glCompressedTexSubImage2D(GLenum target, GLint level,
                                              GLint xoffset, GLint yoffset,
                                              GLsizei width, GLsizei height,
                                              GLenum format, GLsizei imageSize,
-                                             const GLvoid *data)
-{
+                                             const GLvoid *data) {
   glad_glCompressedTexSubImage2D(target, level, xoffset, yoffset, width, height,
                                  format, imageSize, data);
 }
@@ -5218,8 +5142,7 @@ static inline void glCompressedTexSubImage2D(GLenum target, GLint level,
  */
 static inline void glCompressedTextureSubImage2D(
     GLuint texture, GLint level, GLint xoffset, GLint yoffset, GLsizei width,
-    GLsizei height, GLenum format, GLsizei imageSize, const void *data)
-{
+    GLsizei height, GLenum format, GLsizei imageSize, const void *data) {
   glad_glCompressedTextureSubImage2D(texture, level, xoffset, yoffset, width,
                                      height, format, imageSize, data);
 }
@@ -5262,8 +5185,7 @@ static inline void glCompressedTexSubImage3D(GLenum target, GLint level,
                                              GLint zoffset, GLsizei width,
                                              GLsizei height, GLsizei depth,
                                              GLenum format, GLsizei imageSize,
-                                             const GLvoid *data)
-{
+                                             const GLvoid *data) {
   glad_glCompressedTexSubImage3D(target, level, xoffset, yoffset, zoffset,
                                  width, height, depth, format, imageSize, data);
 }
@@ -5305,8 +5227,7 @@ static inline void
 glCompressedTextureSubImage3D(GLuint texture, GLint level, GLint xoffset,
                               GLint yoffset, GLint zoffset, GLsizei width,
                               GLsizei height, GLsizei depth, GLenum format,
-                              GLsizei imageSize, const void *data)
-{
+                              GLsizei imageSize, const void *data) {
   glad_glCompressedTextureSubImage3D(texture, level, xoffset, yoffset, zoffset,
                                      width, height, depth, format, imageSize,
                                      data);
@@ -5339,8 +5260,7 @@ glCompressedTextureSubImage3D(GLuint texture, GLint level, GLint xoffset,
  */
 static inline void glCopyBufferSubData(GLenum readTarget, GLenum writeTarget,
                                        GLintptr readOffset,
-                                       GLintptr writeOffset, GLsizeiptr size)
-{
+                                       GLintptr writeOffset, GLsizeiptr size) {
   glad_glCopyBufferSubData(readTarget, writeTarget, readOffset, writeOffset,
                            size);
 }
@@ -5373,8 +5293,8 @@ static inline void glCopyBufferSubData(GLenum readTarget, GLenum writeTarget,
 static inline void glCopyNamedBufferSubData(GLuint readBuffer,
                                             GLuint writeBuffer,
                                             GLintptr readOffset,
-                                            GLintptr writeOffset, GLsizei size)
-{
+                                            GLintptr writeOffset,
+                                            GLsizei size) {
   glad_glCopyNamedBufferSubData(readBuffer, writeBuffer, readOffset,
                                 writeOffset, size);
 }
@@ -5419,8 +5339,7 @@ static inline void
 glCopyImageSubData(GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX,
                    GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget,
                    GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ,
-                   GLsizei srcWidth, GLsizei srcHeight, GLsizei srcDepth)
-{
+                   GLsizei srcWidth, GLsizei srcHeight, GLsizei srcDepth) {
   glad_glCopyImageSubData(srcName, srcTarget, srcLevel, srcX, srcY, srcZ,
                           dstName, dstTarget, dstLevel, dstX, dstY, dstZ,
                           srcWidth, srcHeight, srcDepth);
@@ -5453,8 +5372,7 @@ glCopyImageSubData(GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX,
  */
 static inline void glCopyTexImage1D(GLenum target, GLint level,
                                     GLenum internalformat, GLint x, GLint y,
-                                    GLsizei width, GLint border)
-{
+                                    GLsizei width, GLint border) {
   glad_glCopyTexImage1D(target, level, internalformat, x, y, width, border);
 }
 /**
@@ -5489,8 +5407,8 @@ static inline void glCopyTexImage1D(GLenum target, GLint level,
  */
 static inline void glCopyTexImage2D(GLenum target, GLint level,
                                     GLenum internalformat, GLint x, GLint y,
-                                    GLsizei width, GLsizei height, GLint border)
-{
+                                    GLsizei width, GLsizei height,
+                                    GLint border) {
   glad_glCopyTexImage2D(target, level, internalformat, x, y, width, height,
                         border);
 }
@@ -5516,8 +5434,7 @@ static inline void glCopyTexImage2D(GLenum target, GLint level,
  */
 static inline void glCopyTexSubImage1D(GLenum target, GLint level,
                                        GLint xoffset, GLint x, GLint y,
-                                       GLsizei width)
-{
+                                       GLsizei width) {
   glad_glCopyTexSubImage1D(target, level, xoffset, x, y, width);
 }
 /**
@@ -5542,8 +5459,7 @@ static inline void glCopyTexSubImage1D(GLenum target, GLint level,
  */
 static inline void glCopyTextureSubImage1D(GLuint texture, GLint level,
                                            GLint xoffset, GLint x, GLint y,
-                                           GLsizei width)
-{
+                                           GLsizei width) {
   glad_glCopyTextureSubImage1D(texture, level, xoffset, x, y, width);
 }
 /**
@@ -5578,8 +5494,7 @@ static inline void glCopyTextureSubImage1D(GLuint texture, GLint level,
  */
 static inline void glCopyTexSubImage2D(GLenum target, GLint level,
                                        GLint xoffset, GLint yoffset, GLint x,
-                                       GLint y, GLsizei width, GLsizei height)
-{
+                                       GLint y, GLsizei width, GLsizei height) {
   glad_glCopyTexSubImage2D(target, level, xoffset, yoffset, x, y, width,
                            height);
 }
@@ -5616,8 +5531,7 @@ static inline void glCopyTexSubImage2D(GLenum target, GLint level,
 static inline void glCopyTextureSubImage2D(GLuint texture, GLint level,
                                            GLint xoffset, GLint yoffset,
                                            GLint x, GLint y, GLsizei width,
-                                           GLsizei height)
-{
+                                           GLsizei height) {
   glad_glCopyTextureSubImage2D(texture, level, xoffset, yoffset, x, y, width,
                                height);
 }
@@ -5654,8 +5568,7 @@ static inline void glCopyTextureSubImage2D(GLuint texture, GLint level,
 static inline void glCopyTexSubImage3D(GLenum target, GLint level,
                                        GLint xoffset, GLint yoffset,
                                        GLint zoffset, GLint x, GLint y,
-                                       GLsizei width, GLsizei height)
-{
+                                       GLsizei width, GLsizei height) {
   glad_glCopyTexSubImage3D(target, level, xoffset, yoffset, zoffset, x, y,
                            width, height);
 }
@@ -5692,8 +5605,7 @@ static inline void glCopyTexSubImage3D(GLenum target, GLint level,
 static inline void glCopyTextureSubImage3D(GLuint texture, GLint level,
                                            GLint xoffset, GLint yoffset,
                                            GLint zoffset, GLint x, GLint y,
-                                           GLsizei width, GLsizei height)
-{
+                                           GLsizei width, GLsizei height) {
   glad_glCopyTextureSubImage3D(texture, level, xoffset, yoffset, zoffset, x, y,
                                width, height);
 }
@@ -5705,8 +5617,7 @@ static inline void glCopyTextureSubImage3D(GLuint texture, GLint level,
  * @param [buffers] Specifies an array in which names of the new buffer
  * objects are stored.
  */
-static inline void glCreateBuffers(GLsizei n, GLuint *buffers)
-{
+static inline void glCreateBuffers(GLsizei n, GLuint *buffers) {
   glad_glCreateBuffers(n, buffers);
 }
 /**
@@ -5717,8 +5628,7 @@ static inline void glCreateBuffers(GLsizei n, GLuint *buffers)
  * @param [framebuffers] Specifies an array in which names of the new
  * framebuffer objects are stored.
  */
-static inline void glCreateFramebuffers(GLsizei n, GLuint *ids)
-{
+static inline void glCreateFramebuffers(GLsizei n, GLuint *ids) {
   glad_glCreateFramebuffers(n, ids);
 }
 /**
@@ -5733,8 +5643,7 @@ static inline GLuint glCreateProgram(void) { return glad_glCreateProgram(); }
  * @param [pipelines] Specifies an array in which names of the new program
  * pipeline objects are stored.
  */
-static inline void glCreateProgramPipelines(GLsizei n, GLuint *pipelines)
-{
+static inline void glCreateProgramPipelines(GLsizei n, GLuint *pipelines) {
   glad_glCreateProgramPipelines(n, pipelines);
 }
 /**
@@ -5747,8 +5656,7 @@ static inline void glCreateProgramPipelines(GLsizei n, GLuint *pipelines)
  * @param [ids] Specifies an array in which names of the new query objects are
  * stored.
  */
-static inline void glCreateQueries(GLenum target, GLsizei n, GLuint *ids)
-{
+static inline void glCreateQueries(GLenum target, GLsizei n, GLuint *ids) {
   glad_glCreateQueries(target, n, ids);
 }
 /**
@@ -5759,8 +5667,7 @@ static inline void glCreateQueries(GLenum target, GLsizei n, GLuint *ids)
  * @param [renderbuffers] Specifies an array in which names of the new
  * renderbuffer objects are stored.
  */
-static inline void glCreateRenderbuffers(GLsizei n, GLuint *renderbuffers)
-{
+static inline void glCreateRenderbuffers(GLsizei n, GLuint *renderbuffers) {
   glad_glCreateRenderbuffers(n, renderbuffers);
 }
 /**
@@ -5771,8 +5678,7 @@ static inline void glCreateRenderbuffers(GLsizei n, GLuint *renderbuffers)
  * @param [samplers] Specifies an array in which names of the new sampler
  * objects are stored.
  */
-static inline void glCreateSamplers(GLsizei n, GLuint *samplers)
-{
+static inline void glCreateSamplers(GLsizei n, GLuint *samplers) {
   glad_glCreateSamplers(n, samplers);
 }
 /**
@@ -5782,8 +5688,7 @@ static inline void glCreateSamplers(GLsizei n, GLuint *samplers)
  * of GL_COMPUTE_SHADER, GL_VERTEX_SHADER, GL_TESS_CONTROL_SHADER,
  * GL_TESS_EVALUATION_SHADER, GL_GEOMETRY_SHADER, or GL_FRAGMENT_SHADER.
  */
-static inline GLuint glCreateShader(GLenum shaderType)
-{
+static inline GLuint glCreateShader(GLenum shaderType) {
   return glad_glCreateShader(shaderType);
 }
 /**
@@ -5799,8 +5704,7 @@ static inline GLuint glCreateShader(GLenum shaderType)
  * code strings from which to create the program object.
  */
 static inline GLuint glCreateShaderProgramv(GLenum type, GLsizei count,
-                                            const char **strings)
-{
+                                            const char **strings) {
   return glad_glCreateShaderProgramv(type, count, strings);
 }
 /**
@@ -5814,8 +5718,8 @@ static inline GLuint glCreateShaderProgramv(GLenum type, GLsizei count,
  * @param [textures] Specifies an array in which names of the new texture
  * objects are stored.
  */
-static inline void glCreateTextures(GLenum target, GLsizei n, GLuint *textures)
-{
+static inline void glCreateTextures(GLenum target, GLsizei n,
+                                    GLuint *textures) {
   glad_glCreateTextures(target, n, textures);
 }
 /**
@@ -5826,8 +5730,7 @@ static inline void glCreateTextures(GLenum target, GLsizei n, GLuint *textures)
  * @param [ids] Specifies an array in which names of the new transform
  * feedback objects are stored.
  */
-static inline void glCreateTransformFeedbacks(GLsizei n, GLuint *ids)
-{
+static inline void glCreateTransformFeedbacks(GLsizei n, GLuint *ids) {
   glad_glCreateTransformFeedbacks(n, ids);
 }
 /**
@@ -5838,8 +5741,7 @@ static inline void glCreateTransformFeedbacks(GLsizei n, GLuint *ids)
  * @param [arrays] Specifies an array in which names of the new vertex array
  * objects are stored.
  */
-static inline void glCreateVertexArrays(GLsizei n, GLuint *arrays)
-{
+static inline void glCreateVertexArrays(GLsizei n, GLuint *arrays) {
   glad_glCreateVertexArrays(n, arrays);
 }
 /**
@@ -5860,8 +5762,8 @@ static inline void glCullFace(GLenum mode) { glad_glCullFace(mode); }
  * @param [userParam] A user supplied pointer that will be passed on each
  * invocation of callback.
  */
-static inline void glDebugMessageCallback(GLDEBUGPROC callback, void *userParam)
-{
+static inline void glDebugMessageCallback(GLDEBUGPROC callback,
+                                          void *userParam) {
   glad_glDebugMessageCallback(callback, userParam);
 }
 /**
@@ -5884,8 +5786,7 @@ static inline void glDebugMessageCallback(GLDEBUGPROC callback, void *userParam)
  */
 static inline void glDebugMessageControl(GLenum source, GLenum type,
                                          GLenum severity, GLsizei count,
-                                         const GLuint *ids, GLboolean enabled)
-{
+                                         const GLuint *ids, GLboolean enabled) {
   glad_glDebugMessageControl(source, type, severity, count, ids, enabled);
 }
 /**
@@ -5908,8 +5809,7 @@ static inline void glDebugMessageControl(GLenum source, GLenum type,
  */
 static inline void glDebugMessageInsert(GLenum source, GLenum type, GLuint id,
                                         GLenum severity, GLsizei length,
-                                        const char *message)
-{
+                                        const char *message) {
   glad_glDebugMessageInsert(source, type, id, severity, length, message);
 }
 /**
@@ -5919,8 +5819,7 @@ static inline void glDebugMessageInsert(GLenum source, GLenum type, GLuint id,
  *
  * @param [buffers] Specifies an array of buffer objects to be deleted.
  */
-static inline void glDeleteBuffers(GLsizei n, const GLuint *buffers)
-{
+static inline void glDeleteBuffers(GLsizei n, const GLuint *buffers) {
   glad_glDeleteBuffers(n, buffers);
 }
 /**
@@ -5931,8 +5830,7 @@ static inline void glDeleteBuffers(GLsizei n, const GLuint *buffers)
  * @param [framebuffers] A pointer to an array containing n framebuffer
  * objects to be deleted.
  */
-static inline void glDeleteFramebuffers(GLsizei n, GLuint *framebuffers)
-{
+static inline void glDeleteFramebuffers(GLsizei n, GLuint *framebuffers) {
   glad_glDeleteFramebuffers(n, framebuffers);
 }
 /**
@@ -5940,8 +5838,7 @@ static inline void glDeleteFramebuffers(GLsizei n, GLuint *framebuffers)
  *
  * @param [program] Specifies the program object to be deleted.
  */
-static inline void glDeleteProgram(GLuint program)
-{
+static inline void glDeleteProgram(GLuint program) {
   glad_glDeleteProgram(program);
 }
 /**
@@ -5952,8 +5849,8 @@ static inline void glDeleteProgram(GLuint program)
  * @param [pipelines] Specifies an array of names of program pipeline objects
  * to delete.
  */
-static inline void glDeleteProgramPipelines(GLsizei n, const GLuint *pipelines)
-{
+static inline void glDeleteProgramPipelines(GLsizei n,
+                                            const GLuint *pipelines) {
   glad_glDeleteProgramPipelines(n, pipelines);
 }
 /**
@@ -5963,8 +5860,7 @@ static inline void glDeleteProgramPipelines(GLsizei n, const GLuint *pipelines)
  *
  * @param [ids] Specifies an array of query objects to be deleted.
  */
-static inline void glDeleteQueries(GLsizei n, const GLuint *ids)
-{
+static inline void glDeleteQueries(GLsizei n, const GLuint *ids) {
   glad_glDeleteQueries(n, ids);
 }
 /**
@@ -5975,8 +5871,7 @@ static inline void glDeleteQueries(GLsizei n, const GLuint *ids)
  * @param [renderbuffers] A pointer to an array containing n renderbuffer
  * objects to be deleted.
  */
-static inline void glDeleteRenderbuffers(GLsizei n, GLuint *renderbuffers)
-{
+static inline void glDeleteRenderbuffers(GLsizei n, GLuint *renderbuffers) {
   glad_glDeleteRenderbuffers(n, renderbuffers);
 }
 /**
@@ -5986,8 +5881,7 @@ static inline void glDeleteRenderbuffers(GLsizei n, GLuint *renderbuffers)
  *
  * @param [samplers] Specifies an array of sampler objects to be deleted.
  */
-static inline void glDeleteSamplers(GLsizei n, const GLuint *samplers)
-{
+static inline void glDeleteSamplers(GLsizei n, const GLuint *samplers) {
   glad_glDeleteSamplers(n, samplers);
 }
 /**
@@ -5995,8 +5889,7 @@ static inline void glDeleteSamplers(GLsizei n, const GLuint *samplers)
  *
  * @param [shader] Specifies the shader object to be deleted.
  */
-static inline void glDeleteShader(GLuint shader)
-{
+static inline void glDeleteShader(GLuint shader) {
   glad_glDeleteShader(shader);
 }
 /**
@@ -6012,8 +5905,7 @@ static inline void glDeleteSync(GLsync sync) { glad_glDeleteSync(sync); }
  *
  * @param [textures] Specifies an array of textures to be deleted.
  */
-static inline void glDeleteTextures(GLsizei n, const GLuint *textures)
-{
+static inline void glDeleteTextures(GLsizei n, const GLuint *textures) {
   glad_glDeleteTextures(n, textures);
 }
 /**
@@ -6024,8 +5916,7 @@ static inline void glDeleteTextures(GLsizei n, const GLuint *textures)
  * @param [ids] Specifies an array of names of transform feedback objects to
  * delete.
  */
-static inline void glDeleteTransformFeedbacks(GLsizei n, const GLuint *ids)
-{
+static inline void glDeleteTransformFeedbacks(GLsizei n, const GLuint *ids) {
   glad_glDeleteTransformFeedbacks(n, ids);
 }
 /**
@@ -6036,8 +5927,7 @@ static inline void glDeleteTransformFeedbacks(GLsizei n, const GLuint *ids)
  * @param [arrays] Specifies the address of an array containing the n names of
  * the objects to be deleted.
  */
-static inline void glDeleteVertexArrays(GLsizei n, const GLuint *arrays)
-{
+static inline void glDeleteVertexArrays(GLsizei n, const GLuint *arrays) {
   glad_glDeleteVertexArrays(n, arrays);
 }
 /**
@@ -6066,8 +5956,7 @@ static inline void glDepthMask(GLboolean flag) { glad_glDepthMask(flag); }
  * @param [farVal] Specifies the mapping of the far clipping plane to window
  * coordinates. The initial value is 1.
  */
-static inline void glDepthRange(GLdouble nearVal, GLdouble farVal)
-{
+static inline void glDepthRange(GLdouble nearVal, GLdouble farVal) {
   glad_glDepthRange(nearVal, farVal);
 }
 /**
@@ -6080,8 +5969,7 @@ static inline void glDepthRange(GLdouble nearVal, GLdouble farVal)
  * @param [farVal] Specifies the mapping of the far clipping plane to window
  * coordinates. The initial value is 1.
  */
-static inline void glDepthRangef(GLfloat nearVal, GLfloat farVal)
-{
+static inline void glDepthRangef(GLfloat nearVal, GLfloat farVal) {
   glad_glDepthRangef(nearVal, farVal);
 }
 /**
@@ -6098,8 +5986,7 @@ static inline void glDepthRangef(GLfloat nearVal, GLfloat farVal)
  * values for the depth range of each modified viewport.
  */
 static inline void glDepthRangeArrayv(GLuint first, GLsizei count,
-                                      const GLdouble *v)
-{
+                                      const GLdouble *v) {
   glad_glDepthRangeArrayv(first, count, v);
 }
 /**
@@ -6116,8 +6003,7 @@ static inline void glDepthRangeArrayv(GLuint first, GLsizei count,
  * coordinates. The initial value is 1.
  */
 static inline void glDepthRangeIndexed(GLuint index, GLdouble nearVal,
-                                       GLdouble farVal)
-{
+                                       GLdouble farVal) {
   glad_glDepthRangeIndexed(index, nearVal, farVal);
 }
 /**
@@ -6129,8 +6015,7 @@ static inline void glDepthRangeIndexed(GLuint index, GLdouble nearVal,
  *
  * @param [shader] Specifies the shader object to be detached.
  */
-static inline void glDetachShader(GLuint program, GLuint shader)
-{
+static inline void glDetachShader(GLuint program, GLuint shader) {
   glad_glDetachShader(program, shader);
 }
 /**
@@ -6146,8 +6031,7 @@ static inline void glDetachShader(GLuint program, GLuint shader)
  * dimension.
  */
 static inline void glDispatchCompute(GLuint num_groups_x, GLuint num_groups_y,
-                                     GLuint num_groups_z)
-{
+                                     GLuint num_groups_z) {
   glad_glDispatchCompute(num_groups_x, num_groups_y, num_groups_z);
 }
 /**
@@ -6158,8 +6042,7 @@ static inline void glDispatchCompute(GLuint num_groups_x, GLuint num_groups_y,
  * GL_DISPATCH_INDIRECT_BUFFER buffer target at which the dispatch parameters
  * are stored.
  */
-static inline void glDispatchComputeIndirect(GLintptr indirect)
-{
+static inline void glDispatchComputeIndirect(GLintptr indirect) {
   glad_glDispatchComputeIndirect(indirect);
 }
 /**
@@ -6175,8 +6058,7 @@ static inline void glDispatchComputeIndirect(GLintptr indirect)
  *
  * @param [count] Specifies the number of indices to be rendered.
  */
-static inline void glDrawArrays(GLenum mode, GLint first, GLsizei count)
-{
+static inline void glDrawArrays(GLenum mode, GLint first, GLsizei count) {
   glad_glDrawArrays(mode, first, count);
 }
 /**
@@ -6192,8 +6074,7 @@ static inline void glDrawArrays(GLenum mode, GLint first, GLsizei count)
  * @param [indirect] Specifies the address of a structure containing the draw
  * parameters.
  */
-static inline void glDrawArraysIndirect(GLenum mode, const void *indirect)
-{
+static inline void glDrawArraysIndirect(GLenum mode, const void *indirect) {
   glad_glDrawArraysIndirect(mode, indirect);
 }
 /**
@@ -6213,8 +6094,7 @@ static inline void glDrawArraysIndirect(GLenum mode, const void *indirect)
  * of indices to be rendered.
  */
 static inline void glDrawArraysInstanced(GLenum mode, GLint first,
-                                         GLsizei count, GLsizei primcount)
-{
+                                         GLsizei count, GLsizei primcount) {
   glad_glDrawArraysInstanced(mode, first, count, primcount);
 }
 /**
@@ -6240,8 +6120,7 @@ static inline void glDrawArraysInstanced(GLenum mode, GLint first,
 static inline void glDrawArraysInstancedBaseInstance(GLenum mode, GLint first,
                                                      GLsizei count,
                                                      GLsizei primcount,
-                                                     GLuint baseinstance)
-{
+                                                     GLuint baseinstance) {
   glad_glDrawArraysInstancedBaseInstance(mode, first, count, primcount,
                                          baseinstance);
 }
@@ -6278,8 +6157,8 @@ static inline void glDrawBuffer(GLenum buf) { glad_glDrawBuffer(buf); }
  * framebuffer objects, GL_COLOR_ATTACHMENT$m$ and GL_NONE enums are accepted,
  * where $m$ is a value between 0 and GL_MAX_COLOR_ATTACHMENTS.
  */
-static inline void glNamedFramebufferDrawBuffer(GLuint framebuffer, GLenum buf)
-{
+static inline void glNamedFramebufferDrawBuffer(GLuint framebuffer,
+                                                GLenum buf) {
   glad_glNamedFramebufferDrawBuffer(framebuffer, buf);
 }
 /**
@@ -6294,8 +6173,7 @@ static inline void glNamedFramebufferDrawBuffer(GLuint framebuffer, GLenum buf)
  * @param [bufs] Points to an array of symbolic constants specifying the
  buffers into which fragment colors or data values will be written.
  */
-static inline void glDrawBuffers(GLsizei n, const GLenum *bufs)
-{
+static inline void glDrawBuffers(GLsizei n, const GLenum *bufs) {
   glad_glDrawBuffers(n, bufs);
 }
 /**
@@ -6311,8 +6189,7 @@ static inline void glDrawBuffers(GLsizei n, const GLenum *bufs)
  buffers into which fragment colors or data values will be written.
  */
 static inline void glNamedFramebufferDrawBuffers(GLuint framebuffer, GLsizei n,
-                                                 const GLenum *bufs)
-{
+                                                 const GLenum *bufs) {
   glad_glNamedFramebufferDrawBuffers(framebuffer, n, bufs);
 }
 /**
@@ -6334,8 +6211,7 @@ static inline void glNamedFramebufferDrawBuffers(GLuint framebuffer, GLsizei n,
  * target.
  */
 static inline void glDrawElements(GLenum mode, GLsizei count, GLenum type,
-                                  const GLvoid *indices)
-{
+                                  const GLvoid *indices) {
   glad_glDrawElements(mode, count, type, indices);
 }
 /**
@@ -6361,8 +6237,7 @@ static inline void glDrawElements(GLenum mode, GLsizei count, GLenum type,
  */
 static inline void glDrawElementsBaseVertex(GLenum mode, GLsizei count,
                                             GLenum type, GLvoid *indices,
-                                            GLint basevertex)
-{
+                                            GLint basevertex) {
   glad_glDrawElementsBaseVertex(mode, count, type, indices, basevertex);
 }
 /**
@@ -6382,8 +6257,7 @@ static inline void glDrawElementsBaseVertex(GLenum mode, GLsizei count,
  * parameters.
  */
 static inline void glDrawElementsIndirect(GLenum mode, GLenum type,
-                                          const void *indirect)
-{
+                                          const void *indirect) {
   glad_glDrawElementsIndirect(mode, type, indirect);
 }
 /**
@@ -6408,8 +6282,7 @@ static inline void glDrawElementsIndirect(GLenum mode, GLenum type,
  */
 static inline void glDrawElementsInstanced(GLenum mode, GLsizei count,
                                            GLenum type, const void *indices,
-                                           GLsizei primcount)
-{
+                                           GLsizei primcount) {
   glad_glDrawElementsInstanced(mode, count, type, indices, primcount);
 }
 /**
@@ -6439,8 +6312,7 @@ static inline void glDrawElementsInstanced(GLenum mode, GLsizei count,
 static inline void
 glDrawElementsInstancedBaseInstance(GLenum mode, GLsizei count, GLenum type,
                                     const void *indices, GLsizei primcount,
-                                    GLuint baseinstance)
-{
+                                    GLuint baseinstance) {
   glad_glDrawElementsInstancedBaseInstance(mode, count, type, indices,
                                            primcount, baseinstance);
 }
@@ -6472,8 +6344,7 @@ static inline void glDrawElementsInstancedBaseVertex(GLenum mode, GLsizei count,
                                                      GLenum type,
                                                      GLvoid *indices,
                                                      GLsizei primcount,
-                                                     GLint basevertex)
-{
+                                                     GLint basevertex) {
   glad_glDrawElementsInstancedBaseVertex(mode, count, type, indices, primcount,
                                          basevertex);
 }
@@ -6506,8 +6377,7 @@ static inline void glDrawElementsInstancedBaseVertex(GLenum mode, GLsizei count,
  */
 static inline void glDrawElementsInstancedBaseVertexBaseInstance(
     GLenum mode, GLsizei count, GLenum type, GLvoid *indices, GLsizei primcount,
-    GLint basevertex, GLuint baseinstance)
-{
+    GLint basevertex, GLuint baseinstance) {
   glad_glDrawElementsInstancedBaseVertexBaseInstance(
       mode, count, type, indices, primcount, basevertex, baseinstance);
 }
@@ -6534,8 +6404,7 @@ static inline void glDrawElementsInstancedBaseVertexBaseInstance(
  */
 static inline void glDrawRangeElements(GLenum mode, GLuint start, GLuint end,
                                        GLsizei count, GLenum type,
-                                       const GLvoid *indices)
-{
+                                       const GLvoid *indices) {
   glad_glDrawRangeElements(mode, start, end, count, type, indices);
 }
 /**
@@ -6566,8 +6435,7 @@ static inline void glDrawRangeElements(GLenum mode, GLuint start, GLuint end,
 static inline void glDrawRangeElementsBaseVertex(GLenum mode, GLuint start,
                                                  GLuint end, GLsizei count,
                                                  GLenum type, GLvoid *indices,
-                                                 GLint basevertex)
-{
+                                                 GLint basevertex) {
   glad_glDrawRangeElementsBaseVertex(mode, start, end, count, type, indices,
                                      basevertex);
 }
@@ -6584,8 +6452,7 @@ static inline void glDrawRangeElementsBaseVertex(GLenum mode, GLuint start,
  * @param [id] Specifies the name of a transform feedback object from which to
  * retrieve a primitive count.
  */
-static inline void glDrawTransformFeedback(GLenum mode, GLuint id)
-{
+static inline void glDrawTransformFeedback(GLenum mode, GLuint id) {
   glad_glDrawTransformFeedback(mode, id);
 }
 /**
@@ -6605,8 +6472,7 @@ static inline void glDrawTransformFeedback(GLenum mode, GLuint id)
  * render.
  */
 static inline void glDrawTransformFeedbackInstanced(GLenum mode, GLuint id,
-                                                    GLsizei primcount)
-{
+                                                    GLsizei primcount) {
   glad_glDrawTransformFeedbackInstanced(mode, id, primcount);
 }
 /**
@@ -6626,8 +6492,7 @@ static inline void glDrawTransformFeedbackInstanced(GLenum mode, GLuint id,
  * which to retrieve a primitive count.
  */
 static inline void glDrawTransformFeedbackStream(GLenum mode, GLuint id,
-                                                 GLuint stream)
-{
+                                                 GLuint stream) {
   glad_glDrawTransformFeedbackStream(mode, id, stream);
 }
 /**
@@ -6653,8 +6518,7 @@ static inline void glDrawTransformFeedbackStream(GLenum mode, GLuint id,
 static inline void glDrawTransformFeedbackStreamInstanced(GLenum mode,
                                                           GLuint id,
                                                           GLuint stream,
-                                                          GLsizei primcount)
-{
+                                                          GLsizei primcount) {
   glad_glDrawTransformFeedbackStreamInstanced(mode, id, stream, primcount);
 }
 /**
@@ -6683,8 +6547,7 @@ static inline void glDisable(GLenum cap) { glad_glDisable(cap); }
  * @param [index] Specifies the index of the switch to disable (for glEnablei
  * and glDisablei only).
  */
-static inline void glEnablei(GLenum cap, GLuint index)
-{
+static inline void glEnablei(GLenum cap, GLuint index) {
   glad_glEnablei(cap, index);
 }
 /**
@@ -6695,8 +6558,7 @@ static inline void glEnablei(GLenum cap, GLuint index)
  * @param [index] Specifies the index of the switch to disable (for glEnablei
  * and glDisablei only).
  */
-static inline void glDisablei(GLenum cap, GLuint index)
-{
+static inline void glDisablei(GLenum cap, GLuint index) {
   glad_glDisablei(cap, index);
 }
 /**
@@ -6709,8 +6571,7 @@ static inline void glDisablei(GLenum cap, GLuint index)
  * @param [index] Specifies the index of the generic vertex attribute to be
  enabled or disabled.
  */
-static inline void glEnableVertexAttribArray(GLuint index)
-{
+static inline void glEnableVertexAttribArray(GLuint index) {
   glad_glEnableVertexAttribArray(index);
 }
 /**
@@ -6723,8 +6584,7 @@ static inline void glEnableVertexAttribArray(GLuint index)
  * @param [index] Specifies the index of the generic vertex attribute to be
  enabled or disabled.
  */
-static inline void glDisableVertexAttribArray(GLuint index)
-{
+static inline void glDisableVertexAttribArray(GLuint index) {
   glad_glDisableVertexAttribArray(index);
 }
 /**
@@ -6737,8 +6597,7 @@ static inline void glDisableVertexAttribArray(GLuint index)
  * @param [index] Specifies the index of the generic vertex attribute to be
  enabled or disabled.
  */
-static inline void glEnableVertexArrayAttrib(GLuint vaobj, GLuint index)
-{
+static inline void glEnableVertexArrayAttrib(GLuint vaobj, GLuint index) {
   glad_glEnableVertexArrayAttrib(vaobj, index);
 }
 /**
@@ -6751,8 +6610,7 @@ static inline void glEnableVertexArrayAttrib(GLuint vaobj, GLuint index)
  * @param [index] Specifies the index of the generic vertex attribute to be
  enabled or disabled.
  */
-static inline void glDisableVertexArrayAttrib(GLuint vaobj, GLuint index)
-{
+static inline void glDisableVertexArrayAttrib(GLuint vaobj, GLuint index) {
   glad_glDisableVertexArrayAttrib(vaobj, index);
 }
 /**
@@ -6767,8 +6625,7 @@ static inline void glDisableVertexArrayAttrib(GLuint vaobj, GLuint index)
  * behavior of the sync object. No flags are presently defined for this
  * operation and flags must be zero.[1]
  */
-static inline GLsync glFenceSync(GLenum condition, GLbitfield flags)
-{
+static inline GLsync glFenceSync(GLenum condition, GLbitfield flags) {
   return glad_glFenceSync(condition, flags);
 }
 /**
@@ -6812,8 +6669,7 @@ static inline void glFlush(void) { glad_glFlush(); }
  * machine units.
  */
 static inline void glFlushMappedBufferRange(GLenum target, GLintptr offset,
-                                            GLsizeiptr length)
-{
+                                            GLsizeiptr length) {
   glad_glFlushMappedBufferRange(target, offset, length);
 }
 /**
@@ -6849,8 +6705,7 @@ static inline void glFlushMappedBufferRange(GLenum target, GLintptr offset,
  * machine units.
  */
 static inline void glFlushMappedNamedBufferRange(GLuint buffer, GLintptr offset,
-                                                 GLsizei length)
-{
+                                                 GLsizei length) {
   glad_glFlushMappedNamedBufferRange(buffer, offset, length);
 }
 /**
@@ -6868,8 +6723,7 @@ static inline void glFlushMappedNamedBufferRange(GLuint buffer, GLintptr offset,
  * @param [param] The new value for the parameter named pname.
  */
 static inline void glFramebufferParameteri(GLenum target, GLenum pname,
-                                           GLint param)
-{
+                                           GLint param) {
   glad_glFramebufferParameteri(target, pname, param);
 }
 /**
@@ -6887,8 +6741,7 @@ static inline void glFramebufferParameteri(GLenum target, GLenum pname,
  * @param [param] The new value for the parameter named pname.
  */
 static inline void glNamedFramebufferParameteri(GLuint framebuffer,
-                                                GLenum pname, GLint param)
-{
+                                                GLenum pname, GLint param) {
   glad_glNamedFramebufferParameteri(framebuffer, pname, param);
 }
 /**
@@ -6911,8 +6764,7 @@ static inline void glNamedFramebufferParameteri(GLuint framebuffer,
  */
 static inline void glFramebufferRenderbuffer(GLenum target, GLenum attachment,
                                              GLenum renderbuffertarget,
-                                             GLuint renderbuffer)
-{
+                                             GLuint renderbuffer) {
   glad_glFramebufferRenderbuffer(target, attachment, renderbuffertarget,
                                  renderbuffer);
 }
@@ -6937,8 +6789,7 @@ static inline void glFramebufferRenderbuffer(GLenum target, GLenum attachment,
 static inline void glNamedFramebufferRenderbuffer(GLuint framebuffer,
                                                   GLenum attachment,
                                                   GLenum renderbuffertarget,
-                                                  GLuint renderbuffer)
-{
+                                                  GLuint renderbuffer) {
   glad_glNamedFramebufferRenderbuffer(framebuffer, attachment,
                                       renderbuffertarget, renderbuffer);
 }
@@ -6964,8 +6815,7 @@ static inline void glNamedFramebufferRenderbuffer(GLuint framebuffer,
  * @param [level] Specifies the mipmap level of the texture object to attach.
  */
 static inline void glFramebufferTexture(GLenum target, GLenum attachment,
-                                        GLuint texture, GLint level)
-{
+                                        GLuint texture, GLint level) {
   glad_glFramebufferTexture(target, attachment, texture, level);
 }
 /**
@@ -6991,8 +6841,7 @@ static inline void glFramebufferTexture(GLenum target, GLenum attachment,
  */
 static inline void glFramebufferTexture1D(GLenum target, GLenum attachment,
                                           GLenum textarget, GLuint texture,
-                                          GLint level)
-{
+                                          GLint level) {
   glad_glFramebufferTexture1D(target, attachment, textarget, texture, level);
 }
 /**
@@ -7018,8 +6867,7 @@ static inline void glFramebufferTexture1D(GLenum target, GLenum attachment,
  */
 static inline void glFramebufferTexture2D(GLenum target, GLenum attachment,
                                           GLenum textarget, GLuint texture,
-                                          GLint level)
-{
+                                          GLint level) {
   glad_glFramebufferTexture2D(target, attachment, textarget, texture, level);
 }
 /**
@@ -7045,8 +6893,7 @@ static inline void glFramebufferTexture2D(GLenum target, GLenum attachment,
  */
 static inline void glFramebufferTexture3D(GLenum target, GLenum attachment,
                                           GLenum textarget, GLuint texture,
-                                          GLint level, GLint layer)
-{
+                                          GLint level, GLint layer) {
   glad_glFramebufferTexture3D(target, attachment, textarget, texture, level,
                               layer);
 }
@@ -7073,8 +6920,7 @@ static inline void glFramebufferTexture3D(GLenum target, GLenum attachment,
  */
 static inline void glNamedFramebufferTexture(GLuint framebuffer,
                                              GLenum attachment, GLuint texture,
-                                             GLint level)
-{
+                                             GLint level) {
   glad_glNamedFramebufferTexture(framebuffer, attachment, texture, level);
 }
 /**
@@ -7098,8 +6944,7 @@ static inline void glNamedFramebufferTexture(GLuint framebuffer,
  */
 static inline void glFramebufferTextureLayer(GLenum target, GLenum attachment,
                                              GLuint texture, GLint level,
-                                             GLint layer)
-{
+                                             GLint layer) {
   glad_glFramebufferTextureLayer(target, attachment, texture, level, layer);
 }
 /**
@@ -7124,8 +6969,7 @@ static inline void glFramebufferTextureLayer(GLenum target, GLenum attachment,
 static inline void glNamedFramebufferTextureLayer(GLuint framebuffer,
                                                   GLenum attachment,
                                                   GLuint texture, GLint level,
-                                                  GLint layer)
-{
+                                                  GLint layer) {
   glad_glNamedFramebufferTextureLayer(framebuffer, attachment, texture, level,
                                       layer);
 }
@@ -7144,8 +6988,7 @@ static inline void glFrontFace(GLenum mode) { glad_glFrontFace(mode); }
  * @param [buffers] Specifies an array in which the generated buffer object
  * names are stored.
  */
-static inline void glGenBuffers(GLsizei n, GLuint *buffers)
-{
+static inline void glGenBuffers(GLsizei n, GLuint *buffers) {
   glad_glGenBuffers(n, buffers);
 }
 /**
@@ -7156,8 +6999,7 @@ static inline void glGenBuffers(GLsizei n, GLuint *buffers)
  * @param [ids] Specifies an array in which the generated framebuffer object
  * names are stored.
  */
-static inline void glGenFramebuffers(GLsizei n, GLuint *ids)
-{
+static inline void glGenFramebuffers(GLsizei n, GLuint *ids) {
   glad_glGenFramebuffers(n, ids);
 }
 /**
@@ -7169,8 +7011,7 @@ static inline void glGenFramebuffers(GLsizei n, GLuint *ids)
  * @param [pipelines] Specifies an array of into which the reserved names will
  * be written.
  */
-static inline void glGenProgramPipelines(GLsizei n, GLuint *pipelines)
-{
+static inline void glGenProgramPipelines(GLsizei n, GLuint *pipelines) {
   glad_glGenProgramPipelines(n, pipelines);
 }
 /**
@@ -7181,8 +7022,7 @@ static inline void glGenProgramPipelines(GLsizei n, GLuint *pipelines)
  * @param [ids] Specifies an array in which the generated query object names
  * are stored.
  */
-static inline void glGenQueries(GLsizei n, GLuint *ids)
-{
+static inline void glGenQueries(GLsizei n, GLuint *ids) {
   glad_glGenQueries(n, ids);
 }
 /**
@@ -7193,8 +7033,7 @@ static inline void glGenQueries(GLsizei n, GLuint *ids)
  * @param [renderbuffers] Specifies an array in which the generated
  * renderbuffer object names are stored.
  */
-static inline void glGenRenderbuffers(GLsizei n, GLuint *renderbuffers)
-{
+static inline void glGenRenderbuffers(GLsizei n, GLuint *renderbuffers) {
   glad_glGenRenderbuffers(n, renderbuffers);
 }
 /**
@@ -7205,8 +7044,7 @@ static inline void glGenRenderbuffers(GLsizei n, GLuint *renderbuffers)
  * @param [samplers] Specifies an array in which the generated sampler object
  * names are stored.
  */
-static inline void glGenSamplers(GLsizei n, GLuint *samplers)
-{
+static inline void glGenSamplers(GLsizei n, GLuint *samplers) {
   glad_glGenSamplers(n, samplers);
 }
 /**
@@ -7217,8 +7055,7 @@ static inline void glGenSamplers(GLsizei n, GLuint *samplers)
  * @param [textures] Specifies an array in which the generated texture names
  * are stored.
  */
-static inline void glGenTextures(GLsizei n, GLuint *textures)
-{
+static inline void glGenTextures(GLsizei n, GLuint *textures) {
   glad_glGenTextures(n, textures);
 }
 /**
@@ -7230,8 +7067,7 @@ static inline void glGenTextures(GLsizei n, GLuint *textures)
  * @param [ids] Specifies an array of into which the reserved names will be
  * written.
  */
-static inline void glGenTransformFeedbacks(GLsizei n, GLuint *ids)
-{
+static inline void glGenTransformFeedbacks(GLsizei n, GLuint *ids) {
   glad_glGenTransformFeedbacks(n, ids);
 }
 /**
@@ -7242,8 +7078,7 @@ static inline void glGenTransformFeedbacks(GLsizei n, GLuint *ids)
  * @param [arrays] Specifies an array in which the generated vertex array
  * object names are stored.
  */
-static inline void glGenVertexArrays(GLsizei n, GLuint *arrays)
-{
+static inline void glGenVertexArrays(GLsizei n, GLuint *arrays) {
   glad_glGenVertexArrays(n, arrays);
 }
 /**
@@ -7258,8 +7093,7 @@ static inline void glGenVertexArrays(GLsizei n, GLuint *arrays)
  * @param [texture] Specifies the texture object name for
  * glGenerateTextureMipmap.
  */
-static inline void glGenerateMipmap(GLenum target)
-{
+static inline void glGenerateMipmap(GLenum target) {
   glad_glGenerateMipmap(target);
 }
 /**
@@ -7274,8 +7108,7 @@ static inline void glGenerateMipmap(GLenum target)
  * @param [texture] Specifies the texture object name for
  * glGenerateTextureMipmap.
  */
-static inline void glGenerateTextureMipmap(GLuint texture)
-{
+static inline void glGenerateTextureMipmap(GLuint texture) {
   glad_glGenerateTextureMipmap(texture);
 }
 /**
@@ -7291,8 +7124,7 @@ static inline void glGenerateTextureMipmap(GLuint texture)
  *
  * @param [data] Returns the value or values of the specified parameter.
  */
-static inline void glGetBooleanv(GLenum pname, GLboolean *data)
-{
+static inline void glGetBooleanv(GLenum pname, GLboolean *data) {
   glad_glGetBooleanv(pname, data);
 }
 /**
@@ -7308,8 +7140,7 @@ static inline void glGetBooleanv(GLenum pname, GLboolean *data)
  *
  * @param [data] Returns the value or values of the specified parameter.
  */
-static inline void glGetDoublev(GLenum pname, GLdouble *data)
-{
+static inline void glGetDoublev(GLenum pname, GLdouble *data) {
   glad_glGetDoublev(pname, data);
 }
 /**
@@ -7325,8 +7156,7 @@ static inline void glGetDoublev(GLenum pname, GLdouble *data)
  *
  * @param [data] Returns the value or values of the specified parameter.
  */
-static inline void glGetFloatv(GLenum pname, GLfloat *data)
-{
+static inline void glGetFloatv(GLenum pname, GLfloat *data) {
   glad_glGetFloatv(pname, data);
 }
 /**
@@ -7342,8 +7172,7 @@ static inline void glGetFloatv(GLenum pname, GLfloat *data)
  *
  * @param [data] Returns the value or values of the specified parameter.
  */
-static inline void glGetIntegerv(GLenum pname, GLint *data)
-{
+static inline void glGetIntegerv(GLenum pname, GLint *data) {
   glad_glGetIntegerv(pname, data);
 }
 /**
@@ -7359,8 +7188,7 @@ static inline void glGetIntegerv(GLenum pname, GLint *data)
  *
  * @param [data] Returns the value or values of the specified parameter.
  */
-static inline void glGetInteger64v(GLenum pname, GLint64 *data)
-{
+static inline void glGetInteger64v(GLenum pname, GLint64 *data) {
   glad_glGetInteger64v(pname, data);
 }
 /**
@@ -7376,8 +7204,8 @@ static inline void glGetInteger64v(GLenum pname, GLint64 *data)
  *
  * @param [data] Returns the value or values of the specified parameter.
  */
-static inline void glGetBooleani_v(GLenum target, GLuint index, GLboolean *data)
-{
+static inline void glGetBooleani_v(GLenum target, GLuint index,
+                                   GLboolean *data) {
   glad_glGetBooleani_v(target, index, data);
 }
 /**
@@ -7393,8 +7221,7 @@ static inline void glGetBooleani_v(GLenum target, GLuint index, GLboolean *data)
  *
  * @param [data] Returns the value or values of the specified parameter.
  */
-static inline void glGetIntegeri_v(GLenum target, GLuint index, GLint *data)
-{
+static inline void glGetIntegeri_v(GLenum target, GLuint index, GLint *data) {
   glad_glGetIntegeri_v(target, index, data);
 }
 /**
@@ -7410,8 +7237,7 @@ static inline void glGetIntegeri_v(GLenum target, GLuint index, GLint *data)
  *
  * @param [data] Returns the value or values of the specified parameter.
  */
-static inline void glGetFloati_v(GLenum target, GLuint index, GLfloat *data)
-{
+static inline void glGetFloati_v(GLenum target, GLuint index, GLfloat *data) {
   glad_glGetFloati_v(target, index, data);
 }
 /**
@@ -7427,8 +7253,7 @@ static inline void glGetFloati_v(GLenum target, GLuint index, GLfloat *data)
  *
  * @param [data] Returns the value or values of the specified parameter.
  */
-static inline void glGetDoublei_v(GLenum target, GLuint index, GLdouble *data)
-{
+static inline void glGetDoublei_v(GLenum target, GLuint index, GLdouble *data) {
   glad_glGetDoublei_v(target, index, data);
 }
 /**
@@ -7444,8 +7269,8 @@ static inline void glGetDoublei_v(GLenum target, GLuint index, GLdouble *data)
  *
  * @param [data] Returns the value or values of the specified parameter.
  */
-static inline void glGetInteger64i_v(GLenum target, GLuint index, GLint64 *data)
-{
+static inline void glGetInteger64i_v(GLenum target, GLuint index,
+                                     GLint64 *data) {
   glad_glGetInteger64i_v(target, index, data);
 }
 /**
@@ -7465,8 +7290,8 @@ static inline void glGetInteger64i_v(GLenum target, GLuint index, GLint64 *data)
  */
 static inline void glGetActiveAtomicCounterBufferiv(GLuint program,
                                                     GLuint bufferIndex,
-                                                    GLenum pname, GLint *params)
-{
+                                                    GLenum pname,
+                                                    GLint *params) {
   glad_glGetActiveAtomicCounterBufferiv(program, bufferIndex, pname, params);
 }
 /**
@@ -7493,8 +7318,7 @@ static inline void glGetActiveAtomicCounterBufferiv(GLuint program,
  */
 static inline void glGetActiveAttrib(GLuint program, GLuint index,
                                      GLsizei bufSize, GLsizei *length,
-                                     GLint *size, GLenum *type, GLchar *name)
-{
+                                     GLint *size, GLenum *type, GLchar *name) {
   glad_glGetActiveAttrib(program, index, bufSize, length, size, type, name);
 }
 /**
@@ -7519,8 +7343,7 @@ static inline void glGetActiveAttrib(GLuint program, GLuint index,
  */
 static inline void glGetActiveSubroutineName(GLuint program, GLenum shadertype,
                                              GLuint index, GLsizei bufsize,
-                                             GLsizei *length, GLchar *name)
-{
+                                             GLsizei *length, GLchar *name) {
   glad_glGetActiveSubroutineName(program, shadertype, index, bufsize, length,
                                  name);
 }
@@ -7548,8 +7371,7 @@ static inline void glGetActiveSubroutineName(GLuint program, GLenum shadertype,
 static inline void glGetActiveSubroutineUniformiv(GLuint program,
                                                   GLenum shadertype,
                                                   GLuint index, GLenum pname,
-                                                  GLint *values)
-{
+                                                  GLint *values) {
   glad_glGetActiveSubroutineUniformiv(program, shadertype, index, pname,
                                       values);
 }
@@ -7579,8 +7401,7 @@ static inline void glGetActiveSubroutineUniformiv(GLuint program,
 static inline void
 glGetActiveSubroutineUniformName(GLuint program, GLenum shadertype,
                                  GLuint index, GLsizei bufsize, GLsizei *length,
-                                 GLchar *name)
-{
+                                 GLchar *name) {
   glad_glGetActiveSubroutineUniformName(program, shadertype, index, bufsize,
                                         length, name);
 }
@@ -7608,8 +7429,7 @@ glGetActiveSubroutineUniformName(GLuint program, GLenum shadertype,
  */
 static inline void glGetActiveUniform(GLuint program, GLuint index,
                                       GLsizei bufSize, GLsizei *length,
-                                      GLint *size, GLenum *type, GLchar *name)
-{
+                                      GLint *size, GLenum *type, GLchar *name) {
   glad_glGetActiveUniform(program, index, bufSize, length, size, type, name);
 }
 /**
@@ -7628,8 +7448,7 @@ static inline void glGetActiveUniform(GLuint program, GLuint index,
  */
 static inline void glGetActiveUniformBlockiv(GLuint program,
                                              GLuint uniformBlockIndex,
-                                             GLenum pname, GLint *params)
-{
+                                             GLenum pname, GLint *params) {
   glad_glGetActiveUniformBlockiv(program, uniformBlockIndex, pname, params);
 }
 /**
@@ -7653,8 +7472,7 @@ static inline void glGetActiveUniformBlockiv(GLuint program,
 static inline void glGetActiveUniformBlockName(GLuint program,
                                                GLuint uniformBlockIndex,
                                                GLsizei bufSize, GLsizei *length,
-                                               GLchar *uniformBlockName)
-{
+                                               GLchar *uniformBlockName) {
   glad_glGetActiveUniformBlockName(program, uniformBlockIndex, bufSize, length,
                                    uniformBlockName);
 }
@@ -7679,8 +7497,7 @@ static inline void glGetActiveUniformBlockName(GLuint program,
  */
 static inline void glGetActiveUniformName(GLuint program, GLuint uniformIndex,
                                           GLsizei bufSize, GLsizei *length,
-                                          GLchar *uniformName)
-{
+                                          GLchar *uniformName) {
   glad_glGetActiveUniformName(program, uniformIndex, bufSize, length,
                               uniformName);
 }
@@ -7706,8 +7523,7 @@ static inline void glGetActiveUniformName(GLuint program, GLuint uniformIndex,
  */
 static inline void glGetActiveUniformsiv(GLuint program, GLsizei uniformCount,
                                          const GLuint *uniformIndices,
-                                         GLenum pname, GLint *params)
-{
+                                         GLenum pname, GLint *params) {
   glad_glGetActiveUniformsiv(program, uniformCount, uniformIndices, pname,
                              params);
 }
@@ -7726,8 +7542,7 @@ static inline void glGetActiveUniformsiv(GLuint program, GLsizei uniformCount,
  * attached shader objects.
  */
 static inline void glGetAttachedShaders(GLuint program, GLsizei maxCount,
-                                        GLsizei *count, GLuint *shaders)
-{
+                                        GLsizei *count, GLuint *shaders) {
   glad_glGetAttachedShaders(program, maxCount, count, shaders);
 }
 /**
@@ -7738,8 +7553,7 @@ static inline void glGetAttachedShaders(GLuint program, GLsizei maxCount,
  * @param [name] Points to a null terminated string containing the name of the
  * attribute variable whose location is to be queried.
  */
-static inline GLint glGetAttribLocation(GLuint program, const GLchar *name)
-{
+static inline GLint glGetAttribLocation(GLuint program, const GLchar *name) {
   return glad_glGetAttribLocation(program, name);
 }
 /**
@@ -7772,8 +7586,7 @@ static inline GLint glGetAttribLocation(GLuint program, const GLchar *name)
  * @param [data] Returns the requested parameter.
  */
 static inline void glGetBufferParameteriv(GLenum target, GLenum value,
-                                          GLint *data)
-{
+                                          GLint *data) {
   glad_glGetBufferParameteriv(target, value, data);
 }
 /**
@@ -7806,8 +7619,7 @@ static inline void glGetBufferParameteriv(GLenum target, GLenum value,
  * @param [data] Returns the requested parameter.
  */
 static inline void glGetBufferParameteri64v(GLenum target, GLenum value,
-                                            GLint64 *data)
-{
+                                            GLint64 *data) {
   glad_glGetBufferParameteri64v(target, value, data);
 }
 /**
@@ -7840,8 +7652,7 @@ static inline void glGetBufferParameteri64v(GLenum target, GLenum value,
  * @param [data] Returns the requested parameter.
  */
 static inline void glGetNamedBufferParameteriv(GLuint buffer, GLenum pname,
-                                               GLint *params)
-{
+                                               GLint *params) {
   glad_glGetNamedBufferParameteriv(buffer, pname, params);
 }
 /**
@@ -7874,8 +7685,7 @@ static inline void glGetNamedBufferParameteriv(GLuint buffer, GLenum pname,
  * @param [data] Returns the requested parameter.
  */
 static inline void glGetNamedBufferParameteri64v(GLuint buffer, GLenum pname,
-                                                 GLint64 *params)
-{
+                                                 GLint64 *params) {
   glad_glGetNamedBufferParameteri64v(buffer, pname, params);
 }
 /**
@@ -7910,8 +7720,7 @@ static inline void glGetNamedBufferParameteri64v(GLuint buffer, GLenum pname,
  * @param [params] Returns the pointer value specified by pname.
  */
 static inline void glGetBufferPointerv(GLenum target, GLenum pname,
-                                       GLvoid **params)
-{
+                                       GLvoid **params) {
   glad_glGetBufferPointerv(target, pname, params);
 }
 /**
@@ -7946,8 +7755,7 @@ static inline void glGetBufferPointerv(GLenum target, GLenum pname,
  * @param [params] Returns the pointer value specified by pname.
  */
 static inline void glGetNamedBufferPointerv(GLuint buffer, GLenum pname,
-                                            void **params)
-{
+                                            void **params) {
   glad_glGetNamedBufferPointerv(buffer, pname, params);
 }
 /**
@@ -7986,8 +7794,7 @@ static inline void glGetNamedBufferPointerv(GLuint buffer, GLenum pname,
  * is returned.
  */
 static inline void glGetBufferSubData(GLenum target, GLintptr offset,
-                                      GLsizeiptr size, GLvoid *data)
-{
+                                      GLsizeiptr size, GLvoid *data) {
   glad_glGetBufferSubData(target, offset, size, data);
 }
 /**
@@ -8026,8 +7833,7 @@ static inline void glGetBufferSubData(GLenum target, GLintptr offset,
  * is returned.
  */
 static inline void glGetNamedBufferSubData(GLuint buffer, GLintptr offset,
-                                           GLsizei size, void *data)
-{
+                                           GLsizei size, void *data) {
   glad_glGetNamedBufferSubData(buffer, offset, size, data);
 }
 /**
@@ -8054,8 +7860,7 @@ static inline void glGetNamedBufferSubData(GLuint buffer, GLintptr offset,
  * @param [pixels] Returns the compressed texture image.
  */
 static inline void glGetCompressedTexImage(GLenum target, GLint level,
-                                           GLvoid *pixels)
-{
+                                           GLvoid *pixels) {
   glad_glGetCompressedTexImage(target, level, pixels);
 }
 /**
@@ -8082,8 +7887,7 @@ static inline void glGetCompressedTexImage(GLenum target, GLint level,
  * @param [pixels] Returns the compressed texture image.
  */
 static inline void glGetnCompressedTexImage(GLenum target, GLint level,
-                                            GLsizei bufSize, void *pixels)
-{
+                                            GLsizei bufSize, void *pixels) {
   glad_glGetnCompressedTexImage(target, level, bufSize, pixels);
 }
 /**
@@ -8110,8 +7914,7 @@ static inline void glGetnCompressedTexImage(GLenum target, GLint level,
  * @param [pixels] Returns the compressed texture image.
  */
 static inline void glGetCompressedTextureImage(GLuint texture, GLint level,
-                                               GLsizei bufSize, void *pixels)
-{
+                                               GLsizei bufSize, void *pixels) {
   glad_glGetCompressedTextureImage(texture, level, bufSize, pixels);
 }
 /**
@@ -8158,8 +7961,8 @@ static inline void glGetCompressedTextureSubImage(GLuint texture, GLint level,
                                                   GLint xoffset, GLint yoffset,
                                                   GLint zoffset, GLsizei width,
                                                   GLsizei height, GLsizei depth,
-                                                  GLsizei bufSize, void *pixels)
-{
+                                                  GLsizei bufSize,
+                                                  void *pixels) {
   glad_glGetCompressedTextureSubImage(texture, level, xoffset, yoffset, zoffset,
                                       width, height, depth, bufSize, pixels);
 }
@@ -8192,8 +7995,8 @@ static inline void glGetCompressedTextureSubImage(GLuint texture, GLint level,
 static inline GLuint glGetDebugMessageLog(GLuint count, GLsizei bufSize,
                                           GLenum *sources, GLenum *types,
                                           GLuint *ids, GLenum *severities,
-                                          GLsizei *lengths, GLchar *messageLog)
-{
+                                          GLsizei *lengths,
+                                          GLchar *messageLog) {
   return glad_glGetDebugMessageLog(count, bufSize, sources, types, ids,
                                    severities, lengths, messageLog);
 }
@@ -8211,8 +8014,7 @@ static inline GLenum glGetError(void) { return glad_glGetError(); }
  * @param [name] The name of the user-defined varying out variable whose index
  * to query
  */
-static inline GLint glGetFragDataIndex(GLuint program, const char *name)
-{
+static inline GLint glGetFragDataIndex(GLuint program, const char *name) {
   return glad_glGetFragDataIndex(program, name);
 }
 /**
@@ -8225,8 +8027,7 @@ static inline GLint glGetFragDataIndex(GLuint program, const char *name)
  * @param [name] The name of the user-defined varying out variable whose
  * binding to query
  */
-static inline GLint glGetFragDataLocation(GLuint program, const char *name)
-{
+static inline GLint glGetFragDataLocation(GLuint program, const char *name) {
   return glad_glGetFragDataLocation(program, name);
 }
 /**
@@ -8250,8 +8051,7 @@ static inline GLint glGetFragDataLocation(GLuint program, const char *name)
 static inline void glGetFramebufferAttachmentParameteriv(GLenum target,
                                                          GLenum attachment,
                                                          GLenum pname,
-                                                         GLint *params)
-{
+                                                         GLint *params) {
   glad_glGetFramebufferAttachmentParameteriv(target, attachment, pname, params);
 }
 /**
@@ -8273,8 +8073,7 @@ static inline void glGetFramebufferAttachmentParameteriv(GLenum target,
  * @param [params] Returns the value of parameter pname for attachment.
  */
 static inline void glGetNamedFramebufferAttachmentParameteriv(
-    GLuint framebuffer, GLenum attachment, GLenum pname, GLint *params)
-{
+    GLuint framebuffer, GLenum attachment, GLenum pname, GLint *params) {
   glad_glGetNamedFramebufferAttachmentParameteriv(framebuffer, attachment,
                                                   pname, params);
 }
@@ -8294,8 +8093,7 @@ static inline void glGetNamedFramebufferAttachmentParameteriv(
  * object.
  */
 static inline void glGetFramebufferParameteriv(GLenum target, GLenum pname,
-                                               GLint *params)
-{
+                                               GLint *params) {
   glad_glGetFramebufferParameteriv(target, pname, params);
 }
 /**
@@ -8314,16 +8112,15 @@ static inline void glGetFramebufferParameteriv(GLenum target, GLenum pname,
  * object.
  */
 static inline void glGetNamedFramebufferParameteriv(GLuint framebuffer,
-                                                    GLenum pname, GLint *param)
-{
+                                                    GLenum pname,
+                                                    GLint *param) {
   glad_glGetNamedFramebufferParameteriv(framebuffer, pname, param);
 }
 /**
  * glGetGraphicsResetStatus — check if the rendering context has not been lost
  * due to software or hardware issues
  */
-static inline GLenum glGetGraphicsResetStatus(void)
-{
+static inline GLenum glGetGraphicsResetStatus(void) {
   return glad_glGetGraphicsResetStatus();
 }
 /**
@@ -8349,8 +8146,7 @@ static inline GLenum glGetGraphicsResetStatus(void)
  */
 static inline void glGetInternalformativ(GLenum target, GLenum internalformat,
                                          GLenum pname, GLsizei bufSize,
-                                         GLint *params)
-{
+                                         GLint *params) {
   glad_glGetInternalformativ(target, internalformat, pname, bufSize, params);
 }
 /**
@@ -8376,8 +8172,7 @@ static inline void glGetInternalformativ(GLenum target, GLenum internalformat,
  */
 static inline void glGetInternalformati64v(GLenum target, GLenum internalformat,
                                            GLenum pname, GLsizei bufSize,
-                                           GLint64 *params)
-{
+                                           GLint64 *params) {
   glad_glGetInternalformati64v(target, internalformat, pname, bufSize, params);
 }
 /**
@@ -8391,8 +8186,8 @@ static inline void glGetInternalformati64v(GLenum target, GLenum internalformat,
  * @param [val] Specifies the address of an array to receive the position of
  * the sample.
  */
-static inline void glGetMultisamplefv(GLenum pname, GLuint index, GLfloat *val)
-{
+static inline void glGetMultisamplefv(GLenum pname, GLuint index,
+                                      GLfloat *val) {
   glad_glGetMultisamplefv(pname, index, val);
 }
 /**
@@ -8413,8 +8208,7 @@ static inline void glGetMultisamplefv(GLenum pname, GLuint index, GLfloat *val)
  */
 static inline void glGetObjectLabel(GLenum identifier, GLuint name,
                                     GLsizei bifSize, GLsizei *length,
-                                    char *label)
-{
+                                    char *label) {
   glad_glGetObjectLabel(identifier, name, bifSize, length, label);
 }
 /**
@@ -8431,8 +8225,7 @@ static inline void glGetObjectLabel(GLenum identifier, GLuint name,
  * @param [label] The address of a string that will receive the object label.
  */
 static inline void glGetObjectPtrLabel(void *ptr, GLsizei bifSize,
-                                       GLsizei *length, char *label)
-{
+                                       GLsizei *length, char *label) {
   glad_glGetObjectPtrLabel(ptr, bifSize, length, label);
 }
 /**
@@ -8443,8 +8236,7 @@ static inline void glGetObjectPtrLabel(void *ptr, GLsizei bifSize,
  *
  * @param [params] Returns the pointer value specified by pname.
  */
-static inline void glGetPointerv(GLenum pname, GLvoid **params)
-{
+static inline void glGetPointerv(GLenum pname, GLvoid **params) {
   glad_glGetPointerv(pname, params);
 }
 /**
@@ -8465,8 +8257,7 @@ static inline void glGetPointerv(GLenum pname, GLvoid **params)
  *
  * @param [params] Returns the requested object parameter.
  */
-static inline void glGetProgramiv(GLuint program, GLenum pname, GLint *params)
-{
+static inline void glGetProgramiv(GLuint program, GLenum pname, GLint *params) {
   glad_glGetProgramiv(program, pname, params);
 }
 /**
@@ -8490,8 +8281,7 @@ static inline void glGetProgramiv(GLuint program, GLenum pname, GLint *params)
  */
 static inline void glGetProgramBinary(GLuint program, GLsizei bufsize,
                                       GLsizei *length, GLenum *binaryFormat,
-                                      void *binary)
-{
+                                      void *binary) {
   glad_glGetProgramBinary(program, bufsize, length, binaryFormat, binary);
 }
 /**
@@ -8510,8 +8300,7 @@ static inline void glGetProgramBinary(GLuint program, GLsizei bufsize,
  * the information log.
  */
 static inline void glGetProgramInfoLog(GLuint program, GLsizei maxLength,
-                                       GLsizei *length, GLchar *infoLog)
-{
+                                       GLsizei *length, GLchar *infoLog) {
   glad_glGetProgramInfoLog(program, maxLength, length, infoLog);
 }
 /**
@@ -8529,8 +8318,7 @@ static inline void glGetProgramInfoLog(GLuint program, GLsizei maxLength,
  */
 static inline void glGetProgramInterfaceiv(GLuint program,
                                            GLenum programInterface,
-                                           GLenum pname, GLint *params)
-{
+                                           GLenum pname, GLint *params) {
   glad_glGetProgramInterfaceiv(program, programInterface, pname, params);
 }
 /**
@@ -8545,8 +8333,7 @@ static inline void glGetProgramInterfaceiv(GLuint program,
  * written the value or values of pname for pipeline.
  */
 static inline void glGetProgramPipelineiv(GLuint pipeline, GLenum pname,
-                                          GLint *params)
-{
+                                          GLint *params) {
   glad_glGetProgramPipelineiv(pipeline, pname, params);
 }
 /**
@@ -8566,8 +8353,8 @@ static inline void glGetProgramPipelineiv(GLuint pipeline, GLenum pname,
  * will be written the info log for pipeline.
  */
 static inline void glGetProgramPipelineInfoLog(GLuint pipeline, GLsizei bufSize,
-                                               GLsizei *length, GLchar *infoLog)
-{
+                                               GLsizei *length,
+                                               GLchar *infoLog) {
   glad_glGetProgramPipelineInfoLog(pipeline, bufSize, length, infoLog);
 }
 /**
@@ -8583,8 +8370,7 @@ static inline void glGetProgramResourceiv(GLuint program,
                                           GLenum programInterface, GLuint index,
                                           GLsizei propCount,
                                           const GLenum *props, GLsizei bufSize,
-                                          GLsizei *length, GLint *params)
-{
+                                          GLsizei *length, GLint *params) {
   glad_glGetProgramResourceiv(program, programInterface, index, propCount,
                               props, bufSize, length, params);
 }
@@ -8601,8 +8387,7 @@ static inline void glGetProgramResourceiv(GLuint program,
  */
 static inline GLuint glGetProgramResourceIndex(GLuint program,
                                                GLenum programInterface,
-                                               const char *name)
-{
+                                               const char *name) {
   return glad_glGetProgramResourceIndex(program, programInterface, name);
 }
 /**
@@ -8618,8 +8403,7 @@ static inline GLuint glGetProgramResourceIndex(GLuint program,
  */
 static inline GLint glGetProgramResourceLocation(GLuint program,
                                                  GLenum programInterface,
-                                                 const char *name)
-{
+                                                 const char *name) {
   return glad_glGetProgramResourceLocation(program, programInterface, name);
 }
 /**
@@ -8635,8 +8419,7 @@ static inline GLint glGetProgramResourceLocation(GLuint program,
  */
 static inline GLint glGetProgramResourceLocationIndex(GLuint program,
                                                       GLenum programInterface,
-                                                      const char *name)
-{
+                                                      const char *name) {
   return glad_glGetProgramResourceLocationIndex(program, programInterface,
                                                 name);
 }
@@ -8664,8 +8447,7 @@ static inline GLint glGetProgramResourceLocationIndex(GLuint program,
 static inline void glGetProgramResourceName(GLuint program,
                                             GLenum programInterface,
                                             GLuint index, GLsizei bufSize,
-                                            GLsizei *length, char *name)
-{
+                                            GLsizei *length, char *name) {
   glad_glGetProgramResourceName(program, programInterface, index, bufSize,
                                 length, name);
 }
@@ -8689,8 +8471,7 @@ static inline void glGetProgramResourceName(GLuint program,
  * value or values will be placed.
  */
 static inline void glGetProgramStageiv(GLuint program, GLenum shadertype,
-                                       GLenum pname, GLint *values)
-{
+                                       GLenum pname, GLint *values) {
   glad_glGetProgramStageiv(program, shadertype, pname, values);
 }
 /**
@@ -8709,8 +8490,7 @@ static inline void glGetProgramStageiv(GLuint program, GLenum shadertype,
  * @param [params] Returns the requested data.
  */
 static inline void glGetQueryIndexediv(GLenum target, GLuint index,
-                                       GLenum pname, GLint *params)
-{
+                                       GLenum pname, GLint *params) {
   glad_glGetQueryIndexediv(target, index, pname, params);
 }
 /**
@@ -8728,8 +8508,7 @@ static inline void glGetQueryIndexediv(GLenum target, GLuint index,
  * GL_QUERY_RESULT_BUFFER, then params is treated as an address in client
  * memory of a variable to receive the resulting data.
  */
-static inline void glGetQueryObjectiv(GLuint id, GLenum pname, GLint *params)
-{
+static inline void glGetQueryObjectiv(GLuint id, GLenum pname, GLint *params) {
   glad_glGetQueryObjectiv(id, pname, params);
 }
 /**
@@ -8747,8 +8526,8 @@ static inline void glGetQueryObjectiv(GLuint id, GLenum pname, GLint *params)
  * GL_QUERY_RESULT_BUFFER, then params is treated as an address in client
  * memory of a variable to receive the resulting data.
  */
-static inline void glGetQueryObjectuiv(GLuint id, GLenum pname, GLuint *params)
-{
+static inline void glGetQueryObjectuiv(GLuint id, GLenum pname,
+                                       GLuint *params) {
   glad_glGetQueryObjectuiv(id, pname, params);
 }
 /**
@@ -8767,8 +8546,7 @@ static inline void glGetQueryObjectuiv(GLuint id, GLenum pname, GLuint *params)
  * memory of a variable to receive the resulting data.
  */
 static inline void glGetQueryObjecti64v(GLuint id, GLenum pname,
-                                        GLint64 *params)
-{
+                                        GLint64 *params) {
   glad_glGetQueryObjecti64v(id, pname, params);
 }
 /**
@@ -8787,8 +8565,7 @@ static inline void glGetQueryObjecti64v(GLuint id, GLenum pname,
  * memory of a variable to receive the resulting data.
  */
 static inline void glGetQueryObjectui64v(GLuint id, GLenum pname,
-                                         GLuint64 *params)
-{
+                                         GLuint64 *params) {
   glad_glGetQueryObjectui64v(id, pname, params);
 }
 /**
@@ -8804,8 +8581,7 @@ static inline void glGetQueryObjectui64v(GLuint id, GLenum pname,
  *
  * @param [params] Returns the requested data.
  */
-static inline void glGetQueryiv(GLenum target, GLenum pname, GLint *params)
-{
+static inline void glGetQueryiv(GLenum target, GLenum pname, GLint *params) {
   glad_glGetQueryiv(target, pname, params);
 }
 /**
@@ -8824,8 +8600,7 @@ static inline void glGetQueryiv(GLenum target, GLenum pname, GLint *params)
  * object.
  */
 static inline void glGetRenderbufferParameteriv(GLenum target, GLenum pname,
-                                                GLint *params)
-{
+                                                GLint *params) {
   glad_glGetRenderbufferParameteriv(target, pname, params);
 }
 /**
@@ -8845,8 +8620,7 @@ static inline void glGetRenderbufferParameteriv(GLenum target, GLenum pname,
  */
 static inline void glGetNamedRenderbufferParameteriv(GLuint renderbuffer,
                                                      GLenum pname,
-                                                     GLint *params)
-{
+                                                     GLint *params) {
   glad_glGetNamedRenderbufferParameteriv(renderbuffer, pname, params);
 }
 /**
@@ -8864,8 +8638,7 @@ static inline void glGetNamedRenderbufferParameteriv(GLuint renderbuffer,
  * @param [params] Returns the sampler parameters.
  */
 static inline void glGetSamplerParameterfv(GLuint sampler, GLenum pname,
-                                           GLfloat *params)
-{
+                                           GLfloat *params) {
   glad_glGetSamplerParameterfv(sampler, pname, params);
 }
 /**
@@ -8883,8 +8656,7 @@ static inline void glGetSamplerParameterfv(GLuint sampler, GLenum pname,
  * @param [params] Returns the sampler parameters.
  */
 static inline void glGetSamplerParameteriv(GLuint sampler, GLenum pname,
-                                           GLint *params)
-{
+                                           GLint *params) {
   glad_glGetSamplerParameteriv(sampler, pname, params);
 }
 /**
@@ -8902,8 +8674,7 @@ static inline void glGetSamplerParameteriv(GLuint sampler, GLenum pname,
  * @param [params] Returns the sampler parameters.
  */
 static inline void glGetSamplerParameterIiv(GLuint sampler, GLenum pname,
-                                            GLint *params)
-{
+                                            GLint *params) {
   glad_glGetSamplerParameterIiv(sampler, pname, params);
 }
 /**
@@ -8921,8 +8692,7 @@ static inline void glGetSamplerParameterIiv(GLuint sampler, GLenum pname,
  * @param [params] Returns the sampler parameters.
  */
 static inline void glGetSamplerParameterIuiv(GLuint sampler, GLenum pname,
-                                             GLuint *params)
-{
+                                             GLuint *params) {
   glad_glGetSamplerParameterIuiv(sampler, pname, params);
 }
 /**
@@ -8936,8 +8706,7 @@ static inline void glGetSamplerParameterIuiv(GLuint sampler, GLenum pname,
  *
  * @param [params] Returns the requested object parameter.
  */
-static inline void glGetShaderiv(GLuint shader, GLenum pname, GLint *params)
-{
+static inline void glGetShaderiv(GLuint shader, GLenum pname, GLint *params) {
   glad_glGetShaderiv(shader, pname, params);
 }
 /**
@@ -8956,8 +8725,7 @@ static inline void glGetShaderiv(GLuint shader, GLenum pname, GLint *params)
  * the information log.
  */
 static inline void glGetShaderInfoLog(GLuint shader, GLsizei maxLength,
-                                      GLsizei *length, GLchar *infoLog)
-{
+                                      GLsizei *length, GLchar *infoLog) {
   glad_glGetShaderInfoLog(shader, maxLength, length, infoLog);
 }
 /**
@@ -8978,8 +8746,7 @@ static inline void glGetShaderInfoLog(GLuint shader, GLsizei maxLength,
  */
 static inline void glGetShaderPrecisionFormat(GLenum shaderType,
                                               GLenum precisionType,
-                                              GLint *range, GLint *precision)
-{
+                                              GLint *range, GLint *precision) {
   glad_glGetShaderPrecisionFormat(shaderType, precisionType, range, precision);
 }
 /**
@@ -8997,8 +8764,7 @@ static inline void glGetShaderPrecisionFormat(GLenum shaderType,
  * source code string.
  */
 static inline void glGetShaderSource(GLuint shader, GLsizei bufSize,
-                                     GLsizei *length, GLchar *source)
-{
+                                     GLsizei *length, GLchar *source) {
   glad_glGetShaderSource(shader, bufSize, length, source);
 }
 /**
@@ -9011,8 +8777,7 @@ static inline void glGetShaderSource(GLuint shader, GLsizei bufSize,
  * @param [index] For glGetStringi, specifies the index of the string to
  * return.
  */
-static inline const GLubyte *glGetString(GLenum name)
-{
+static inline const GLubyte *glGetString(GLenum name) {
   return glad_glGetString(name);
 }
 /**
@@ -9025,8 +8790,7 @@ static inline const GLubyte *glGetString(GLenum name)
  * @param [index] For glGetStringi, specifies the index of the string to
  * return.
  */
-static inline const GLubyte *glGetStringi(GLenum name, GLuint index)
-{
+static inline const GLubyte *glGetStringi(GLenum name, GLuint index) {
   return glad_glGetStringi(name, index);
 }
 /**
@@ -9044,8 +8808,7 @@ static inline const GLubyte *glGetStringi(GLenum name, GLuint index)
  * query.
  */
 static inline GLuint glGetSubroutineIndex(GLuint program, GLenum shadertype,
-                                          const GLchar *name)
-{
+                                          const GLchar *name) {
   return glad_glGetSubroutineIndex(program, shadertype, name);
 }
 /**
@@ -9064,8 +8827,7 @@ static inline GLuint glGetSubroutineIndex(GLuint program, GLenum shadertype,
  */
 static inline GLint glGetSubroutineUniformLocation(GLuint program,
                                                    GLenum shadertype,
-                                                   const GLchar *name)
-{
+                                                   const GLchar *name) {
   return glad_glGetSubroutineUniformLocation(program, shadertype, name);
 }
 /**
@@ -9086,8 +8848,7 @@ static inline GLint glGetSubroutineUniformLocation(GLuint program,
  * the queried parameter.
  */
 static inline void glGetSynciv(GLsync sync, GLenum pname, GLsizei bufSize,
-                               GLsizei *length, GLint *values)
-{
+                               GLsizei *length, GLint *values) {
   glad_glGetSynciv(sync, pname, bufSize, length, values);
 }
 /**
@@ -9133,8 +8894,7 @@ static inline void glGetSynciv(GLsync sync, GLenum pname, GLsizei bufSize,
  * of the type specified by type.
  */
 static inline void glGetTexImage(GLenum target, GLint level, GLenum format,
-                                 GLenum type, GLvoid *pixels)
-{
+                                 GLenum type, GLvoid *pixels) {
   glad_glGetTexImage(target, level, format, type, pixels);
 }
 /**
@@ -9180,8 +8940,7 @@ static inline void glGetTexImage(GLenum target, GLint level, GLenum format,
  * of the type specified by type.
  */
 static inline void glGetnTexImage(GLenum target, GLint level, GLenum format,
-                                  GLenum type, GLsizei bufSize, void *pixels)
-{
+                                  GLenum type, GLsizei bufSize, void *pixels) {
   glad_glGetnTexImage(target, level, format, type, bufSize, pixels);
 }
 /**
@@ -9227,8 +8986,8 @@ static inline void glGetnTexImage(GLenum target, GLint level, GLenum format,
  * of the type specified by type.
  */
 static inline void glGetTextureImage(GLuint texture, GLint level, GLenum format,
-                                     GLenum type, GLsizei bufSize, void *pixels)
-{
+                                     GLenum type, GLsizei bufSize,
+                                     void *pixels) {
   glad_glGetTextureImage(texture, level, format, type, bufSize, pixels);
 }
 /**
@@ -9265,8 +9024,7 @@ static inline void glGetTextureImage(GLuint texture, GLint level, GLenum format,
  * @param [params] Returns the requested data.
  */
 static inline void glGetTexLevelParameterfv(GLenum target, GLint level,
-                                            GLenum pname, GLfloat *params)
-{
+                                            GLenum pname, GLfloat *params) {
   glad_glGetTexLevelParameterfv(target, level, pname, params);
 }
 /**
@@ -9303,8 +9061,7 @@ static inline void glGetTexLevelParameterfv(GLenum target, GLint level,
  * @param [params] Returns the requested data.
  */
 static inline void glGetTexLevelParameteriv(GLenum target, GLint level,
-                                            GLenum pname, GLint *params)
-{
+                                            GLenum pname, GLint *params) {
   glad_glGetTexLevelParameteriv(target, level, pname, params);
 }
 /**
@@ -9341,8 +9098,7 @@ static inline void glGetTexLevelParameteriv(GLenum target, GLint level,
  * @param [params] Returns the requested data.
  */
 static inline void glGetTextureLevelParameterfv(GLuint texture, GLint level,
-                                                GLenum pname, GLfloat *params)
-{
+                                                GLenum pname, GLfloat *params) {
   glad_glGetTextureLevelParameterfv(texture, level, pname, params);
 }
 /**
@@ -9379,8 +9135,7 @@ static inline void glGetTextureLevelParameterfv(GLuint texture, GLint level,
  * @param [params] Returns the requested data.
  */
 static inline void glGetTextureLevelParameteriv(GLuint texture, GLint level,
-                                                GLenum pname, GLint *params)
-{
+                                                GLenum pname, GLint *params) {
   glad_glGetTextureLevelParameteriv(texture, level, pname, params);
 }
 /**
@@ -9412,8 +9167,7 @@ static inline void glGetTextureLevelParameteriv(GLuint texture, GLint level,
  * @param [params] Returns the texture parameters.
  */
 static inline void glGetTexParameterfv(GLenum target, GLenum pname,
-                                       GLfloat *params)
-{
+                                       GLfloat *params) {
   glad_glGetTexParameterfv(target, pname, params);
 }
 /**
@@ -9445,8 +9199,7 @@ static inline void glGetTexParameterfv(GLenum target, GLenum pname,
  * @param [params] Returns the texture parameters.
  */
 static inline void glGetTexParameteriv(GLenum target, GLenum pname,
-                                       GLint *params)
-{
+                                       GLint *params) {
   glad_glGetTexParameteriv(target, pname, params);
 }
 /**
@@ -9478,8 +9231,7 @@ static inline void glGetTexParameteriv(GLenum target, GLenum pname,
  * @param [params] Returns the texture parameters.
  */
 static inline void glGetTexParameterIiv(GLenum target, GLenum pname,
-                                        GLint *params)
-{
+                                        GLint *params) {
   glad_glGetTexParameterIiv(target, pname, params);
 }
 /**
@@ -9511,8 +9263,7 @@ static inline void glGetTexParameterIiv(GLenum target, GLenum pname,
  * @param [params] Returns the texture parameters.
  */
 static inline void glGetTexParameterIuiv(GLenum target, GLenum pname,
-                                         GLuint *params)
-{
+                                         GLuint *params) {
   glad_glGetTexParameterIuiv(target, pname, params);
 }
 /**
@@ -9544,8 +9295,7 @@ static inline void glGetTexParameterIuiv(GLenum target, GLenum pname,
  * @param [params] Returns the texture parameters.
  */
 static inline void glGetTextureParameterfv(GLuint texture, GLenum pname,
-                                           GLfloat *params)
-{
+                                           GLfloat *params) {
   glad_glGetTextureParameterfv(texture, pname, params);
 }
 /**
@@ -9577,8 +9327,7 @@ static inline void glGetTextureParameterfv(GLuint texture, GLenum pname,
  * @param [params] Returns the texture parameters.
  */
 static inline void glGetTextureParameteriv(GLuint texture, GLenum pname,
-                                           GLint *params)
-{
+                                           GLint *params) {
   glad_glGetTextureParameteriv(texture, pname, params);
 }
 /**
@@ -9610,8 +9359,7 @@ static inline void glGetTextureParameteriv(GLuint texture, GLenum pname,
  * @param [params] Returns the texture parameters.
  */
 static inline void glGetTextureParameterIiv(GLuint texture, GLenum pname,
-                                            GLint *params)
-{
+                                            GLint *params) {
   glad_glGetTextureParameterIiv(texture, pname, params);
 }
 /**
@@ -9643,8 +9391,7 @@ static inline void glGetTextureParameterIiv(GLuint texture, GLenum pname,
  * @param [params] Returns the texture parameters.
  */
 static inline void glGetTextureParameterIuiv(GLuint texture, GLenum pname,
-                                             GLuint *params)
-{
+                                             GLuint *params) {
   glad_glGetTextureParameterIuiv(texture, pname, params);
 }
 /**
@@ -9700,8 +9447,7 @@ static inline void glGetTextureSubImage(GLuint texture, GLint level,
                                         GLint zoffset, GLsizei width,
                                         GLsizei height, GLsizei depth,
                                         GLenum format, GLenum type,
-                                        GLsizei bufSize, void *pixels)
-{
+                                        GLsizei bufSize, void *pixels) {
   glad_glGetTextureSubImage(texture, level, xoffset, yoffset, zoffset, width,
                             height, depth, format, type, bufSize, pixels);
 }
@@ -9722,8 +9468,7 @@ static inline void glGetTextureSubImage(GLuint texture, GLint level,
  * requested state information.
  */
 static inline void glGetTransformFeedbackiv(GLuint xfb, GLenum pname,
-                                            GLint *param)
-{
+                                            GLint *param) {
   glad_glGetTransformFeedbackiv(xfb, pname, param);
 }
 /**
@@ -9743,8 +9488,7 @@ static inline void glGetTransformFeedbackiv(GLuint xfb, GLenum pname,
  * requested state information.
  */
 static inline void glGetTransformFeedbacki_v(GLuint xfb, GLenum pname,
-                                             GLuint index, GLint *param)
-{
+                                             GLuint index, GLint *param) {
   glad_glGetTransformFeedbacki_v(xfb, pname, index, param);
 }
 /**
@@ -9764,8 +9508,7 @@ static inline void glGetTransformFeedbacki_v(GLuint xfb, GLenum pname,
  * requested state information.
  */
 static inline void glGetTransformFeedbacki64_v(GLuint xfb, GLenum pname,
-                                               GLuint index, GLint64 *param)
-{
+                                               GLuint index, GLint64 *param) {
   glad_glGetTransformFeedbacki64_v(xfb, pname, index, param);
 }
 /**
@@ -9796,8 +9539,7 @@ static inline void glGetTransformFeedbacki64_v(GLuint xfb, GLenum pname,
 static inline void glGetTransformFeedbackVarying(GLuint program, GLuint index,
                                                  GLsizei bufSize,
                                                  GLsizei *length, GLsizei *size,
-                                                 GLenum *type, char *name)
-{
+                                                 GLenum *type, char *name) {
   glad_glGetTransformFeedbackVarying(program, index, bufSize, length, size,
                                      type, name);
 }
@@ -9814,8 +9556,7 @@ static inline void glGetTransformFeedbackVarying(GLuint program, GLuint index,
  * @param [params] Returns the value of the specified uniform variable.
  */
 static inline void glGetUniformfv(GLuint program, GLint location,
-                                  GLfloat *params)
-{
+                                  GLfloat *params) {
   glad_glGetUniformfv(program, location, params);
 }
 /**
@@ -9830,8 +9571,8 @@ static inline void glGetUniformfv(GLuint program, GLint location,
  *
  * @param [params] Returns the value of the specified uniform variable.
  */
-static inline void glGetUniformiv(GLuint program, GLint location, GLint *params)
-{
+static inline void glGetUniformiv(GLuint program, GLint location,
+                                  GLint *params) {
   glad_glGetUniformiv(program, location, params);
 }
 /**
@@ -9847,8 +9588,7 @@ static inline void glGetUniformiv(GLuint program, GLint location, GLint *params)
  * @param [params] Returns the value of the specified uniform variable.
  */
 static inline void glGetUniformuiv(GLuint program, GLint location,
-                                   GLuint *params)
-{
+                                   GLuint *params) {
   glad_glGetUniformuiv(program, location, params);
 }
 /**
@@ -9864,8 +9604,7 @@ static inline void glGetUniformuiv(GLuint program, GLint location,
  * @param [params] Returns the value of the specified uniform variable.
  */
 static inline void glGetUniformdv(GLuint program, GLint location,
-                                  GLdouble *params)
-{
+                                  GLdouble *params) {
   glad_glGetUniformdv(program, location, params);
 }
 /**
@@ -9881,8 +9620,7 @@ static inline void glGetUniformdv(GLuint program, GLint location,
  * @param [params] Returns the value of the specified uniform variable.
  */
 static inline void glGetnUniformfv(GLuint program, GLint location,
-                                   GLsizei bufSize, GLfloat *params)
-{
+                                   GLsizei bufSize, GLfloat *params) {
   glad_glGetnUniformfv(program, location, bufSize, params);
 }
 /**
@@ -9898,8 +9636,7 @@ static inline void glGetnUniformfv(GLuint program, GLint location,
  * @param [params] Returns the value of the specified uniform variable.
  */
 static inline void glGetnUniformiv(GLuint program, GLint location,
-                                   GLsizei bufSize, GLint *params)
-{
+                                   GLsizei bufSize, GLint *params) {
   glad_glGetnUniformiv(program, location, bufSize, params);
 }
 /**
@@ -9915,8 +9652,7 @@ static inline void glGetnUniformiv(GLuint program, GLint location,
  * @param [params] Returns the value of the specified uniform variable.
  */
 static inline void glGetnUniformuiv(GLuint program, GLint location,
-                                    GLsizei bufSize, GLuint *params)
-{
+                                    GLsizei bufSize, GLuint *params) {
   glad_glGetnUniformuiv(program, location, bufSize, params);
 }
 /**
@@ -9932,8 +9668,7 @@ static inline void glGetnUniformuiv(GLuint program, GLint location,
  * @param [params] Returns the value of the specified uniform variable.
  */
 static inline void glGetnUniformdv(GLuint program, GLint location,
-                                   GLsizei bufSize, GLdouble *params)
-{
+                                   GLsizei bufSize, GLdouble *params) {
   glad_glGetnUniformdv(program, location, bufSize, params);
 }
 /**
@@ -9946,8 +9681,7 @@ static inline void glGetnUniformdv(GLuint program, GLint location,
  * containing the name of the uniform block whose index to retrieve.
  */
 static inline GLuint glGetUniformBlockIndex(GLuint program,
-                                            const GLchar *uniformBlockName)
-{
+                                            const GLchar *uniformBlockName) {
   return glad_glGetUniformBlockIndex(program, uniformBlockName);
 }
 /**
@@ -9967,8 +9701,7 @@ static inline GLuint glGetUniformBlockIndex(GLuint program,
  */
 static inline void glGetUniformIndices(GLuint program, GLsizei uniformCount,
                                        const GLchar **uniformNames,
-                                       GLuint *uniformIndices)
-{
+                                       GLuint *uniformIndices) {
   glad_glGetUniformIndices(program, uniformCount, uniformNames, uniformIndices);
 }
 /**
@@ -9979,8 +9712,7 @@ static inline void glGetUniformIndices(GLuint program, GLsizei uniformCount,
  * @param [name] Points to a null terminated string containing the name of the
  * uniform variable whose location is to be queried.
  */
-static inline GLint glGetUniformLocation(GLuint program, const GLchar *name)
-{
+static inline GLint glGetUniformLocation(GLuint program, const GLchar *name) {
   return glad_glGetUniformLocation(program, name);
 }
 /**
@@ -9998,8 +9730,7 @@ static inline GLint glGetUniformLocation(GLuint program, const GLchar *name)
  * values of the subroutine uniform.
  */
 static inline void glGetUniformSubroutineuiv(GLenum shadertype, GLint location,
-                                             GLuint *values)
-{
+                                             GLuint *values) {
   glad_glGetUniformSubroutineuiv(shadertype, location, values);
 }
 /**
@@ -10023,8 +9754,7 @@ static inline void glGetUniformSubroutineuiv(GLenum shadertype, GLint location,
  * @param [param] Returns the requested value.
  */
 static inline void glGetVertexArrayIndexed64iv(GLuint vaobj, GLuint index,
-                                               GLenum pname, GLint64 *param)
-{
+                                               GLenum pname, GLint64 *param) {
   glad_glGetVertexArrayIndexed64iv(vaobj, index, pname, param);
 }
 /**
@@ -10048,8 +9778,7 @@ static inline void glGetVertexArrayIndexed64iv(GLuint vaobj, GLuint index,
  * @param [param] Returns the requested value.
  */
 static inline void glGetVertexArrayIndexediv(GLuint vaobj, GLuint index,
-                                             GLenum pname, GLint *param)
-{
+                                             GLenum pname, GLint *param) {
   glad_glGetVertexArrayIndexediv(vaobj, index, pname, param);
 }
 /**
@@ -10063,8 +9792,8 @@ static inline void glGetVertexArrayIndexediv(GLuint vaobj, GLuint index,
  *
  * @param [param] Returns the requested value.
  */
-static inline void glGetVertexArrayiv(GLuint vaobj, GLenum pname, GLint *param)
-{
+static inline void glGetVertexArrayiv(GLuint vaobj, GLenum pname,
+                                      GLint *param) {
   glad_glGetVertexArrayiv(vaobj, pname, param);
 }
 /**
@@ -10084,8 +9813,7 @@ static inline void glGetVertexArrayiv(GLuint vaobj, GLenum pname, GLint *param)
  * @param [params] Returns the requested data.
  */
 static inline void glGetVertexAttribdv(GLuint index, GLenum pname,
-                                       GLdouble *params)
-{
+                                       GLdouble *params) {
   glad_glGetVertexAttribdv(index, pname, params);
 }
 /**
@@ -10105,8 +9833,7 @@ static inline void glGetVertexAttribdv(GLuint index, GLenum pname,
  * @param [params] Returns the requested data.
  */
 static inline void glGetVertexAttribfv(GLuint index, GLenum pname,
-                                       GLfloat *params)
-{
+                                       GLfloat *params) {
   glad_glGetVertexAttribfv(index, pname, params);
 }
 /**
@@ -10126,8 +9853,7 @@ static inline void glGetVertexAttribfv(GLuint index, GLenum pname,
  * @param [params] Returns the requested data.
  */
 static inline void glGetVertexAttribiv(GLuint index, GLenum pname,
-                                       GLint *params)
-{
+                                       GLint *params) {
   glad_glGetVertexAttribiv(index, pname, params);
 }
 /**
@@ -10147,8 +9873,7 @@ static inline void glGetVertexAttribiv(GLuint index, GLenum pname,
  * @param [params] Returns the requested data.
  */
 static inline void glGetVertexAttribIiv(GLuint index, GLenum pname,
-                                        GLint *params)
-{
+                                        GLint *params) {
   glad_glGetVertexAttribIiv(index, pname, params);
 }
 /**
@@ -10168,8 +9893,7 @@ static inline void glGetVertexAttribIiv(GLuint index, GLenum pname,
  * @param [params] Returns the requested data.
  */
 static inline void glGetVertexAttribIuiv(GLuint index, GLenum pname,
-                                         GLuint *params)
-{
+                                         GLuint *params) {
   glad_glGetVertexAttribIuiv(index, pname, params);
 }
 /**
@@ -10189,8 +9913,7 @@ static inline void glGetVertexAttribIuiv(GLuint index, GLenum pname,
  * @param [params] Returns the requested data.
  */
 static inline void glGetVertexAttribLdv(GLuint index, GLenum pname,
-                                        GLdouble *params)
-{
+                                        GLdouble *params) {
   glad_glGetVertexAttribLdv(index, pname, params);
 }
 /**
@@ -10206,8 +9929,7 @@ static inline void glGetVertexAttribLdv(GLuint index, GLenum pname,
  * @param [pointer] Returns the pointer value.
  */
 static inline void glGetVertexAttribPointerv(GLuint index, GLenum pname,
-                                             GLvoid **pointer)
-{
+                                             GLvoid **pointer) {
   glad_glGetVertexAttribPointerv(index, pname, pointer);
 }
 /**
@@ -10221,8 +9943,7 @@ static inline void glGetVertexAttribPointerv(GLuint index, GLenum pname,
  * @param [mode] Specifies a symbolic constant indicating the desired
  * behavior. GL_FASTEST, GL_NICEST, and GL_DONT_CARE are accepted.
  */
-static inline void glHint(GLenum target, GLenum mode)
-{
+static inline void glHint(GLenum target, GLenum mode) {
   glad_glHint(target, mode);
 }
 /**
@@ -10231,8 +9952,7 @@ static inline void glHint(GLenum target, GLenum mode)
  *
  * @param [buffer] The name of a buffer object whose data store to invalidate.
  */
-static inline void glInvalidateBufferData(GLuint buffer)
-{
+static inline void glInvalidateBufferData(GLuint buffer) {
   glad_glInvalidateBufferData(buffer);
 }
 /**
@@ -10249,8 +9969,7 @@ static inline void glInvalidateBufferData(GLuint buffer)
  * be invalidated.
  */
 static inline void glInvalidateBufferSubData(GLuint buffer, GLintptr offset,
-                                             GLsizeiptr length)
-{
+                                             GLsizeiptr length) {
   glad_glInvalidateBufferSubData(buffer, offset, length);
 }
 /**
@@ -10271,8 +9990,7 @@ static inline void glInvalidateBufferSubData(GLuint buffer, GLintptr offset,
  */
 static inline void glInvalidateFramebuffer(GLenum target,
                                            GLsizei numAttachments,
-                                           const GLenum *attachments)
-{
+                                           const GLenum *attachments) {
   glad_glInvalidateFramebuffer(target, numAttachments, attachments);
 }
 /**
@@ -10293,8 +10011,7 @@ static inline void glInvalidateFramebuffer(GLenum target,
  */
 static inline void glInvalidateNamedFramebufferData(GLuint framebuffer,
                                                     GLsizei numAttachments,
-                                                    const GLenum *attachments)
-{
+                                                    const GLenum *attachments) {
   glad_glInvalidateNamedFramebufferData(framebuffer, numAttachments,
                                         attachments);
 }
@@ -10327,8 +10044,7 @@ static inline void glInvalidateSubFramebuffer(GLenum target,
                                               GLsizei numAttachments,
                                               const GLenum *attachments,
                                               GLint x, GLint y, GLint width,
-                                              GLint height)
-{
+                                              GLint height) {
   glad_glInvalidateSubFramebuffer(target, numAttachments, attachments, x, y,
                                   width, height);
 }
@@ -10360,8 +10076,7 @@ static inline void glInvalidateSubFramebuffer(GLenum target,
 static inline void
 glInvalidateNamedFramebufferSubData(GLuint framebuffer, GLsizei numAttachments,
                                     const GLenum *attachments, GLint x, GLint y,
-                                    GLsizei width, GLsizei height)
-{
+                                    GLsizei width, GLsizei height) {
   glad_glInvalidateNamedFramebufferSubData(framebuffer, numAttachments,
                                            attachments, x, y, width, height);
 }
@@ -10372,8 +10087,7 @@ glInvalidateNamedFramebufferSubData(GLuint framebuffer, GLsizei numAttachments,
  *
  * @param [level] The level of detail of the texture object to invalidate.
  */
-static inline void glInvalidateTexImage(GLuint texture, GLint level)
-{
+static inline void glInvalidateTexImage(GLuint texture, GLint level) {
   glad_glInvalidateTexImage(texture, level);
 }
 /**
@@ -10400,8 +10114,7 @@ static inline void glInvalidateTexImage(GLuint texture, GLint level)
 static inline void glInvalidateTexSubImage(GLuint texture, GLint level,
                                            GLint xoffset, GLint yoffset,
                                            GLint zoffset, GLsizei width,
-                                           GLsizei height, GLsizei depth)
-{
+                                           GLsizei height, GLsizei depth) {
   glad_glInvalidateTexSubImage(texture, level, xoffset, yoffset, zoffset, width,
                                height, depth);
 }
@@ -10410,8 +10123,7 @@ static inline void glInvalidateTexSubImage(GLuint texture, GLint level,
  *
  * @param [buffer] Specifies a value that may be the name of a buffer object.
  */
-static inline GLboolean glIsBuffer(GLuint buffer)
-{
+static inline GLboolean glIsBuffer(GLuint buffer) {
   return glad_glIsBuffer(buffer);
 }
 /**
@@ -10421,8 +10133,7 @@ static inline GLboolean glIsBuffer(GLuint buffer)
  *
  * @param [index] Specifies the index of the capability.
  */
-static inline GLboolean glIsEnabled(GLenum cap)
-{
+static inline GLboolean glIsEnabled(GLenum cap) {
   return glad_glIsEnabled(cap);
 }
 /**
@@ -10432,8 +10143,7 @@ static inline GLboolean glIsEnabled(GLenum cap)
  *
  * @param [index] Specifies the index of the capability.
  */
-static inline GLboolean glIsEnabledi(GLenum cap, GLuint index)
-{
+static inline GLboolean glIsEnabledi(GLenum cap, GLuint index) {
   return glad_glIsEnabledi(cap, index);
 }
 /**
@@ -10442,8 +10152,7 @@ static inline GLboolean glIsEnabledi(GLenum cap, GLuint index)
  * @param [framebuffer] Specifies a value that may be the name of a
  * framebuffer object.
  */
-static inline GLboolean glIsFramebuffer(GLuint framebuffer)
-{
+static inline GLboolean glIsFramebuffer(GLuint framebuffer) {
   return glad_glIsFramebuffer(framebuffer);
 }
 /**
@@ -10451,8 +10160,7 @@ static inline GLboolean glIsFramebuffer(GLuint framebuffer)
  *
  * @param [program] Specifies a potential program object.
  */
-static inline GLboolean glIsProgram(GLuint program)
-{
+static inline GLboolean glIsProgram(GLuint program) {
   return glad_glIsProgram(program);
 }
 /**
@@ -10462,8 +10170,7 @@ static inline GLboolean glIsProgram(GLuint program)
  * @param [pipeline] Specifies a value that may be the name of a program
  * pipeline object.
  */
-static inline GLboolean glIsProgramPipeline(GLuint pipeline)
-{
+static inline GLboolean glIsProgramPipeline(GLuint pipeline) {
   return glad_glIsProgramPipeline(pipeline);
 }
 /**
@@ -10478,8 +10185,7 @@ static inline GLboolean glIsQuery(GLuint id) { return glad_glIsQuery(id); }
  * @param [renderbuffer] Specifies a value that may be the name of a
  * renderbuffer object.
  */
-static inline GLboolean glIsRenderbuffer(GLuint renderbuffer)
-{
+static inline GLboolean glIsRenderbuffer(GLuint renderbuffer) {
   return glad_glIsRenderbuffer(renderbuffer);
 }
 /**
@@ -10493,8 +10199,7 @@ static inline GLboolean glIsSampler(GLuint id) { return glad_glIsSampler(id); }
  *
  * @param [shader] Specifies a potential shader object.
  */
-static inline GLboolean glIsShader(GLuint shader)
-{
+static inline GLboolean glIsShader(GLuint shader) {
   return glad_glIsShader(shader);
 }
 /**
@@ -10508,8 +10213,7 @@ static inline GLboolean glIsSync(GLsync sync) { return glad_glIsSync(sync); }
  *
  * @param [texture] Specifies a value that may be the name of a texture.
  */
-static inline GLboolean glIsTexture(GLuint texture)
-{
+static inline GLboolean glIsTexture(GLuint texture) {
   return glad_glIsTexture(texture);
 }
 /**
@@ -10519,8 +10223,7 @@ static inline GLboolean glIsTexture(GLuint texture)
  * @param [id] Specifies a value that may be the name of a transform feedback
  * object.
  */
-static inline GLboolean glIsTransformFeedback(GLuint id)
-{
+static inline GLboolean glIsTransformFeedback(GLuint id) {
   return glad_glIsTransformFeedback(id);
 }
 /**
@@ -10529,8 +10232,7 @@ static inline GLboolean glIsTransformFeedback(GLuint id)
  * @param [array] Specifies a value that may be the name of a vertex array
  * object.
  */
-static inline GLboolean glIsVertexArray(GLuint array)
-{
+static inline GLboolean glIsVertexArray(GLuint array) {
   return glad_glIsVertexArray(array);
 }
 /**
@@ -10545,8 +10247,7 @@ static inline void glLineWidth(GLfloat width) { glad_glLineWidth(width); }
  *
  * @param [program] Specifies the handle of the program object to be linked.
  */
-static inline void glLinkProgram(GLuint program)
-{
+static inline void glLinkProgram(GLuint program) {
   glad_glLinkProgram(program);
 }
 /**
@@ -10591,8 +10292,7 @@ static inline void glLogicOp(GLenum opcode) { glad_glLogicOp(opcode); }
  * store. The symbolic constant must be GL_READ_ONLY, GL_WRITE_ONLY, or
  * GL_READ_WRITE.
  */
-static inline void *glMapBuffer(GLenum target, GLenum access)
-{
+static inline void *glMapBuffer(GLenum target, GLenum access) {
   return glad_glMapBuffer(target, access);
 }
 /**
@@ -10627,8 +10327,7 @@ static inline void *glMapBuffer(GLenum target, GLenum access)
  * store. The symbolic constant must be GL_READ_ONLY, GL_WRITE_ONLY, or
  * GL_READ_WRITE.
  */
-static inline void *glMapNamedBuffer(GLuint buffer, GLenum access)
-{
+static inline void *glMapNamedBuffer(GLuint buffer, GLenum access) {
   return glad_glMapNamedBuffer(buffer, access);
 }
 /**
@@ -10666,8 +10365,7 @@ static inline void *glMapNamedBuffer(GLuint buffer, GLenum access)
  * desired access to the mapped range.
  */
 static inline void *glMapBufferRange(GLenum target, GLintptr offset,
-                                     GLsizeiptr length, GLbitfield access)
-{
+                                     GLsizeiptr length, GLbitfield access) {
   return glad_glMapBufferRange(target, offset, length, access);
 }
 /**
@@ -10705,8 +10403,7 @@ static inline void *glMapBufferRange(GLenum target, GLintptr offset,
  * desired access to the mapped range.
  */
 static inline void *glMapNamedBufferRange(GLuint buffer, GLintptr offset,
-                                          GLsizei length, GLbitfield access)
-{
+                                          GLsizei length, GLbitfield access) {
   return glad_glMapNamedBufferRange(buffer, offset, length, access);
 }
 /**
@@ -10714,8 +10411,7 @@ static inline void *glMapNamedBufferRange(GLuint buffer, GLintptr offset,
  *
  * @param [barriers] Specifies the barriers to insert.
  */
-static inline void glMemoryBarrier(GLbitfield barriers)
-{
+static inline void glMemoryBarrier(GLbitfield barriers) {
   glad_glMemoryBarrier(barriers);
 }
 /**
@@ -10723,8 +10419,7 @@ static inline void glMemoryBarrier(GLbitfield barriers)
  *
  * @param [barriers] Specifies the barriers to insert.
  */
-static inline void glMemoryBarrierByRegion(GLbitfield barriers)
-{
+static inline void glMemoryBarrierByRegion(GLbitfield barriers) {
   glad_glMemoryBarrierByRegion(barriers);
 }
 /**
@@ -10734,8 +10429,7 @@ static inline void glMemoryBarrierByRegion(GLbitfield barriers)
  * @param [value] Specifies the rate at which samples are shaded within each
  * covered pixel.
  */
-static inline void glMinSampleShading(GLfloat value)
-{
+static inline void glMinSampleShading(GLfloat value) {
   glad_glMinSampleShading(value);
 }
 /**
@@ -10755,8 +10449,7 @@ static inline void glMinSampleShading(GLfloat value)
  * @param [drawcount] Specifies the size of the first and count
  */
 static inline void glMultiDrawArrays(GLenum mode, const GLint *first,
-                                     const GLsizei *count, GLsizei drawcount)
-{
+                                     const GLsizei *count, GLsizei drawcount) {
   glad_glMultiDrawArrays(mode, first, count, drawcount);
 }
 /**
@@ -10779,8 +10472,8 @@ static inline void glMultiDrawArrays(GLenum mode, const GLint *first,
  * elements of the draw parameter array.
  */
 static inline void glMultiDrawArraysIndirect(GLenum mode, const void *indirect,
-                                             GLsizei drawcount, GLsizei stride)
-{
+                                             GLsizei drawcount,
+                                             GLsizei stride) {
   glad_glMultiDrawArraysIndirect(mode, indirect, drawcount, stride);
 }
 /**
@@ -10806,8 +10499,7 @@ static inline void glMultiDrawArraysIndirect(GLenum mode, const void *indirect,
 static inline void glMultiDrawElements(GLenum mode, const GLsizei *count,
                                        GLenum type,
                                        const GLvoid *const *indices,
-                                       GLsizei drawcount)
-{
+                                       GLsizei drawcount) {
   glad_glMultiDrawElements(mode, count, type, indices, drawcount);
 }
 /**
@@ -10838,8 +10530,7 @@ static inline void glMultiDrawElements(GLenum mode, const GLsizei *count,
 static inline void
 glMultiDrawElementsBaseVertex(GLenum mode, const GLsizei *count, GLenum type,
                               const GLvoid *const *indices, GLsizei drawcount,
-                              const GLint *basevertex)
-{
+                              const GLint *basevertex) {
   glad_glMultiDrawElementsBaseVertex(mode, count, type, indices, drawcount,
                                      basevertex);
 }
@@ -10868,8 +10559,7 @@ glMultiDrawElementsBaseVertex(GLenum mode, const GLsizei *count, GLenum type,
 static inline void glMultiDrawElementsIndirect(GLenum mode, GLenum type,
                                                const void *indirect,
                                                GLsizei drawcount,
-                                               GLsizei stride)
-{
+                                               GLsizei stride) {
   glad_glMultiDrawElementsIndirect(mode, type, indirect, drawcount, stride);
 }
 /**
@@ -10886,8 +10576,7 @@ static inline void glMultiDrawElementsIndirect(GLenum mode, GLenum type,
  * the object.
  */
 static inline void glObjectLabel(GLenum identifier, GLuint name, GLsizei length,
-                                 const char *label)
-{
+                                 const char *label) {
   glad_glObjectLabel(identifier, name, length, label);
 }
 /**
@@ -10901,8 +10590,7 @@ static inline void glObjectLabel(GLenum identifier, GLuint name, GLsizei length,
  * the object.
  */
 static inline void glObjectPtrLabel(void *ptr, GLsizei length,
-                                    const char *label)
-{
+                                    const char *label) {
   glad_glObjectPtrLabel(ptr, length, label);
 }
 /**
@@ -10917,8 +10605,7 @@ static inline void glObjectPtrLabel(void *ptr, GLsizei length,
  * @param [values] Specifies the address of an array containing the new values
  * for the parameter given by pname.
  */
-static inline void glPatchParameteri(GLenum pname, GLint value)
-{
+static inline void glPatchParameteri(GLenum pname, GLint value) {
   glad_glPatchParameteri(pname, value);
 }
 /**
@@ -10933,15 +10620,13 @@ static inline void glPatchParameteri(GLenum pname, GLint value)
  * @param [values] Specifies the address of an array containing the new values
  * for the parameter given by pname.
  */
-static inline void glPatchParameterfv(GLenum pname, const GLfloat *values)
-{
+static inline void glPatchParameterfv(GLenum pname, const GLfloat *values) {
   glad_glPatchParameterfv(pname, values);
 }
 /**
  * glPauseTransformFeedback — pause transform feedback operations
  */
-static inline void glPauseTransformFeedback(void)
-{
+static inline void glPauseTransformFeedback(void) {
   glad_glPauseTransformFeedback();
 }
 /**
@@ -10958,8 +10643,7 @@ static inline void glPauseTransformFeedback(void)
  *
  * @param [param] Specifies the value that pname is set to.
  */
-static inline void glPixelStoref(GLenum pname, GLfloat param)
-{
+static inline void glPixelStoref(GLenum pname, GLfloat param) {
   glad_glPixelStoref(pname, param);
 }
 /**
@@ -10976,8 +10660,7 @@ static inline void glPixelStoref(GLenum pname, GLfloat param)
  *
  * @param [param] Specifies the value that pname is set to.
  */
-static inline void glPixelStorei(GLenum pname, GLint param)
-{
+static inline void glPixelStorei(GLenum pname, GLint param) {
   glad_glPixelStorei(pname, param);
 }
 /**
@@ -10994,8 +10677,7 @@ static inline void glPixelStorei(GLenum pname, GLint param)
  * pointer to an array where the value or values to be assigned to pname are
  * stored.
  */
-static inline void glPointParameterf(GLenum pname, GLfloat param)
-{
+static inline void glPointParameterf(GLenum pname, GLfloat param) {
   glad_glPointParameterf(pname, param);
 }
 /**
@@ -11012,8 +10694,7 @@ static inline void glPointParameterf(GLenum pname, GLfloat param)
  * pointer to an array where the value or values to be assigned to pname are
  * stored.
  */
-static inline void glPointParameteri(GLenum pname, GLint param)
-{
+static inline void glPointParameteri(GLenum pname, GLint param) {
   glad_glPointParameteri(pname, param);
 }
 /**
@@ -11030,8 +10711,7 @@ static inline void glPointParameteri(GLenum pname, GLint param)
  * pointer to an array where the value or values to be assigned to pname are
  * stored.
  */
-static inline void glPointParameterfv(GLenum pname, const GLfloat *params)
-{
+static inline void glPointParameterfv(GLenum pname, const GLfloat *params) {
   glad_glPointParameterfv(pname, params);
 }
 /**
@@ -11048,8 +10728,7 @@ static inline void glPointParameterfv(GLenum pname, const GLfloat *params)
  * pointer to an array where the value or values to be assigned to pname are
  * stored.
  */
-static inline void glPointParameteriv(GLenum pname, const GLint *params)
-{
+static inline void glPointParameteriv(GLenum pname, const GLint *params) {
   glad_glPointParameteriv(pname, params);
 }
 /**
@@ -11069,8 +10748,7 @@ static inline void glPointSize(GLfloat size) { glad_glPointSize(size); }
  * are GL_POINT, GL_LINE, and GL_FILL. The initial value is GL_FILL for both
  * front- and back-facing polygons.
  */
-static inline void glPolygonMode(GLenum face, GLenum mode)
-{
+static inline void glPolygonMode(GLenum face, GLenum mode) {
   glad_glPolygonMode(face, mode);
 }
 /**
@@ -11082,8 +10760,7 @@ static inline void glPolygonMode(GLenum face, GLenum mode)
  * @param [units] Is multiplied by an implementation-specific value to create
  * a constant depth offset. The initial value is 0.
  */
-static inline void glPolygonOffset(GLfloat factor, GLfloat units)
-{
+static inline void glPolygonOffset(GLfloat factor, GLfloat units) {
   glad_glPolygonOffset(factor, units);
 }
 /**
@@ -11096,8 +10773,7 @@ static inline void glPopDebugGroup(void) { glad_glPopDebugGroup(); }
  * @param [index] Specifies the value to be interpreted as the primitive
  * restart index.
  */
-static inline void glPrimitiveRestartIndex(GLuint index)
-{
+static inline void glPrimitiveRestartIndex(GLuint index) {
   glad_glPrimitiveRestartIndex(index);
 }
 /**
@@ -11114,8 +10790,7 @@ static inline void glPrimitiveRestartIndex(GLuint index)
  * @param [length] Specifies the number of bytes contained in binary.
  */
 static inline void glProgramBinary(GLuint program, GLenum binaryFormat,
-                                   const void *binary, GLsizei length)
-{
+                                   const void *binary, GLsizei length) {
   glad_glProgramBinary(program, binaryFormat, binary, length);
 }
 /**
@@ -11130,8 +10805,7 @@ static inline void glProgramBinary(GLuint program, GLenum binaryFormat,
  * for program.
  */
 static inline void glProgramParameteri(GLuint program, GLenum pname,
-                                       GLint value)
-{
+                                       GLint value) {
   glad_glProgramParameteri(program, pname, value);
 }
 /**
@@ -11159,8 +10833,7 @@ static inline void glProgramParameteri(GLuint program, GLenum pname,
  * variable.
  */
 static inline void glProgramUniform1f(GLuint program, GLint location,
-                                      GLfloat v0)
-{
+                                      GLfloat v0) {
   glad_glProgramUniform1f(program, location, v0);
 }
 /**
@@ -11188,8 +10861,7 @@ static inline void glProgramUniform1f(GLuint program, GLint location,
  * variable.
  */
 static inline void glProgramUniform2f(GLuint program, GLint location,
-                                      GLfloat v0, GLfloat v1)
-{
+                                      GLfloat v0, GLfloat v1) {
   glad_glProgramUniform2f(program, location, v0, v1);
 }
 /**
@@ -11217,8 +10889,7 @@ static inline void glProgramUniform2f(GLuint program, GLint location,
  * variable.
  */
 static inline void glProgramUniform3f(GLuint program, GLint location,
-                                      GLfloat v0, GLfloat v1, GLfloat v2)
-{
+                                      GLfloat v0, GLfloat v1, GLfloat v2) {
   glad_glProgramUniform3f(program, location, v0, v1, v2);
 }
 /**
@@ -11247,8 +10918,7 @@ static inline void glProgramUniform3f(GLuint program, GLint location,
  */
 static inline void glProgramUniform4f(GLuint program, GLint location,
                                       GLfloat v0, GLfloat v1, GLfloat v2,
-                                      GLfloat v3)
-{
+                                      GLfloat v3) {
   glad_glProgramUniform4f(program, location, v0, v1, v2, v3);
 }
 /**
@@ -11275,8 +10945,8 @@ static inline void glProgramUniform4f(GLuint program, GLint location,
  * an array of count values that will be used to update the specified uniform
  * variable.
  */
-static inline void glProgramUniform1i(GLuint program, GLint location, GLint v0)
-{
+static inline void glProgramUniform1i(GLuint program, GLint location,
+                                      GLint v0) {
   glad_glProgramUniform1i(program, location, v0);
 }
 /**
@@ -11304,8 +10974,7 @@ static inline void glProgramUniform1i(GLuint program, GLint location, GLint v0)
  * variable.
  */
 static inline void glProgramUniform2i(GLuint program, GLint location, GLint v0,
-                                      GLint v1)
-{
+                                      GLint v1) {
   glad_glProgramUniform2i(program, location, v0, v1);
 }
 /**
@@ -11333,8 +11002,7 @@ static inline void glProgramUniform2i(GLuint program, GLint location, GLint v0,
  * variable.
  */
 static inline void glProgramUniform3i(GLuint program, GLint location, GLint v0,
-                                      GLint v1, GLint v2)
-{
+                                      GLint v1, GLint v2) {
   glad_glProgramUniform3i(program, location, v0, v1, v2);
 }
 /**
@@ -11362,8 +11030,7 @@ static inline void glProgramUniform3i(GLuint program, GLint location, GLint v0,
  * variable.
  */
 static inline void glProgramUniform4i(GLuint program, GLint location, GLint v0,
-                                      GLint v1, GLint v2, GLint v3)
-{
+                                      GLint v1, GLint v2, GLint v3) {
   glad_glProgramUniform4i(program, location, v0, v1, v2, v3);
 }
 /**
@@ -11391,8 +11058,7 @@ static inline void glProgramUniform4i(GLuint program, GLint location, GLint v0,
  * variable.
  */
 static inline void glProgramUniform1ui(GLuint program, GLint location,
-                                       GLuint v0)
-{
+                                       GLuint v0) {
   glad_glProgramUniform1ui(program, location, v0);
 }
 /**
@@ -11420,8 +11086,7 @@ static inline void glProgramUniform1ui(GLuint program, GLint location,
  * variable.
  */
 static inline void glProgramUniform2ui(GLuint program, GLint location,
-                                       GLuint v0, GLuint v1)
-{
+                                       GLuint v0, GLuint v1) {
   glad_glProgramUniform2ui(program, location, v0, v1);
 }
 /**
@@ -11449,8 +11114,7 @@ static inline void glProgramUniform2ui(GLuint program, GLint location,
  * variable.
  */
 static inline void glProgramUniform3ui(GLuint program, GLint location,
-                                       GLuint v0, GLuint v1, GLuint v2)
-{
+                                       GLuint v0, GLuint v1, GLuint v2) {
   glad_glProgramUniform3ui(program, location, v0, v1, v2);
 }
 /**
@@ -11479,8 +11143,7 @@ static inline void glProgramUniform3ui(GLuint program, GLint location,
  */
 static inline void glProgramUniform4ui(GLuint program, GLint location,
                                        GLuint v0, GLuint v1, GLuint v2,
-                                       GLuint v3)
-{
+                                       GLuint v3) {
   glad_glProgramUniform4ui(program, location, v0, v1, v2, v3);
 }
 /**
@@ -11508,8 +11171,7 @@ static inline void glProgramUniform4ui(GLuint program, GLint location,
  * variable.
  */
 static inline void glProgramUniform1fv(GLuint program, GLint location,
-                                       GLsizei count, const GLfloat *value)
-{
+                                       GLsizei count, const GLfloat *value) {
   glad_glProgramUniform1fv(program, location, count, value);
 }
 /**
@@ -11537,8 +11199,7 @@ static inline void glProgramUniform1fv(GLuint program, GLint location,
  * variable.
  */
 static inline void glProgramUniform2fv(GLuint program, GLint location,
-                                       GLsizei count, const GLfloat *value)
-{
+                                       GLsizei count, const GLfloat *value) {
   glad_glProgramUniform2fv(program, location, count, value);
 }
 /**
@@ -11566,8 +11227,7 @@ static inline void glProgramUniform2fv(GLuint program, GLint location,
  * variable.
  */
 static inline void glProgramUniform3fv(GLuint program, GLint location,
-                                       GLsizei count, const GLfloat *value)
-{
+                                       GLsizei count, const GLfloat *value) {
   glad_glProgramUniform3fv(program, location, count, value);
 }
 /**
@@ -11595,8 +11255,7 @@ static inline void glProgramUniform3fv(GLuint program, GLint location,
  * variable.
  */
 static inline void glProgramUniform4fv(GLuint program, GLint location,
-                                       GLsizei count, const GLfloat *value)
-{
+                                       GLsizei count, const GLfloat *value) {
   glad_glProgramUniform4fv(program, location, count, value);
 }
 /**
@@ -11624,8 +11283,7 @@ static inline void glProgramUniform4fv(GLuint program, GLint location,
  * variable.
  */
 static inline void glProgramUniform1iv(GLuint program, GLint location,
-                                       GLsizei count, const GLint *value)
-{
+                                       GLsizei count, const GLint *value) {
   glad_glProgramUniform1iv(program, location, count, value);
 }
 /**
@@ -11653,8 +11311,7 @@ static inline void glProgramUniform1iv(GLuint program, GLint location,
  * variable.
  */
 static inline void glProgramUniform2iv(GLuint program, GLint location,
-                                       GLsizei count, const GLint *value)
-{
+                                       GLsizei count, const GLint *value) {
   glad_glProgramUniform2iv(program, location, count, value);
 }
 /**
@@ -11682,8 +11339,7 @@ static inline void glProgramUniform2iv(GLuint program, GLint location,
  * variable.
  */
 static inline void glProgramUniform3iv(GLuint program, GLint location,
-                                       GLsizei count, const GLint *value)
-{
+                                       GLsizei count, const GLint *value) {
   glad_glProgramUniform3iv(program, location, count, value);
 }
 /**
@@ -11711,8 +11367,7 @@ static inline void glProgramUniform3iv(GLuint program, GLint location,
  * variable.
  */
 static inline void glProgramUniform4iv(GLuint program, GLint location,
-                                       GLsizei count, const GLint *value)
-{
+                                       GLsizei count, const GLint *value) {
   glad_glProgramUniform4iv(program, location, count, value);
 }
 /**
@@ -11740,8 +11395,7 @@ static inline void glProgramUniform4iv(GLuint program, GLint location,
  * variable.
  */
 static inline void glProgramUniform1uiv(GLuint program, GLint location,
-                                        GLsizei count, const GLuint *value)
-{
+                                        GLsizei count, const GLuint *value) {
   glad_glProgramUniform1uiv(program, location, count, value);
 }
 /**
@@ -11769,8 +11423,7 @@ static inline void glProgramUniform1uiv(GLuint program, GLint location,
  * variable.
  */
 static inline void glProgramUniform2uiv(GLuint program, GLint location,
-                                        GLsizei count, const GLuint *value)
-{
+                                        GLsizei count, const GLuint *value) {
   glad_glProgramUniform2uiv(program, location, count, value);
 }
 /**
@@ -11798,8 +11451,7 @@ static inline void glProgramUniform2uiv(GLuint program, GLint location,
  * variable.
  */
 static inline void glProgramUniform3uiv(GLuint program, GLint location,
-                                        GLsizei count, const GLuint *value)
-{
+                                        GLsizei count, const GLuint *value) {
   glad_glProgramUniform3uiv(program, location, count, value);
 }
 /**
@@ -11827,8 +11479,7 @@ static inline void glProgramUniform3uiv(GLuint program, GLint location,
  * variable.
  */
 static inline void glProgramUniform4uiv(GLuint program, GLint location,
-                                        GLsizei count, const GLuint *value)
-{
+                                        GLsizei count, const GLuint *value) {
   glad_glProgramUniform4uiv(program, location, count, value);
 }
 /**
@@ -11857,8 +11508,7 @@ static inline void glProgramUniform4uiv(GLuint program, GLint location,
  */
 static inline void glProgramUniformMatrix2fv(GLuint program, GLint location,
                                              GLsizei count, GLboolean transpose,
-                                             const GLfloat *value)
-{
+                                             const GLfloat *value) {
   glad_glProgramUniformMatrix2fv(program, location, count, transpose, value);
 }
 /**
@@ -11887,8 +11537,7 @@ static inline void glProgramUniformMatrix2fv(GLuint program, GLint location,
  */
 static inline void glProgramUniformMatrix3fv(GLuint program, GLint location,
                                              GLsizei count, GLboolean transpose,
-                                             const GLfloat *value)
-{
+                                             const GLfloat *value) {
   glad_glProgramUniformMatrix3fv(program, location, count, transpose, value);
 }
 /**
@@ -11917,8 +11566,7 @@ static inline void glProgramUniformMatrix3fv(GLuint program, GLint location,
  */
 static inline void glProgramUniformMatrix4fv(GLuint program, GLint location,
                                              GLsizei count, GLboolean transpose,
-                                             const GLfloat *value)
-{
+                                             const GLfloat *value) {
   glad_glProgramUniformMatrix4fv(program, location, count, transpose, value);
 }
 /**
@@ -11948,8 +11596,7 @@ static inline void glProgramUniformMatrix4fv(GLuint program, GLint location,
 static inline void glProgramUniformMatrix2x3fv(GLuint program, GLint location,
                                                GLsizei count,
                                                GLboolean transpose,
-                                               const GLfloat *value)
-{
+                                               const GLfloat *value) {
   glad_glProgramUniformMatrix2x3fv(program, location, count, transpose, value);
 }
 /**
@@ -11979,8 +11626,7 @@ static inline void glProgramUniformMatrix2x3fv(GLuint program, GLint location,
 static inline void glProgramUniformMatrix3x2fv(GLuint program, GLint location,
                                                GLsizei count,
                                                GLboolean transpose,
-                                               const GLfloat *value)
-{
+                                               const GLfloat *value) {
   glad_glProgramUniformMatrix3x2fv(program, location, count, transpose, value);
 }
 /**
@@ -12010,8 +11656,7 @@ static inline void glProgramUniformMatrix3x2fv(GLuint program, GLint location,
 static inline void glProgramUniformMatrix2x4fv(GLuint program, GLint location,
                                                GLsizei count,
                                                GLboolean transpose,
-                                               const GLfloat *value)
-{
+                                               const GLfloat *value) {
   glad_glProgramUniformMatrix2x4fv(program, location, count, transpose, value);
 }
 /**
@@ -12041,8 +11686,7 @@ static inline void glProgramUniformMatrix2x4fv(GLuint program, GLint location,
 static inline void glProgramUniformMatrix4x2fv(GLuint program, GLint location,
                                                GLsizei count,
                                                GLboolean transpose,
-                                               const GLfloat *value)
-{
+                                               const GLfloat *value) {
   glad_glProgramUniformMatrix4x2fv(program, location, count, transpose, value);
 }
 /**
@@ -12072,8 +11716,7 @@ static inline void glProgramUniformMatrix4x2fv(GLuint program, GLint location,
 static inline void glProgramUniformMatrix3x4fv(GLuint program, GLint location,
                                                GLsizei count,
                                                GLboolean transpose,
-                                               const GLfloat *value)
-{
+                                               const GLfloat *value) {
   glad_glProgramUniformMatrix3x4fv(program, location, count, transpose, value);
 }
 /**
@@ -12103,8 +11746,7 @@ static inline void glProgramUniformMatrix3x4fv(GLuint program, GLint location,
 static inline void glProgramUniformMatrix4x3fv(GLuint program, GLint location,
                                                GLsizei count,
                                                GLboolean transpose,
-                                               const GLfloat *value)
-{
+                                               const GLfloat *value) {
   glad_glProgramUniformMatrix4x3fv(program, location, count, transpose, value);
 }
 /**
@@ -12114,8 +11756,7 @@ static inline void glProgramUniformMatrix4x3fv(GLuint program, GLint location,
  * @param [provokeMode] Specifies the vertex to be used as the source of data
  * for flat shaded varyings.
  */
-static inline void glProvokingVertex(GLenum provokeMode)
-{
+static inline void glProvokingVertex(GLenum provokeMode) {
   glad_glProvokingVertex(provokeMode);
 }
 /**
@@ -12132,8 +11773,7 @@ static inline void glProvokingVertex(GLenum provokeMode)
  * debug output stream.
  */
 static inline void glPushDebugGroup(GLenum source, GLuint id, GLsizei length,
-                                    const char *message)
-{
+                                    const char *message) {
   glad_glPushDebugGroup(source, id, length, message);
 }
 /**
@@ -12145,8 +11785,7 @@ static inline void glPushDebugGroup(GLenum source, GLuint id, GLsizei length,
  *
  * @param [target] Specify the counter to query. target must be GL_TIMESTAMP.
  */
-static inline void glQueryCounter(GLuint id, GLenum target)
-{
+static inline void glQueryCounter(GLuint id, GLenum target) {
   glad_glQueryCounter(id, target);
 }
 /**
@@ -12172,8 +11811,8 @@ static inline void glReadBuffer(GLenum mode) { glad_glReadBuffer(mode); }
  * GL_FRONT_RIGHT, GL_BACK_LEFT, GL_BACK_RIGHT, GL_FRONT, GL_BACK, GL_LEFT,
  * GL_RIGHT, and the constants GL_COLOR_ATTACHMENTi.
  */
-static inline void glNamedFramebufferReadBuffer(GLuint framebuffer, GLenum mode)
-{
+static inline void glNamedFramebufferReadBuffer(GLuint framebuffer,
+                                                GLenum mode) {
   glad_glNamedFramebufferReadBuffer(framebuffer, mode);
 }
 /**
@@ -12209,8 +11848,7 @@ static inline void glNamedFramebufferReadBuffer(GLuint framebuffer, GLenum mode)
  * @param [data] Returns the pixel data.
  */
 static inline void glReadPixels(GLint x, GLint y, GLsizei width, GLsizei height,
-                                GLenum format, GLenum type, GLvoid *data)
-{
+                                GLenum format, GLenum type, GLvoid *data) {
   glad_glReadPixels(x, y, width, height, format, type, data);
 }
 /**
@@ -12247,16 +11885,14 @@ static inline void glReadPixels(GLint x, GLint y, GLsizei width, GLsizei height,
  */
 static inline void glReadnPixels(GLint x, GLint y, GLsizei width,
                                  GLsizei height, GLenum format, GLenum type,
-                                 GLsizei bufSize, void *data)
-{
+                                 GLsizei bufSize, void *data) {
   glad_glReadnPixels(x, y, width, height, format, type, bufSize, data);
 }
 /**
  * glReleaseShaderCompiler — release resources consumed by the
  * implementation's shader compiler
  */
-static inline void glReleaseShaderCompiler(void)
-{
+static inline void glReleaseShaderCompiler(void) {
   glad_glReleaseShaderCompiler();
 }
 /**
@@ -12277,8 +11913,7 @@ static inline void glReleaseShaderCompiler(void)
  * @param [height] Specifies the height of the renderbuffer, in pixels.
  */
 static inline void glRenderbufferStorage(GLenum target, GLenum internalformat,
-                                         GLsizei width, GLsizei height)
-{
+                                         GLsizei width, GLsizei height) {
   glad_glRenderbufferStorage(target, internalformat, width, height);
 }
 /**
@@ -12300,8 +11935,7 @@ static inline void glRenderbufferStorage(GLenum target, GLenum internalformat,
  */
 static inline void glNamedRenderbufferStorage(GLuint renderbuffer,
                                               GLenum internalformat,
-                                              GLsizei width, GLsizei height)
-{
+                                              GLsizei width, GLsizei height) {
   glad_glNamedRenderbufferStorage(renderbuffer, internalformat, width, height);
 }
 /**
@@ -12329,8 +11963,7 @@ static inline void glRenderbufferStorageMultisample(GLenum target,
                                                     GLsizei samples,
                                                     GLenum internalformat,
                                                     GLsizei width,
-                                                    GLsizei height)
-{
+                                                    GLsizei height) {
   glad_glRenderbufferStorageMultisample(target, samples, internalformat, width,
                                         height);
 }
@@ -12359,16 +11992,14 @@ static inline void glNamedRenderbufferStorageMultisample(GLuint renderbuffer,
                                                          GLsizei samples,
                                                          GLenum internalformat,
                                                          GLsizei width,
-                                                         GLsizei height)
-{
+                                                         GLsizei height) {
   glad_glNamedRenderbufferStorageMultisample(renderbuffer, samples,
                                              internalformat, width, height);
 }
 /**
  * glResumeTransformFeedback — resume transform feedback operations
  */
-static inline void glResumeTransformFeedback(void)
-{
+static inline void glResumeTransformFeedback(void) {
   glad_glResumeTransformFeedback();
 }
 /**
@@ -12381,8 +12012,7 @@ static inline void glResumeTransformFeedback(void)
  * masks should be inverted. GL_TRUE and GL_FALSE are accepted. The initial
  * value is GL_FALSE.
  */
-static inline void glSampleCoverage(GLfloat value, GLboolean invert)
-{
+static inline void glSampleCoverage(GLfloat value, GLboolean invert) {
   glad_glSampleCoverage(value, invert);
 }
 /**
@@ -12393,8 +12023,7 @@ static inline void glSampleCoverage(GLfloat value, GLboolean invert)
  *
  * @param [mask] Specifies the new value of the mask sub-word.
  */
-static inline void glSampleMaski(GLuint maskNumber, GLbitfield mask)
-{
+static inline void glSampleMaski(GLuint maskNumber, GLbitfield mask) {
   glad_glSampleMaski(maskNumber, mask);
 }
 /**
@@ -12414,8 +12043,7 @@ static inline void glSampleMaski(GLuint maskNumber, GLbitfield mask)
  * pointer to an array where the value or values of pname are stored.
  */
 static inline void glSamplerParameterf(GLuint sampler, GLenum pname,
-                                       GLfloat param)
-{
+                                       GLfloat param) {
   glad_glSamplerParameterf(sampler, pname, param);
 }
 /**
@@ -12435,8 +12063,7 @@ static inline void glSamplerParameterf(GLuint sampler, GLenum pname,
  * pointer to an array where the value or values of pname are stored.
  */
 static inline void glSamplerParameteri(GLuint sampler, GLenum pname,
-                                       GLint param)
-{
+                                       GLint param) {
   glad_glSamplerParameteri(sampler, pname, param);
 }
 /**
@@ -12456,8 +12083,7 @@ static inline void glSamplerParameteri(GLuint sampler, GLenum pname,
  * pointer to an array where the value or values of pname are stored.
  */
 static inline void glSamplerParameterfv(GLuint sampler, GLenum pname,
-                                        const GLfloat *params)
-{
+                                        const GLfloat *params) {
   glad_glSamplerParameterfv(sampler, pname, params);
 }
 /**
@@ -12477,8 +12103,7 @@ static inline void glSamplerParameterfv(GLuint sampler, GLenum pname,
  * pointer to an array where the value or values of pname are stored.
  */
 static inline void glSamplerParameteriv(GLuint sampler, GLenum pname,
-                                        const GLint *params)
-{
+                                        const GLint *params) {
   glad_glSamplerParameteriv(sampler, pname, params);
 }
 /**
@@ -12498,8 +12123,7 @@ static inline void glSamplerParameteriv(GLuint sampler, GLenum pname,
  * pointer to an array where the value or values of pname are stored.
  */
 static inline void glSamplerParameterIiv(GLuint sampler, GLenum pname,
-                                         const GLint *params)
-{
+                                         const GLint *params) {
   glad_glSamplerParameterIiv(sampler, pname, params);
 }
 /**
@@ -12519,8 +12143,7 @@ static inline void glSamplerParameterIiv(GLuint sampler, GLenum pname,
  * pointer to an array where the value or values of pname are stored.
  */
 static inline void glSamplerParameterIuiv(GLuint sampler, GLenum pname,
-                                          const GLuint *params)
-{
+                                          const GLuint *params) {
   glad_glSamplerParameterIuiv(sampler, pname, params);
 }
 /**
@@ -12533,8 +12156,7 @@ static inline void glSamplerParameterIuiv(GLuint sampler, GLenum pname,
  * When a GL context is first attached to a window, width and height are set
  * to the dimensions of that window.
  */
-static inline void glScissor(GLint x, GLint y, GLsizei width, GLsizei height)
-{
+static inline void glScissor(GLint x, GLint y, GLsizei width, GLsizei height) {
   glad_glScissor(x, y, width, height);
 }
 /**
@@ -12548,8 +12170,8 @@ static inline void glScissor(GLint x, GLint y, GLsizei width, GLsizei height)
  * @param [v] Specifies the address of an array containing the left, bottom,
  * width and height of each scissor box, in that order.
  */
-static inline void glScissorArrayv(GLuint first, GLsizei count, const GLint *v)
-{
+static inline void glScissorArrayv(GLuint first, GLsizei count,
+                                   const GLint *v) {
   glad_glScissorArrayv(first, count, v);
 }
 /**
@@ -12569,8 +12191,7 @@ static inline void glScissorArrayv(GLuint first, GLsizei count, const GLint *v)
  * order.
  */
 static inline void glScissorIndexed(GLuint index, GLint left, GLint bottom,
-                                    GLsizei width, GLsizei height)
-{
+                                    GLsizei width, GLsizei height) {
   glad_glScissorIndexed(index, left, bottom, width, height);
 }
 /**
@@ -12589,8 +12210,7 @@ static inline void glScissorIndexed(GLuint index, GLint left, GLint bottom,
  * containing the left, bottom, width and height of each scissor box, in that
  * order.
  */
-static inline void glScissorIndexedv(GLuint index, const GLint *v)
-{
+static inline void glScissorIndexedv(GLuint index, const GLint *v) {
   glad_glScissorIndexedv(index, v);
 }
 /**
@@ -12613,8 +12233,7 @@ static inline void glScissorIndexedv(GLuint index, const GLint *v)
  */
 static inline void glShaderBinary(GLsizei count, const GLuint *shaders,
                                   GLenum binaryFormat, const void *binary,
-                                  GLsizei length)
-{
+                                  GLsizei length) {
   glad_glShaderBinary(count, shaders, binaryFormat, binary, length);
 }
 /**
@@ -12632,8 +12251,7 @@ static inline void glShaderBinary(GLsizei count, const GLuint *shaders,
  * @param [length] Specifies an array of string lengths.
  */
 static inline void glShaderSource(GLuint shader, GLsizei count,
-                                  const GLchar **string, const GLint *length)
-{
+                                  const GLchar **string, const GLint *length) {
   glad_glShaderSource(shader, count, string, length);
 }
 /**
@@ -12649,8 +12267,7 @@ static inline void glShaderSource(GLuint shader, GLsizei count,
  */
 static inline void glShaderStorageBlockBinding(GLuint program,
                                                GLuint storageBlockIndex,
-                                               GLuint storageBlockBinding)
-{
+                                               GLuint storageBlockBinding) {
   glad_glShaderStorageBlockBinding(program, storageBlockIndex,
                                    storageBlockBinding);
 }
@@ -12670,8 +12287,7 @@ static inline void glShaderStorageBlockBinding(GLuint program,
  * and the stored stencil value when the test is done. The initial value is
  * all 1's.
  */
-static inline void glStencilFunc(GLenum func, GLint ref, GLuint mask)
-{
+static inline void glStencilFunc(GLenum func, GLint ref, GLuint mask) {
   glad_glStencilFunc(func, ref, mask);
 }
 /**
@@ -12695,8 +12311,7 @@ static inline void glStencilFunc(GLenum func, GLint ref, GLuint mask)
  * all 1's.
  */
 static inline void glStencilFuncSeparate(GLenum face, GLenum func, GLint ref,
-                                         GLuint mask)
-{
+                                         GLuint mask) {
   glad_glStencilFuncSeparate(face, func, ref, mask);
 }
 /**
@@ -12718,8 +12333,7 @@ static inline void glStencilMask(GLuint mask) { glad_glStencilMask(mask); }
  * @param [mask] Specifies a bit mask to enable and disable writing of
  * individual bits in the stencil planes. Initially, the mask is all 1's.
  */
-static inline void glStencilMaskSeparate(GLenum face, GLuint mask)
-{
+static inline void glStencilMaskSeparate(GLenum face, GLuint mask) {
   glad_glStencilMaskSeparate(face, mask);
 }
 /**
@@ -12739,8 +12353,7 @@ static inline void glStencilMaskSeparate(GLenum face, GLuint mask)
  * depth buffer or depth testing is not enabled. dppass accepts the same
  * symbolic constants as sfail. The initial value is GL_KEEP.
  */
-static inline void glStencilOp(GLenum sfail, GLenum dpfail, GLenum dppass)
-{
+static inline void glStencilOp(GLenum sfail, GLenum dpfail, GLenum dppass) {
   glad_glStencilOp(sfail, dpfail, dppass);
 }
 /**
@@ -12765,8 +12378,7 @@ static inline void glStencilOp(GLenum sfail, GLenum dpfail, GLenum dppass)
  * symbolic constants as sfail. The initial value is GL_KEEP.
  */
 static inline void glStencilOpSeparate(GLenum face, GLenum sfail, GLenum dpfail,
-                                       GLenum dppass)
-{
+                                       GLenum dppass) {
   glad_glStencilOpSeparate(face, sfail, dpfail, dppass);
 }
 /**
@@ -12785,8 +12397,7 @@ static inline void glStencilOpSeparate(GLenum face, GLenum sfail, GLenum dpfail,
  * attach to the active buffer texture.
  */
 static inline void glTexBuffer(GLenum target, GLenum internalFormat,
-                               GLuint buffer)
-{
+                               GLuint buffer) {
   glad_glTexBuffer(target, internalFormat, buffer);
 }
 /**
@@ -12805,8 +12416,7 @@ static inline void glTexBuffer(GLenum target, GLenum internalFormat,
  * attach to the active buffer texture.
  */
 static inline void glTextureBuffer(GLuint texture, GLenum internalformat,
-                                   GLuint buffer)
-{
+                                   GLuint buffer) {
   glad_glTextureBuffer(texture, internalformat, buffer);
 }
 /**
@@ -12833,8 +12443,7 @@ static inline void glTextureBuffer(GLuint texture, GLenum internalformat,
  */
 static inline void glTexBufferRange(GLenum target, GLenum internalFormat,
                                     GLuint buffer, GLintptr offset,
-                                    GLsizeiptr size)
-{
+                                    GLsizeiptr size) {
   glad_glTexBufferRange(target, internalFormat, buffer, offset, size);
 }
 /**
@@ -12861,8 +12470,7 @@ static inline void glTexBufferRange(GLenum target, GLenum internalFormat,
  */
 static inline void glTextureBufferRange(GLuint texture, GLenum internalformat,
                                         GLuint buffer, GLintptr offset,
-                                        GLsizei size)
-{
+                                        GLsizei size) {
   glad_glTextureBufferRange(texture, internalformat, buffer, offset, size);
 }
 /**
@@ -12906,8 +12514,7 @@ static inline void glTextureBufferRange(GLuint texture, GLenum internalformat,
 static inline void glTexImage1D(GLenum target, GLint level,
                                 GLint internalFormat, GLsizei width,
                                 GLint border, GLenum format, GLenum type,
-                                const GLvoid *data)
-{
+                                const GLvoid *data) {
   glad_glTexImage1D(target, level, internalFormat, width, border, format, type,
                     data);
 }
@@ -12963,8 +12570,7 @@ static inline void glTexImage1D(GLenum target, GLint level,
 static inline void glTexImage2D(GLenum target, GLint level,
                                 GLint internalFormat, GLsizei width,
                                 GLsizei height, GLint border, GLenum format,
-                                GLenum type, const GLvoid *data)
-{
+                                GLenum type, const GLvoid *data) {
   glad_glTexImage2D(target, level, internalFormat, width, height, border,
                     format, type, data);
 }
@@ -12993,8 +12599,7 @@ static inline void glTexImage2D(GLenum target, GLint level,
 static inline void glTexImage2DMultisample(GLenum target, GLsizei samples,
                                            GLenum internalformat, GLsizei width,
                                            GLsizei height,
-                                           GLboolean fixedsamplelocations)
-{
+                                           GLboolean fixedsamplelocations) {
   glad_glTexImage2DMultisample(target, samples, internalformat, width, height,
                                fixedsamplelocations);
 }
@@ -13047,8 +12652,8 @@ static inline void glTexImage2DMultisample(GLenum target, GLsizei samples,
 static inline void glTexImage3D(GLenum target, GLint level,
                                 GLint internalFormat, GLsizei width,
                                 GLsizei height, GLsizei depth, GLint border,
-                                GLenum format, GLenum type, const GLvoid *data)
-{
+                                GLenum format, GLenum type,
+                                const GLvoid *data) {
   glad_glTexImage3D(target, level, internalFormat, width, height, depth, border,
                     format, type, data);
 }
@@ -13077,8 +12682,7 @@ static inline void glTexImage3D(GLenum target, GLint level,
 static inline void glTexImage3DMultisample(GLenum target, GLsizei samples,
                                            GLenum internalformat, GLsizei width,
                                            GLsizei height, GLsizei depth,
-                                           GLboolean fixedsamplelocations)
-{
+                                           GLboolean fixedsamplelocations) {
   glad_glTexImage3DMultisample(target, samples, internalformat, width, height,
                                depth, fixedsamplelocations);
 }
@@ -13108,8 +12712,7 @@ static inline void glTexImage3DMultisample(GLenum target, GLsizei samples,
  * @param [params] For the vector commands, specifies a pointer to an array
  * where the value or values of pname are stored.
  */
-static inline void glTexParameterf(GLenum target, GLenum pname, GLfloat param)
-{
+static inline void glTexParameterf(GLenum target, GLenum pname, GLfloat param) {
   glad_glTexParameterf(target, pname, param);
 }
 /**
@@ -13138,8 +12741,7 @@ static inline void glTexParameterf(GLenum target, GLenum pname, GLfloat param)
  * @param [params] For the vector commands, specifies a pointer to an array
  * where the value or values of pname are stored.
  */
-static inline void glTexParameteri(GLenum target, GLenum pname, GLint param)
-{
+static inline void glTexParameteri(GLenum target, GLenum pname, GLint param) {
   glad_glTexParameteri(target, pname, param);
 }
 /**
@@ -13169,8 +12771,7 @@ static inline void glTexParameteri(GLenum target, GLenum pname, GLint param)
  * where the value or values of pname are stored.
  */
 static inline void glTextureParameterf(GLuint texture, GLenum pname,
-                                       GLfloat param)
-{
+                                       GLfloat param) {
   glad_glTextureParameterf(texture, pname, param);
 }
 /**
@@ -13200,8 +12801,7 @@ static inline void glTextureParameterf(GLuint texture, GLenum pname,
  * where the value or values of pname are stored.
  */
 static inline void glTextureParameteri(GLuint texture, GLenum pname,
-                                       GLint param)
-{
+                                       GLint param) {
   glad_glTextureParameteri(texture, pname, param);
 }
 /**
@@ -13231,8 +12831,7 @@ static inline void glTextureParameteri(GLuint texture, GLenum pname,
  * where the value or values of pname are stored.
  */
 static inline void glTexParameterfv(GLenum target, GLenum pname,
-                                    const GLfloat *params)
-{
+                                    const GLfloat *params) {
   glad_glTexParameterfv(target, pname, params);
 }
 /**
@@ -13262,8 +12861,7 @@ static inline void glTexParameterfv(GLenum target, GLenum pname,
  * where the value or values of pname are stored.
  */
 static inline void glTexParameteriv(GLenum target, GLenum pname,
-                                    const GLint *params)
-{
+                                    const GLint *params) {
   glad_glTexParameteriv(target, pname, params);
 }
 /**
@@ -13293,8 +12891,7 @@ static inline void glTexParameteriv(GLenum target, GLenum pname,
  * where the value or values of pname are stored.
  */
 static inline void glTexParameterIiv(GLenum target, GLenum pname,
-                                     const GLint *params)
-{
+                                     const GLint *params) {
   glad_glTexParameterIiv(target, pname, params);
 }
 /**
@@ -13324,8 +12921,7 @@ static inline void glTexParameterIiv(GLenum target, GLenum pname,
  * where the value or values of pname are stored.
  */
 static inline void glTexParameterIuiv(GLenum target, GLenum pname,
-                                      const GLuint *params)
-{
+                                      const GLuint *params) {
   glad_glTexParameterIuiv(target, pname, params);
 }
 /**
@@ -13355,8 +12951,7 @@ static inline void glTexParameterIuiv(GLenum target, GLenum pname,
  * where the value or values of pname are stored.
  */
 static inline void glTextureParameterfv(GLuint texture, GLenum pname,
-                                        const GLfloat *paramtexture)
-{
+                                        const GLfloat *paramtexture) {
   glad_glTextureParameterfv(texture, pname, paramtexture);
 }
 /**
@@ -13386,8 +12981,7 @@ static inline void glTextureParameterfv(GLuint texture, GLenum pname,
  * where the value or values of pname are stored.
  */
 static inline void glTextureParameteriv(GLuint texture, GLenum pname,
-                                        const GLint *param)
-{
+                                        const GLint *param) {
   glad_glTextureParameteriv(texture, pname, param);
 }
 /**
@@ -13417,8 +13011,7 @@ static inline void glTextureParameteriv(GLuint texture, GLenum pname,
  * where the value or values of pname are stored.
  */
 static inline void glTextureParameterIiv(GLuint texture, GLenum pname,
-                                         const GLint *params)
-{
+                                         const GLint *params) {
   glad_glTextureParameterIiv(texture, pname, params);
 }
 /**
@@ -13448,8 +13041,7 @@ static inline void glTextureParameterIiv(GLuint texture, GLenum pname,
  * where the value or values of pname are stored.
  */
 static inline void glTextureParameterIuiv(GLuint texture, GLenum pname,
-                                          const GLuint *params)
-{
+                                          const GLuint *params) {
   glad_glTextureParameterIuiv(texture, pname, params);
 }
 /**
@@ -13471,8 +13063,7 @@ static inline void glTextureParameterIuiv(GLuint texture, GLenum pname,
  * @param [width] Specifies the width of the texture, in texels.
  */
 static inline void glTexStorage1D(GLenum target, GLsizei levels,
-                                  GLenum internalformat, GLsizei width)
-{
+                                  GLenum internalformat, GLsizei width) {
   glad_glTexStorage1D(target, levels, internalformat, width);
 }
 /**
@@ -13494,8 +13085,7 @@ static inline void glTexStorage1D(GLenum target, GLsizei levels,
  * @param [width] Specifies the width of the texture, in texels.
  */
 static inline void glTextureStorage1D(GLuint texture, GLsizei levels,
-                                      GLenum internalformat, GLsizei width)
-{
+                                      GLenum internalformat, GLsizei width) {
   glad_glTextureStorage1D(texture, levels, internalformat, width);
 }
 /**
@@ -13522,8 +13112,7 @@ static inline void glTextureStorage1D(GLuint texture, GLsizei levels,
  */
 static inline void glTexStorage2D(GLenum target, GLsizei levels,
                                   GLenum internalformat, GLsizei width,
-                                  GLsizei height)
-{
+                                  GLsizei height) {
   glad_glTexStorage2D(target, levels, internalformat, width, height);
 }
 /**
@@ -13550,8 +13139,7 @@ static inline void glTexStorage2D(GLenum target, GLsizei levels,
  */
 static inline void glTextureStorage2D(GLuint texture, GLsizei levels,
                                       GLenum internalformat, GLsizei width,
-                                      GLsizei height)
-{
+                                      GLsizei height) {
   glad_glTextureStorage2D(texture, levels, internalformat, width, height);
 }
 /**
@@ -13583,8 +13171,7 @@ static inline void glTextureStorage2D(GLuint texture, GLsizei levels,
 static inline void glTexStorage2DMultisample(GLenum target, GLsizei samples,
                                              GLenum internalformat,
                                              GLsizei width, GLsizei height,
-                                             GLboolean fixedsamplelocations)
-{
+                                             GLboolean fixedsamplelocations) {
   glad_glTexStorage2DMultisample(target, samples, internalformat, width, height,
                                  fixedsamplelocations);
 }
@@ -13614,12 +13201,10 @@ static inline void glTexStorage2DMultisample(GLenum target, GLsizei samples,
  * the image, and the sample locations will not depend on the internal format
  * or size of the image.
  */
-static inline void glTextureStorage2DMultisample(GLuint texture,
-                                                 GLsizei samples,
-                                                 GLenum internalformat,
-                                                 GLsizei width, GLsizei height,
-                                                 GLboolean fixedsamplelocations)
-{
+static inline void
+glTextureStorage2DMultisample(GLuint texture, GLsizei samples,
+                              GLenum internalformat, GLsizei width,
+                              GLsizei height, GLboolean fixedsamplelocations) {
   glad_glTextureStorage2DMultisample(texture, samples, internalformat, width,
                                      height, fixedsamplelocations);
 }
@@ -13650,8 +13235,7 @@ static inline void glTextureStorage2DMultisample(GLuint texture,
  */
 static inline void glTexStorage3D(GLenum target, GLsizei levels,
                                   GLenum internalformat, GLsizei width,
-                                  GLsizei height, GLsizei depth)
-{
+                                  GLsizei height, GLsizei depth) {
   glad_glTexStorage3D(target, levels, internalformat, width, height, depth);
 }
 /**
@@ -13681,8 +13265,7 @@ static inline void glTexStorage3D(GLenum target, GLsizei levels,
  */
 static inline void glTextureStorage3D(GLuint texture, GLsizei levels,
                                       GLenum internalformat, GLsizei width,
-                                      GLsizei height, GLsizei depth)
-{
+                                      GLsizei height, GLsizei depth) {
   glad_glTextureStorage3D(texture, levels, internalformat, width, height,
                           depth);
 }
@@ -13718,8 +13301,7 @@ static inline void glTexStorage3DMultisample(GLenum target, GLsizei samples,
                                              GLenum internalformat,
                                              GLsizei width, GLsizei height,
                                              GLsizei depth,
-                                             GLboolean fixedsamplelocations)
-{
+                                             GLboolean fixedsamplelocations) {
   glad_glTexStorage3DMultisample(target, samples, internalformat, width, height,
                                  depth, fixedsamplelocations);
 }
@@ -13753,8 +13335,7 @@ static inline void glTexStorage3DMultisample(GLenum target, GLsizei samples,
  */
 static inline void glTextureStorage3DMultisample(
     GLuint texture, GLsizei samples, GLenum internalformat, GLsizei width,
-    GLsizei height, GLsizei depth, GLboolean fixedsamplelocations)
-{
+    GLsizei height, GLsizei depth, GLboolean fixedsamplelocations) {
   glad_glTextureStorage3DMultisample(texture, samples, internalformat, width,
                                      height, depth, fixedsamplelocations);
 }
@@ -13795,8 +13376,7 @@ static inline void glTextureStorage3DMultisample(
  */
 static inline void glTexSubImage1D(GLenum target, GLint level, GLint xoffset,
                                    GLsizei width, GLenum format, GLenum type,
-                                   const GLvoid *pixels)
-{
+                                   const GLvoid *pixels) {
   glad_glTexSubImage1D(target, level, xoffset, width, format, type, pixels);
 }
 /**
@@ -13837,8 +13417,7 @@ static inline void glTexSubImage1D(GLenum target, GLint level, GLint xoffset,
 static inline void glTextureSubImage1D(GLuint texture, GLint level,
                                        GLint xoffset, GLsizei width,
                                        GLenum format, GLenum type,
-                                       const void *pixels)
-{
+                                       const void *pixels) {
   glad_glTextureSubImage1D(texture, level, xoffset, width, format, type,
                            pixels);
 }
@@ -13888,8 +13467,7 @@ static inline void glTextureSubImage1D(GLuint texture, GLint level,
 static inline void glTexSubImage2D(GLenum target, GLint level, GLint xoffset,
                                    GLint yoffset, GLsizei width, GLsizei height,
                                    GLenum format, GLenum type,
-                                   const GLvoid *pixels)
-{
+                                   const GLvoid *pixels) {
   glad_glTexSubImage2D(target, level, xoffset, yoffset, width, height, format,
                        type, pixels);
 }
@@ -13940,8 +13518,7 @@ static inline void glTextureSubImage2D(GLuint texture, GLint level,
                                        GLint xoffset, GLint yoffset,
                                        GLsizei width, GLsizei height,
                                        GLenum format, GLenum type,
-                                       const void *pixels)
-{
+                                       const void *pixels) {
   glad_glTextureSubImage2D(texture, level, xoffset, yoffset, width, height,
                            format, type, pixels);
 }
@@ -13993,8 +13570,7 @@ static inline void glTextureSubImage2D(GLuint texture, GLint level,
 static inline void glTexSubImage3D(GLenum target, GLint level, GLint xoffset,
                                    GLint yoffset, GLint zoffset, GLsizei width,
                                    GLsizei height, GLsizei depth, GLenum format,
-                                   GLenum type, const GLvoid *pixels)
-{
+                                   GLenum type, const GLvoid *pixels) {
   glad_glTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height,
                        depth, format, type, pixels);
 }
@@ -14046,8 +13622,7 @@ static inline void glTexSubImage3D(GLenum target, GLint level, GLint xoffset,
 static inline void
 glTextureSubImage3D(GLuint texture, GLint level, GLint xoffset, GLint yoffset,
                     GLint zoffset, GLsizei width, GLsizei height, GLsizei depth,
-                    GLenum format, GLenum type, const void *pixels)
-{
+                    GLenum format, GLenum type, const void *pixels) {
   glad_glTextureSubImage3D(texture, level, xoffset, yoffset, zoffset, width,
                            height, depth, format, type, pixels);
 }
@@ -14084,8 +13659,7 @@ static inline void glTextureBarrier(void) { glad_glTextureBarrier(); }
 static inline void glTextureView(GLuint texture, GLenum target,
                                  GLuint origtexture, GLenum internalformat,
                                  GLuint minlevel, GLuint numlevels,
-                                 GLuint minlayer, GLuint numlayers)
-{
+                                 GLuint minlayer, GLuint numlayers) {
   glad_glTextureView(texture, target, origtexture, internalformat, minlevel,
                      numlevels, minlayer, numlayers);
 }
@@ -14101,8 +13675,7 @@ static inline void glTextureView(GLuint texture, GLenum target,
  * point.
  */
 static inline void glTransformFeedbackBufferBase(GLuint xfb, GLuint index,
-                                                 GLuint buffer)
-{
+                                                 GLuint buffer) {
   glad_glTransformFeedbackBufferBase(xfb, index, buffer);
 }
 /**
@@ -14124,8 +13697,8 @@ static inline void glTransformFeedbackBufferBase(GLuint xfb, GLuint index,
  */
 static inline void glTransformFeedbackBufferRange(GLuint xfb, GLuint index,
                                                   GLuint buffer,
-                                                  GLintptr offset, GLsizei size)
-{
+                                                  GLintptr offset,
+                                                  GLsizei size) {
   glad_glTransformFeedbackBufferRange(xfb, index, buffer, offset, size);
 }
 /**
@@ -14145,8 +13718,7 @@ static inline void glTransformFeedbackBufferRange(GLuint xfb, GLuint index,
  */
 static inline void glTransformFeedbackVaryings(GLuint program, GLsizei count,
                                                const char **varyings,
-                                               GLenum bufferMode)
-{
+                                               GLenum bufferMode) {
   glad_glTransformFeedbackVaryings(program, count, varyings, bufferMode);
 }
 /**
@@ -14170,8 +13742,7 @@ static inline void glTransformFeedbackVaryings(GLuint program, GLsizei count,
  * an array of count values that will be used to update the specified uniform
  * variable.
  */
-static inline void glUniform1f(GLint location, GLfloat v0)
-{
+static inline void glUniform1f(GLint location, GLfloat v0) {
   glad_glUniform1f(location, v0);
 }
 /**
@@ -14195,8 +13766,7 @@ static inline void glUniform1f(GLint location, GLfloat v0)
  * an array of count values that will be used to update the specified uniform
  * variable.
  */
-static inline void glUniform2f(GLint location, GLfloat v0, GLfloat v1)
-{
+static inline void glUniform2f(GLint location, GLfloat v0, GLfloat v1) {
   glad_glUniform2f(location, v0, v1);
 }
 /**
@@ -14221,8 +13791,7 @@ static inline void glUniform2f(GLint location, GLfloat v0, GLfloat v1)
  * variable.
  */
 static inline void glUniform3f(GLint location, GLfloat v0, GLfloat v1,
-                               GLfloat v2)
-{
+                               GLfloat v2) {
   glad_glUniform3f(location, v0, v1, v2);
 }
 /**
@@ -14247,8 +13816,7 @@ static inline void glUniform3f(GLint location, GLfloat v0, GLfloat v1,
  * variable.
  */
 static inline void glUniform4f(GLint location, GLfloat v0, GLfloat v1,
-                               GLfloat v2, GLfloat v3)
-{
+                               GLfloat v2, GLfloat v3) {
   glad_glUniform4f(location, v0, v1, v2, v3);
 }
 /**
@@ -14272,8 +13840,7 @@ static inline void glUniform4f(GLint location, GLfloat v0, GLfloat v1,
  * an array of count values that will be used to update the specified uniform
  * variable.
  */
-static inline void glUniform1i(GLint location, GLint v0)
-{
+static inline void glUniform1i(GLint location, GLint v0) {
   glad_glUniform1i(location, v0);
 }
 /**
@@ -14297,8 +13864,7 @@ static inline void glUniform1i(GLint location, GLint v0)
  * an array of count values that will be used to update the specified uniform
  * variable.
  */
-static inline void glUniform2i(GLint location, GLint v0, GLint v1)
-{
+static inline void glUniform2i(GLint location, GLint v0, GLint v1) {
   glad_glUniform2i(location, v0, v1);
 }
 /**
@@ -14322,8 +13888,7 @@ static inline void glUniform2i(GLint location, GLint v0, GLint v1)
  * an array of count values that will be used to update the specified uniform
  * variable.
  */
-static inline void glUniform3i(GLint location, GLint v0, GLint v1, GLint v2)
-{
+static inline void glUniform3i(GLint location, GLint v0, GLint v1, GLint v2) {
   glad_glUniform3i(location, v0, v1, v2);
 }
 /**
@@ -14348,8 +13913,7 @@ static inline void glUniform3i(GLint location, GLint v0, GLint v1, GLint v2)
  * variable.
  */
 static inline void glUniform4i(GLint location, GLint v0, GLint v1, GLint v2,
-                               GLint v3)
-{
+                               GLint v3) {
   glad_glUniform4i(location, v0, v1, v2, v3);
 }
 /**
@@ -14373,8 +13937,7 @@ static inline void glUniform4i(GLint location, GLint v0, GLint v1, GLint v2,
  * an array of count values that will be used to update the specified uniform
  * variable.
  */
-static inline void glUniform1ui(GLint location, GLuint v0)
-{
+static inline void glUniform1ui(GLint location, GLuint v0) {
   glad_glUniform1ui(location, v0);
 }
 /**
@@ -14398,8 +13961,7 @@ static inline void glUniform1ui(GLint location, GLuint v0)
  * an array of count values that will be used to update the specified uniform
  * variable.
  */
-static inline void glUniform2ui(GLint location, GLuint v0, GLuint v1)
-{
+static inline void glUniform2ui(GLint location, GLuint v0, GLuint v1) {
   glad_glUniform2ui(location, v0, v1);
 }
 /**
@@ -14423,8 +13985,8 @@ static inline void glUniform2ui(GLint location, GLuint v0, GLuint v1)
  * an array of count values that will be used to update the specified uniform
  * variable.
  */
-static inline void glUniform3ui(GLint location, GLuint v0, GLuint v1, GLuint v2)
-{
+static inline void glUniform3ui(GLint location, GLuint v0, GLuint v1,
+                                GLuint v2) {
   glad_glUniform3ui(location, v0, v1, v2);
 }
 /**
@@ -14449,8 +14011,7 @@ static inline void glUniform3ui(GLint location, GLuint v0, GLuint v1, GLuint v2)
  * variable.
  */
 static inline void glUniform4ui(GLint location, GLuint v0, GLuint v1, GLuint v2,
-                                GLuint v3)
-{
+                                GLuint v3) {
   glad_glUniform4ui(location, v0, v1, v2, v3);
 }
 /**
@@ -14475,8 +14036,7 @@ static inline void glUniform4ui(GLint location, GLuint v0, GLuint v1, GLuint v2,
  * variable.
  */
 static inline void glUniform1fv(GLint location, GLsizei count,
-                                const GLfloat *value)
-{
+                                const GLfloat *value) {
   glad_glUniform1fv(location, count, value);
 }
 /**
@@ -14501,8 +14061,7 @@ static inline void glUniform1fv(GLint location, GLsizei count,
  * variable.
  */
 static inline void glUniform2fv(GLint location, GLsizei count,
-                                const GLfloat *value)
-{
+                                const GLfloat *value) {
   glad_glUniform2fv(location, count, value);
 }
 /**
@@ -14527,8 +14086,7 @@ static inline void glUniform2fv(GLint location, GLsizei count,
  * variable.
  */
 static inline void glUniform3fv(GLint location, GLsizei count,
-                                const GLfloat *value)
-{
+                                const GLfloat *value) {
   glad_glUniform3fv(location, count, value);
 }
 /**
@@ -14553,8 +14111,7 @@ static inline void glUniform3fv(GLint location, GLsizei count,
  * variable.
  */
 static inline void glUniform4fv(GLint location, GLsizei count,
-                                const GLfloat *value)
-{
+                                const GLfloat *value) {
   glad_glUniform4fv(location, count, value);
 }
 /**
@@ -14579,8 +14136,7 @@ static inline void glUniform4fv(GLint location, GLsizei count,
  * variable.
  */
 static inline void glUniform1iv(GLint location, GLsizei count,
-                                const GLint *value)
-{
+                                const GLint *value) {
   glad_glUniform1iv(location, count, value);
 }
 /**
@@ -14605,8 +14161,7 @@ static inline void glUniform1iv(GLint location, GLsizei count,
  * variable.
  */
 static inline void glUniform2iv(GLint location, GLsizei count,
-                                const GLint *value)
-{
+                                const GLint *value) {
   glad_glUniform2iv(location, count, value);
 }
 /**
@@ -14631,8 +14186,7 @@ static inline void glUniform2iv(GLint location, GLsizei count,
  * variable.
  */
 static inline void glUniform3iv(GLint location, GLsizei count,
-                                const GLint *value)
-{
+                                const GLint *value) {
   glad_glUniform3iv(location, count, value);
 }
 /**
@@ -14657,8 +14211,7 @@ static inline void glUniform3iv(GLint location, GLsizei count,
  * variable.
  */
 static inline void glUniform4iv(GLint location, GLsizei count,
-                                const GLint *value)
-{
+                                const GLint *value) {
   glad_glUniform4iv(location, count, value);
 }
 /**
@@ -14683,8 +14236,7 @@ static inline void glUniform4iv(GLint location, GLsizei count,
  * variable.
  */
 static inline void glUniform1uiv(GLint location, GLsizei count,
-                                 const GLuint *value)
-{
+                                 const GLuint *value) {
   glad_glUniform1uiv(location, count, value);
 }
 /**
@@ -14709,8 +14261,7 @@ static inline void glUniform1uiv(GLint location, GLsizei count,
  * variable.
  */
 static inline void glUniform2uiv(GLint location, GLsizei count,
-                                 const GLuint *value)
-{
+                                 const GLuint *value) {
   glad_glUniform2uiv(location, count, value);
 }
 /**
@@ -14735,8 +14286,7 @@ static inline void glUniform2uiv(GLint location, GLsizei count,
  * variable.
  */
 static inline void glUniform3uiv(GLint location, GLsizei count,
-                                 const GLuint *value)
-{
+                                 const GLuint *value) {
   glad_glUniform3uiv(location, count, value);
 }
 /**
@@ -14761,8 +14311,7 @@ static inline void glUniform3uiv(GLint location, GLsizei count,
  * variable.
  */
 static inline void glUniform4uiv(GLint location, GLsizei count,
-                                 const GLuint *value)
-{
+                                 const GLuint *value) {
   glad_glUniform4uiv(location, count, value);
 }
 /**
@@ -14787,8 +14336,8 @@ static inline void glUniform4uiv(GLint location, GLsizei count,
  * variable.
  */
 static inline void glUniformMatrix2fv(GLint location, GLsizei count,
-                                      GLboolean transpose, const GLfloat *value)
-{
+                                      GLboolean transpose,
+                                      const GLfloat *value) {
   glad_glUniformMatrix2fv(location, count, transpose, value);
 }
 /**
@@ -14813,8 +14362,8 @@ static inline void glUniformMatrix2fv(GLint location, GLsizei count,
  * variable.
  */
 static inline void glUniformMatrix3fv(GLint location, GLsizei count,
-                                      GLboolean transpose, const GLfloat *value)
-{
+                                      GLboolean transpose,
+                                      const GLfloat *value) {
   glad_glUniformMatrix3fv(location, count, transpose, value);
 }
 /**
@@ -14839,8 +14388,8 @@ static inline void glUniformMatrix3fv(GLint location, GLsizei count,
  * variable.
  */
 static inline void glUniformMatrix4fv(GLint location, GLsizei count,
-                                      GLboolean transpose, const GLfloat *value)
-{
+                                      GLboolean transpose,
+                                      const GLfloat *value) {
   glad_glUniformMatrix4fv(location, count, transpose, value);
 }
 /**
@@ -14866,8 +14415,7 @@ static inline void glUniformMatrix4fv(GLint location, GLsizei count,
  */
 static inline void glUniformMatrix2x3fv(GLint location, GLsizei count,
                                         GLboolean transpose,
-                                        const GLfloat *value)
-{
+                                        const GLfloat *value) {
   glad_glUniformMatrix2x3fv(location, count, transpose, value);
 }
 /**
@@ -14893,8 +14441,7 @@ static inline void glUniformMatrix2x3fv(GLint location, GLsizei count,
  */
 static inline void glUniformMatrix3x2fv(GLint location, GLsizei count,
                                         GLboolean transpose,
-                                        const GLfloat *value)
-{
+                                        const GLfloat *value) {
   glad_glUniformMatrix3x2fv(location, count, transpose, value);
 }
 /**
@@ -14920,8 +14467,7 @@ static inline void glUniformMatrix3x2fv(GLint location, GLsizei count,
  */
 static inline void glUniformMatrix2x4fv(GLint location, GLsizei count,
                                         GLboolean transpose,
-                                        const GLfloat *value)
-{
+                                        const GLfloat *value) {
   glad_glUniformMatrix2x4fv(location, count, transpose, value);
 }
 /**
@@ -14947,8 +14493,7 @@ static inline void glUniformMatrix2x4fv(GLint location, GLsizei count,
  */
 static inline void glUniformMatrix4x2fv(GLint location, GLsizei count,
                                         GLboolean transpose,
-                                        const GLfloat *value)
-{
+                                        const GLfloat *value) {
   glad_glUniformMatrix4x2fv(location, count, transpose, value);
 }
 /**
@@ -14974,8 +14519,7 @@ static inline void glUniformMatrix4x2fv(GLint location, GLsizei count,
  */
 static inline void glUniformMatrix3x4fv(GLint location, GLsizei count,
                                         GLboolean transpose,
-                                        const GLfloat *value)
-{
+                                        const GLfloat *value) {
   glad_glUniformMatrix3x4fv(location, count, transpose, value);
 }
 /**
@@ -15001,8 +14545,7 @@ static inline void glUniformMatrix3x4fv(GLint location, GLsizei count,
  */
 static inline void glUniformMatrix4x3fv(GLint location, GLsizei count,
                                         GLboolean transpose,
-                                        const GLfloat *value)
-{
+                                        const GLfloat *value) {
   glad_glUniformMatrix4x3fv(location, count, transpose, value);
 }
 /**
@@ -15019,8 +14562,7 @@ static inline void glUniformMatrix4x3fv(GLint location, GLsizei count,
  */
 static inline void glUniformBlockBinding(GLuint program,
                                          GLuint uniformBlockIndex,
-                                         GLuint uniformBlockBinding)
-{
+                                         GLuint uniformBlockBinding) {
   glad_glUniformBlockBinding(program, uniformBlockIndex, uniformBlockBinding);
 }
 /**
@@ -15037,8 +14579,7 @@ static inline void glUniformBlockBinding(GLuint program,
  * load into the shader subroutine variables.
  */
 static inline void glUniformSubroutinesuiv(GLenum shadertype, GLsizei count,
-                                           const GLuint *indices)
-{
+                                           const GLuint *indices) {
   glad_glUniformSubroutinesuiv(shadertype, count, indices);
 }
 /**
@@ -15067,8 +14608,7 @@ static inline void glUniformSubroutinesuiv(GLenum shadertype, GLsizei count,
  * @param [buffer] Specifies the name of the buffer object for
  * glUnmapNamedBuffer.
  */
-static inline GLboolean glUnmapBuffer(GLenum target)
-{
+static inline GLboolean glUnmapBuffer(GLenum target) {
   return glad_glUnmapBuffer(target);
 }
 /**
@@ -15097,8 +14637,7 @@ static inline GLboolean glUnmapBuffer(GLenum target)
  * @param [buffer] Specifies the name of the buffer object for
  * glUnmapNamedBuffer.
  */
-static inline GLboolean glUnmapNamedBuffer(GLuint buffer)
-{
+static inline GLboolean glUnmapNamedBuffer(GLuint buffer) {
   return glad_glUnmapNamedBuffer(buffer);
 }
 /**
@@ -15121,8 +14660,7 @@ static inline void glUseProgram(GLuint program) { glad_glUseProgram(program); }
  * executables to use in pipeline.
  */
 static inline void glUseProgramStages(GLuint pipeline, GLbitfield stages,
-                                      GLuint program)
-{
+                                      GLuint program) {
   glad_glUseProgramStages(pipeline, stages, program);
 }
 /**
@@ -15131,8 +14669,7 @@ static inline void glUseProgramStages(GLuint pipeline, GLbitfield stages,
  * @param [program] Specifies the handle of the program object to be
  * validated.
  */
-static inline void glValidateProgram(GLuint program)
-{
+static inline void glValidateProgram(GLuint program) {
   glad_glValidateProgram(program);
 }
 /**
@@ -15142,8 +14679,7 @@ static inline void glValidateProgram(GLuint program)
  * @param [pipeline] Specifies the name of a program pipeline object to
  * validate.
  */
-static inline void glValidateProgramPipeline(GLuint pipeline)
-{
+static inline void glValidateProgramPipeline(GLuint pipeline) {
   glad_glValidateProgramPipeline(pipeline);
 }
 /**
@@ -15155,8 +14691,7 @@ static inline void glValidateProgramPipeline(GLuint pipeline)
  * @param [buffer] Specifies the name of the buffer object to use for the
  * element array buffer binding.
  */
-static inline void glVertexArrayElementBuffer(GLuint vaobj, GLuint buffer)
-{
+static inline void glVertexArrayElementBuffer(GLuint vaobj, GLuint buffer) {
   glad_glVertexArrayElementBuffer(vaobj, buffer);
 }
 /**
@@ -15185,8 +14720,7 @@ static inline void glVertexArrayElementBuffer(GLuint vaobj, GLuint buffer)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttrib1f(GLuint index, GLfloat v0)
-{
+static inline void glVertexAttrib1f(GLuint index, GLfloat v0) {
   glad_glVertexAttrib1f(index, v0);
 }
 /**
@@ -15215,8 +14749,7 @@ static inline void glVertexAttrib1f(GLuint index, GLfloat v0)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttrib1s(GLuint index, GLshort v0)
-{
+static inline void glVertexAttrib1s(GLuint index, GLshort v0) {
   glad_glVertexAttrib1s(index, v0);
 }
 /**
@@ -15245,8 +14778,7 @@ static inline void glVertexAttrib1s(GLuint index, GLshort v0)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttrib1d(GLuint index, GLdouble v0)
-{
+static inline void glVertexAttrib1d(GLuint index, GLdouble v0) {
   glad_glVertexAttrib1d(index, v0);
 }
 /**
@@ -15275,8 +14807,7 @@ static inline void glVertexAttrib1d(GLuint index, GLdouble v0)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttribI1i(GLuint index, GLint v0)
-{
+static inline void glVertexAttribI1i(GLuint index, GLint v0) {
   glad_glVertexAttribI1i(index, v0);
 }
 /**
@@ -15305,8 +14836,7 @@ static inline void glVertexAttribI1i(GLuint index, GLint v0)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttribI1ui(GLuint index, GLuint v0)
-{
+static inline void glVertexAttribI1ui(GLuint index, GLuint v0) {
   glad_glVertexAttribI1ui(index, v0);
 }
 /**
@@ -15335,8 +14865,7 @@ static inline void glVertexAttribI1ui(GLuint index, GLuint v0)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttrib2f(GLuint index, GLfloat v0, GLfloat v1)
-{
+static inline void glVertexAttrib2f(GLuint index, GLfloat v0, GLfloat v1) {
   glad_glVertexAttrib2f(index, v0, v1);
 }
 /**
@@ -15365,8 +14894,7 @@ static inline void glVertexAttrib2f(GLuint index, GLfloat v0, GLfloat v1)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttrib2s(GLuint index, GLshort v0, GLshort v1)
-{
+static inline void glVertexAttrib2s(GLuint index, GLshort v0, GLshort v1) {
   glad_glVertexAttrib2s(index, v0, v1);
 }
 /**
@@ -15395,8 +14923,7 @@ static inline void glVertexAttrib2s(GLuint index, GLshort v0, GLshort v1)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttrib2d(GLuint index, GLdouble v0, GLdouble v1)
-{
+static inline void glVertexAttrib2d(GLuint index, GLdouble v0, GLdouble v1) {
   glad_glVertexAttrib2d(index, v0, v1);
 }
 /**
@@ -15425,8 +14952,7 @@ static inline void glVertexAttrib2d(GLuint index, GLdouble v0, GLdouble v1)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttribI2i(GLuint index, GLint v0, GLint v1)
-{
+static inline void glVertexAttribI2i(GLuint index, GLint v0, GLint v1) {
   glad_glVertexAttribI2i(index, v0, v1);
 }
 /**
@@ -15455,8 +14981,7 @@ static inline void glVertexAttribI2i(GLuint index, GLint v0, GLint v1)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttribI2ui(GLuint index, GLuint v0, GLuint v1)
-{
+static inline void glVertexAttribI2ui(GLuint index, GLuint v0, GLuint v1) {
   glad_glVertexAttribI2ui(index, v0, v1);
 }
 /**
@@ -15486,8 +15011,7 @@ static inline void glVertexAttribI2ui(GLuint index, GLuint v0, GLuint v1)
  * be used for the specified vertex attribute.
  */
 static inline void glVertexAttrib3f(GLuint index, GLfloat v0, GLfloat v1,
-                                    GLfloat v2)
-{
+                                    GLfloat v2) {
   glad_glVertexAttrib3f(index, v0, v1, v2);
 }
 /**
@@ -15517,8 +15041,7 @@ static inline void glVertexAttrib3f(GLuint index, GLfloat v0, GLfloat v1,
  * be used for the specified vertex attribute.
  */
 static inline void glVertexAttrib3s(GLuint index, GLshort v0, GLshort v1,
-                                    GLshort v2)
-{
+                                    GLshort v2) {
   glad_glVertexAttrib3s(index, v0, v1, v2);
 }
 /**
@@ -15548,8 +15071,7 @@ static inline void glVertexAttrib3s(GLuint index, GLshort v0, GLshort v1,
  * be used for the specified vertex attribute.
  */
 static inline void glVertexAttrib3d(GLuint index, GLdouble v0, GLdouble v1,
-                                    GLdouble v2)
-{
+                                    GLdouble v2) {
   glad_glVertexAttrib3d(index, v0, v1, v2);
 }
 /**
@@ -15578,8 +15100,8 @@ static inline void glVertexAttrib3d(GLuint index, GLdouble v0, GLdouble v1,
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttribI3i(GLuint index, GLint v0, GLint v1, GLint v2)
-{
+static inline void glVertexAttribI3i(GLuint index, GLint v0, GLint v1,
+                                     GLint v2) {
   glad_glVertexAttribI3i(index, v0, v1, v2);
 }
 /**
@@ -15609,8 +15131,7 @@ static inline void glVertexAttribI3i(GLuint index, GLint v0, GLint v1, GLint v2)
  * be used for the specified vertex attribute.
  */
 static inline void glVertexAttribI3ui(GLuint index, GLuint v0, GLuint v1,
-                                      GLuint v2)
-{
+                                      GLuint v2) {
   glad_glVertexAttribI3ui(index, v0, v1, v2);
 }
 /**
@@ -15640,8 +15161,7 @@ static inline void glVertexAttribI3ui(GLuint index, GLuint v0, GLuint v1,
  * be used for the specified vertex attribute.
  */
 static inline void glVertexAttrib4f(GLuint index, GLfloat v0, GLfloat v1,
-                                    GLfloat v2, GLfloat v3)
-{
+                                    GLfloat v2, GLfloat v3) {
   glad_glVertexAttrib4f(index, v0, v1, v2, v3);
 }
 /**
@@ -15671,8 +15191,7 @@ static inline void glVertexAttrib4f(GLuint index, GLfloat v0, GLfloat v1,
  * be used for the specified vertex attribute.
  */
 static inline void glVertexAttrib4s(GLuint index, GLshort v0, GLshort v1,
-                                    GLshort v2, GLshort v3)
-{
+                                    GLshort v2, GLshort v3) {
   glad_glVertexAttrib4s(index, v0, v1, v2, v3);
 }
 /**
@@ -15702,8 +15221,7 @@ static inline void glVertexAttrib4s(GLuint index, GLshort v0, GLshort v1,
  * be used for the specified vertex attribute.
  */
 static inline void glVertexAttrib4d(GLuint index, GLdouble v0, GLdouble v1,
-                                    GLdouble v2, GLdouble v3)
-{
+                                    GLdouble v2, GLdouble v3) {
   glad_glVertexAttrib4d(index, v0, v1, v2, v3);
 }
 /**
@@ -15733,8 +15251,7 @@ static inline void glVertexAttrib4d(GLuint index, GLdouble v0, GLdouble v1,
  * be used for the specified vertex attribute.
  */
 static inline void glVertexAttrib4Nub(GLuint index, GLubyte v0, GLubyte v1,
-                                      GLubyte v2, GLubyte v3)
-{
+                                      GLubyte v2, GLubyte v3) {
   glad_glVertexAttrib4Nub(index, v0, v1, v2, v3);
 }
 /**
@@ -15764,8 +15281,7 @@ static inline void glVertexAttrib4Nub(GLuint index, GLubyte v0, GLubyte v1,
  * be used for the specified vertex attribute.
  */
 static inline void glVertexAttribI4i(GLuint index, GLint v0, GLint v1, GLint v2,
-                                     GLint v3)
-{
+                                     GLint v3) {
   glad_glVertexAttribI4i(index, v0, v1, v2, v3);
 }
 /**
@@ -15795,8 +15311,7 @@ static inline void glVertexAttribI4i(GLuint index, GLint v0, GLint v1, GLint v2,
  * be used for the specified vertex attribute.
  */
 static inline void glVertexAttribI4ui(GLuint index, GLuint v0, GLuint v1,
-                                      GLuint v2, GLuint v3)
-{
+                                      GLuint v2, GLuint v3) {
   glad_glVertexAttribI4ui(index, v0, v1, v2, v3);
 }
 /**
@@ -15825,8 +15340,7 @@ static inline void glVertexAttribI4ui(GLuint index, GLuint v0, GLuint v1,
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttribL1d(GLuint index, GLdouble v0)
-{
+static inline void glVertexAttribL1d(GLuint index, GLdouble v0) {
   glad_glVertexAttribL1d(index, v0);
 }
 /**
@@ -15855,8 +15369,7 @@ static inline void glVertexAttribL1d(GLuint index, GLdouble v0)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttribL2d(GLuint index, GLdouble v0, GLdouble v1)
-{
+static inline void glVertexAttribL2d(GLuint index, GLdouble v0, GLdouble v1) {
   glad_glVertexAttribL2d(index, v0, v1);
 }
 /**
@@ -15886,8 +15399,7 @@ static inline void glVertexAttribL2d(GLuint index, GLdouble v0, GLdouble v1)
  * be used for the specified vertex attribute.
  */
 static inline void glVertexAttribL3d(GLuint index, GLdouble v0, GLdouble v1,
-                                     GLdouble v2)
-{
+                                     GLdouble v2) {
   glad_glVertexAttribL3d(index, v0, v1, v2);
 }
 /**
@@ -15917,8 +15429,7 @@ static inline void glVertexAttribL3d(GLuint index, GLdouble v0, GLdouble v1,
  * be used for the specified vertex attribute.
  */
 static inline void glVertexAttribL4d(GLuint index, GLdouble v0, GLdouble v1,
-                                     GLdouble v2, GLdouble v3)
-{
+                                     GLdouble v2, GLdouble v3) {
   glad_glVertexAttribL4d(index, v0, v1, v2, v3);
 }
 /**
@@ -15947,8 +15458,7 @@ static inline void glVertexAttribL4d(GLuint index, GLdouble v0, GLdouble v1,
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttrib1fv(GLuint index, const GLfloat *v)
-{
+static inline void glVertexAttrib1fv(GLuint index, const GLfloat *v) {
   glad_glVertexAttrib1fv(index, v);
 }
 /**
@@ -15977,8 +15487,7 @@ static inline void glVertexAttrib1fv(GLuint index, const GLfloat *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttrib1sv(GLuint index, const GLshort *v)
-{
+static inline void glVertexAttrib1sv(GLuint index, const GLshort *v) {
   glad_glVertexAttrib1sv(index, v);
 }
 /**
@@ -16007,8 +15516,7 @@ static inline void glVertexAttrib1sv(GLuint index, const GLshort *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttrib1dv(GLuint index, const GLdouble *v)
-{
+static inline void glVertexAttrib1dv(GLuint index, const GLdouble *v) {
   glad_glVertexAttrib1dv(index, v);
 }
 /**
@@ -16037,8 +15545,7 @@ static inline void glVertexAttrib1dv(GLuint index, const GLdouble *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttribI1iv(GLuint index, const GLint *v)
-{
+static inline void glVertexAttribI1iv(GLuint index, const GLint *v) {
   glad_glVertexAttribI1iv(index, v);
 }
 /**
@@ -16067,8 +15574,7 @@ static inline void glVertexAttribI1iv(GLuint index, const GLint *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttribI1uiv(GLuint index, const GLuint *v)
-{
+static inline void glVertexAttribI1uiv(GLuint index, const GLuint *v) {
   glad_glVertexAttribI1uiv(index, v);
 }
 /**
@@ -16097,8 +15603,7 @@ static inline void glVertexAttribI1uiv(GLuint index, const GLuint *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttrib2fv(GLuint index, const GLfloat *v)
-{
+static inline void glVertexAttrib2fv(GLuint index, const GLfloat *v) {
   glad_glVertexAttrib2fv(index, v);
 }
 /**
@@ -16127,8 +15632,7 @@ static inline void glVertexAttrib2fv(GLuint index, const GLfloat *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttrib2sv(GLuint index, const GLshort *v)
-{
+static inline void glVertexAttrib2sv(GLuint index, const GLshort *v) {
   glad_glVertexAttrib2sv(index, v);
 }
 /**
@@ -16157,8 +15661,7 @@ static inline void glVertexAttrib2sv(GLuint index, const GLshort *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttrib2dv(GLuint index, const GLdouble *v)
-{
+static inline void glVertexAttrib2dv(GLuint index, const GLdouble *v) {
   glad_glVertexAttrib2dv(index, v);
 }
 /**
@@ -16187,8 +15690,7 @@ static inline void glVertexAttrib2dv(GLuint index, const GLdouble *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttribI2iv(GLuint index, const GLint *v)
-{
+static inline void glVertexAttribI2iv(GLuint index, const GLint *v) {
   glad_glVertexAttribI2iv(index, v);
 }
 /**
@@ -16217,8 +15719,7 @@ static inline void glVertexAttribI2iv(GLuint index, const GLint *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttribI2uiv(GLuint index, const GLuint *v)
-{
+static inline void glVertexAttribI2uiv(GLuint index, const GLuint *v) {
   glad_glVertexAttribI2uiv(index, v);
 }
 /**
@@ -16247,8 +15748,7 @@ static inline void glVertexAttribI2uiv(GLuint index, const GLuint *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttrib3fv(GLuint index, const GLfloat *v)
-{
+static inline void glVertexAttrib3fv(GLuint index, const GLfloat *v) {
   glad_glVertexAttrib3fv(index, v);
 }
 /**
@@ -16277,8 +15777,7 @@ static inline void glVertexAttrib3fv(GLuint index, const GLfloat *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttrib3sv(GLuint index, const GLshort *v)
-{
+static inline void glVertexAttrib3sv(GLuint index, const GLshort *v) {
   glad_glVertexAttrib3sv(index, v);
 }
 /**
@@ -16307,8 +15806,7 @@ static inline void glVertexAttrib3sv(GLuint index, const GLshort *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttrib3dv(GLuint index, const GLdouble *v)
-{
+static inline void glVertexAttrib3dv(GLuint index, const GLdouble *v) {
   glad_glVertexAttrib3dv(index, v);
 }
 /**
@@ -16337,8 +15835,7 @@ static inline void glVertexAttrib3dv(GLuint index, const GLdouble *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttribI3iv(GLuint index, const GLint *v)
-{
+static inline void glVertexAttribI3iv(GLuint index, const GLint *v) {
   glad_glVertexAttribI3iv(index, v);
 }
 /**
@@ -16367,8 +15864,7 @@ static inline void glVertexAttribI3iv(GLuint index, const GLint *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttribI3uiv(GLuint index, const GLuint *v)
-{
+static inline void glVertexAttribI3uiv(GLuint index, const GLuint *v) {
   glad_glVertexAttribI3uiv(index, v);
 }
 /**
@@ -16397,8 +15893,7 @@ static inline void glVertexAttribI3uiv(GLuint index, const GLuint *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttrib4fv(GLuint index, const GLfloat *v)
-{
+static inline void glVertexAttrib4fv(GLuint index, const GLfloat *v) {
   glad_glVertexAttrib4fv(index, v);
 }
 /**
@@ -16427,8 +15922,7 @@ static inline void glVertexAttrib4fv(GLuint index, const GLfloat *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttrib4sv(GLuint index, const GLshort *v)
-{
+static inline void glVertexAttrib4sv(GLuint index, const GLshort *v) {
   glad_glVertexAttrib4sv(index, v);
 }
 /**
@@ -16457,8 +15951,7 @@ static inline void glVertexAttrib4sv(GLuint index, const GLshort *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttrib4dv(GLuint index, const GLdouble *v)
-{
+static inline void glVertexAttrib4dv(GLuint index, const GLdouble *v) {
   glad_glVertexAttrib4dv(index, v);
 }
 /**
@@ -16487,8 +15980,7 @@ static inline void glVertexAttrib4dv(GLuint index, const GLdouble *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttrib4iv(GLuint index, const GLint *v)
-{
+static inline void glVertexAttrib4iv(GLuint index, const GLint *v) {
   glad_glVertexAttrib4iv(index, v);
 }
 /**
@@ -16517,8 +16009,7 @@ static inline void glVertexAttrib4iv(GLuint index, const GLint *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttrib4bv(GLuint index, const GLbyte *v)
-{
+static inline void glVertexAttrib4bv(GLuint index, const GLbyte *v) {
   glad_glVertexAttrib4bv(index, v);
 }
 /**
@@ -16547,8 +16038,7 @@ static inline void glVertexAttrib4bv(GLuint index, const GLbyte *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttrib4ubv(GLuint index, const GLubyte *v)
-{
+static inline void glVertexAttrib4ubv(GLuint index, const GLubyte *v) {
   glad_glVertexAttrib4ubv(index, v);
 }
 /**
@@ -16577,8 +16067,7 @@ static inline void glVertexAttrib4ubv(GLuint index, const GLubyte *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttrib4usv(GLuint index, const GLushort *v)
-{
+static inline void glVertexAttrib4usv(GLuint index, const GLushort *v) {
   glad_glVertexAttrib4usv(index, v);
 }
 /**
@@ -16607,8 +16096,7 @@ static inline void glVertexAttrib4usv(GLuint index, const GLushort *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttrib4uiv(GLuint index, const GLuint *v)
-{
+static inline void glVertexAttrib4uiv(GLuint index, const GLuint *v) {
   glad_glVertexAttrib4uiv(index, v);
 }
 /**
@@ -16637,8 +16125,7 @@ static inline void glVertexAttrib4uiv(GLuint index, const GLuint *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttrib4Nbv(GLuint index, const GLbyte *v)
-{
+static inline void glVertexAttrib4Nbv(GLuint index, const GLbyte *v) {
   glad_glVertexAttrib4Nbv(index, v);
 }
 /**
@@ -16667,8 +16154,7 @@ static inline void glVertexAttrib4Nbv(GLuint index, const GLbyte *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttrib4Nsv(GLuint index, const GLshort *v)
-{
+static inline void glVertexAttrib4Nsv(GLuint index, const GLshort *v) {
   glad_glVertexAttrib4Nsv(index, v);
 }
 /**
@@ -16697,8 +16183,7 @@ static inline void glVertexAttrib4Nsv(GLuint index, const GLshort *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttrib4Niv(GLuint index, const GLint *v)
-{
+static inline void glVertexAttrib4Niv(GLuint index, const GLint *v) {
   glad_glVertexAttrib4Niv(index, v);
 }
 /**
@@ -16727,8 +16212,7 @@ static inline void glVertexAttrib4Niv(GLuint index, const GLint *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttrib4Nubv(GLuint index, const GLubyte *v)
-{
+static inline void glVertexAttrib4Nubv(GLuint index, const GLubyte *v) {
   glad_glVertexAttrib4Nubv(index, v);
 }
 /**
@@ -16757,8 +16241,7 @@ static inline void glVertexAttrib4Nubv(GLuint index, const GLubyte *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttrib4Nusv(GLuint index, const GLushort *v)
-{
+static inline void glVertexAttrib4Nusv(GLuint index, const GLushort *v) {
   glad_glVertexAttrib4Nusv(index, v);
 }
 /**
@@ -16787,8 +16270,7 @@ static inline void glVertexAttrib4Nusv(GLuint index, const GLushort *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttrib4Nuiv(GLuint index, const GLuint *v)
-{
+static inline void glVertexAttrib4Nuiv(GLuint index, const GLuint *v) {
   glad_glVertexAttrib4Nuiv(index, v);
 }
 /**
@@ -16817,8 +16299,7 @@ static inline void glVertexAttrib4Nuiv(GLuint index, const GLuint *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttribI4bv(GLuint index, const GLbyte *v)
-{
+static inline void glVertexAttribI4bv(GLuint index, const GLbyte *v) {
   glad_glVertexAttribI4bv(index, v);
 }
 /**
@@ -16847,8 +16328,7 @@ static inline void glVertexAttribI4bv(GLuint index, const GLbyte *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttribI4ubv(GLuint index, const GLubyte *v)
-{
+static inline void glVertexAttribI4ubv(GLuint index, const GLubyte *v) {
   glad_glVertexAttribI4ubv(index, v);
 }
 /**
@@ -16877,8 +16357,7 @@ static inline void glVertexAttribI4ubv(GLuint index, const GLubyte *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttribI4sv(GLuint index, const GLshort *v)
-{
+static inline void glVertexAttribI4sv(GLuint index, const GLshort *v) {
   glad_glVertexAttribI4sv(index, v);
 }
 /**
@@ -16907,8 +16386,7 @@ static inline void glVertexAttribI4sv(GLuint index, const GLshort *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttribI4usv(GLuint index, const GLushort *v)
-{
+static inline void glVertexAttribI4usv(GLuint index, const GLushort *v) {
   glad_glVertexAttribI4usv(index, v);
 }
 /**
@@ -16937,8 +16415,7 @@ static inline void glVertexAttribI4usv(GLuint index, const GLushort *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttribI4iv(GLuint index, const GLint *v)
-{
+static inline void glVertexAttribI4iv(GLuint index, const GLint *v) {
   glad_glVertexAttribI4iv(index, v);
 }
 /**
@@ -16967,8 +16444,7 @@ static inline void glVertexAttribI4iv(GLuint index, const GLint *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttribI4uiv(GLuint index, const GLuint *v)
-{
+static inline void glVertexAttribI4uiv(GLuint index, const GLuint *v) {
   glad_glVertexAttribI4uiv(index, v);
 }
 /**
@@ -16997,8 +16473,7 @@ static inline void glVertexAttribI4uiv(GLuint index, const GLuint *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttribL1dv(GLuint index, const GLdouble *v)
-{
+static inline void glVertexAttribL1dv(GLuint index, const GLdouble *v) {
   glad_glVertexAttribL1dv(index, v);
 }
 /**
@@ -17027,8 +16502,7 @@ static inline void glVertexAttribL1dv(GLuint index, const GLdouble *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttribL2dv(GLuint index, const GLdouble *v)
-{
+static inline void glVertexAttribL2dv(GLuint index, const GLdouble *v) {
   glad_glVertexAttribL2dv(index, v);
 }
 /**
@@ -17057,8 +16531,7 @@ static inline void glVertexAttribL2dv(GLuint index, const GLdouble *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttribL3dv(GLuint index, const GLdouble *v)
-{
+static inline void glVertexAttribL3dv(GLuint index, const GLdouble *v) {
   glad_glVertexAttribL3dv(index, v);
 }
 /**
@@ -17087,8 +16560,7 @@ static inline void glVertexAttribL3dv(GLuint index, const GLdouble *v)
  * @param [value] For the packed commands, specifies the new packed value to
  * be used for the specified vertex attribute.
  */
-static inline void glVertexAttribL4dv(GLuint index, const GLdouble *v)
-{
+static inline void glVertexAttribL4dv(GLuint index, const GLdouble *v) {
   glad_glVertexAttribL4dv(index, v);
 }
 /**
@@ -17118,8 +16590,7 @@ static inline void glVertexAttribL4dv(GLuint index, const GLdouble *v)
  * be used for the specified vertex attribute.
  */
 static inline void glVertexAttribP1ui(GLuint index, GLenum type,
-                                      GLboolean normalized, GLuint value)
-{
+                                      GLboolean normalized, GLuint value) {
   glad_glVertexAttribP1ui(index, type, normalized, value);
 }
 /**
@@ -17149,8 +16620,7 @@ static inline void glVertexAttribP1ui(GLuint index, GLenum type,
  * be used for the specified vertex attribute.
  */
 static inline void glVertexAttribP2ui(GLuint index, GLenum type,
-                                      GLboolean normalized, GLuint value)
-{
+                                      GLboolean normalized, GLuint value) {
   glad_glVertexAttribP2ui(index, type, normalized, value);
 }
 /**
@@ -17180,8 +16650,7 @@ static inline void glVertexAttribP2ui(GLuint index, GLenum type,
  * be used for the specified vertex attribute.
  */
 static inline void glVertexAttribP3ui(GLuint index, GLenum type,
-                                      GLboolean normalized, GLuint value)
-{
+                                      GLboolean normalized, GLuint value) {
   glad_glVertexAttribP3ui(index, type, normalized, value);
 }
 /**
@@ -17211,8 +16680,7 @@ static inline void glVertexAttribP3ui(GLuint index, GLenum type,
  * be used for the specified vertex attribute.
  */
 static inline void glVertexAttribP4ui(GLuint index, GLenum type,
-                                      GLboolean normalized, GLuint value)
-{
+                                      GLboolean normalized, GLuint value) {
   glad_glVertexAttribP4ui(index, type, normalized, value);
 }
 /**
@@ -17229,8 +16697,7 @@ static inline void glVertexAttribP4ui(GLuint index, GLenum type,
  * associate the generic vertex attribute.
  */
 static inline void glVertexAttribBinding(GLuint attribindex,
-                                         GLuint bindingindex)
-{
+                                         GLuint bindingindex) {
   glad_glVertexAttribBinding(attribindex, bindingindex);
 }
 /**
@@ -17247,8 +16714,7 @@ static inline void glVertexAttribBinding(GLuint attribindex,
  * associate the generic vertex attribute.
  */
 static inline void glVertexArrayAttribBinding(GLuint vaobj, GLuint attribindex,
-                                              GLuint bindingindex)
-{
+                                              GLuint bindingindex) {
   glad_glVertexArrayAttribBinding(vaobj, attribindex, bindingindex);
 }
 /**
@@ -17260,8 +16726,7 @@ static inline void glVertexArrayAttribBinding(GLuint vaobj, GLuint attribindex,
  * @param [divisor] Specify the number of instances that will pass between
  * updates of the generic attribute at slot index.
  */
-static inline void glVertexAttribDivisor(GLuint index, GLuint divisor)
-{
+static inline void glVertexAttribDivisor(GLuint index, GLuint divisor) {
   glad_glVertexAttribDivisor(index, divisor);
 }
 /**
@@ -17286,8 +16751,7 @@ static inline void glVertexAttribDivisor(GLuint index, GLuint divisor)
  */
 static inline void glVertexAttribFormat(GLuint attribindex, GLint size,
                                         GLenum type, GLboolean normalized,
-                                        GLuint relativeoffset)
-{
+                                        GLuint relativeoffset) {
   glad_glVertexAttribFormat(attribindex, size, type, normalized,
                             relativeoffset);
 }
@@ -17312,8 +16776,7 @@ static inline void glVertexAttribFormat(GLuint attribindex, GLint size,
  * attribute fetches from.
  */
 static inline void glVertexAttribIFormat(GLuint attribindex, GLint size,
-                                         GLenum type, GLuint relativeoffset)
-{
+                                         GLenum type, GLuint relativeoffset) {
   glad_glVertexAttribIFormat(attribindex, size, type, relativeoffset);
 }
 /**
@@ -17337,8 +16800,7 @@ static inline void glVertexAttribIFormat(GLuint attribindex, GLint size,
  * attribute fetches from.
  */
 static inline void glVertexAttribLFormat(GLuint attribindex, GLint size,
-                                         GLenum type, GLuint relativeoffset)
-{
+                                         GLenum type, GLuint relativeoffset) {
   glad_glVertexAttribLFormat(attribindex, size, type, relativeoffset);
 }
 /**
@@ -17364,8 +16826,7 @@ static inline void glVertexAttribLFormat(GLuint attribindex, GLint size,
 static inline void glVertexArrayAttribFormat(GLuint vaobj, GLuint attribindex,
                                              GLint size, GLenum type,
                                              GLboolean normalized,
-                                             GLuint relativeoffset)
-{
+                                             GLuint relativeoffset) {
   glad_glVertexArrayAttribFormat(vaobj, attribindex, size, type, normalized,
                                  relativeoffset);
 }
@@ -17391,8 +16852,7 @@ static inline void glVertexArrayAttribFormat(GLuint vaobj, GLuint attribindex,
  */
 static inline void glVertexArrayAttribIFormat(GLuint vaobj, GLuint attribindex,
                                               GLint size, GLenum type,
-                                              GLuint relativeoffset)
-{
+                                              GLuint relativeoffset) {
   glad_glVertexArrayAttribIFormat(vaobj, attribindex, size, type,
                                   relativeoffset);
 }
@@ -17418,8 +16878,7 @@ static inline void glVertexArrayAttribIFormat(GLuint vaobj, GLuint attribindex,
  */
 static inline void glVertexArrayAttribLFormat(GLuint vaobj, GLuint attribindex,
                                               GLint size, GLenum type,
-                                              GLuint relativeoffset)
-{
+                                              GLuint relativeoffset) {
   glad_glVertexArrayAttribLFormat(vaobj, attribindex, size, type,
                                   relativeoffset);
 }
@@ -17457,8 +16916,7 @@ static inline void glVertexArrayAttribLFormat(GLuint vaobj, GLuint attribindex,
  */
 static inline void glVertexAttribPointer(GLuint index, GLint size, GLenum type,
                                          GLboolean normalized, GLsizei stride,
-                                         const GLvoid *pointer)
-{
+                                         const GLvoid *pointer) {
   glad_glVertexAttribPointer(index, size, type, normalized, stride, pointer);
 }
 /**
@@ -17494,8 +16952,8 @@ static inline void glVertexAttribPointer(GLuint index, GLint size, GLenum type,
  * currently bound to the GL_ARRAY_BUFFER target. The initial value is 0.
  */
 static inline void glVertexAttribIPointer(GLuint index, GLint size, GLenum type,
-                                          GLsizei stride, const GLvoid *pointer)
-{
+                                          GLsizei stride,
+                                          const GLvoid *pointer) {
   glad_glVertexAttribIPointer(index, size, type, stride, pointer);
 }
 /**
@@ -17531,8 +16989,8 @@ static inline void glVertexAttribIPointer(GLuint index, GLint size, GLenum type,
  * currently bound to the GL_ARRAY_BUFFER target. The initial value is 0.
  */
 static inline void glVertexAttribLPointer(GLuint index, GLint size, GLenum type,
-                                          GLsizei stride, const GLvoid *pointer)
-{
+                                          GLsizei stride,
+                                          const GLvoid *pointer) {
   glad_glVertexAttribLPointer(index, size, type, stride, pointer);
 }
 /**
@@ -17546,8 +17004,7 @@ static inline void glVertexAttribLPointer(GLuint index, GLint size, GLenum type,
  *
  * @param [divisor] The new value for the instance step rate to apply.
  */
-static inline void glVertexBindingDivisor(GLuint bindingindex, GLuint divisor)
-{
+static inline void glVertexBindingDivisor(GLuint bindingindex, GLuint divisor) {
   glad_glVertexBindingDivisor(bindingindex, divisor);
 }
 /**
@@ -17562,8 +17019,7 @@ static inline void glVertexBindingDivisor(GLuint bindingindex, GLuint divisor)
  * @param [divisor] The new value for the instance step rate to apply.
  */
 static inline void
-glVertexArrayBindingDivisor(GLuint vaobj, GLuint bindingindex, GLuint divisor)
-{
+glVertexArrayBindingDivisor(GLuint vaobj, GLuint bindingindex, GLuint divisor) {
   glad_glVertexArrayBindingDivisor(vaobj, bindingindex, divisor);
 }
 /**
@@ -17576,8 +17032,7 @@ glVertexArrayBindingDivisor(GLuint vaobj, GLuint bindingindex, GLuint divisor)
  * GL context is first attached to a window, width and height are set to the
  * dimensions of that window.
  */
-static inline void glViewport(GLint x, GLint y, GLsizei width, GLsizei height)
-{
+static inline void glViewport(GLint x, GLint y, GLsizei width, GLsizei height) {
   glad_glViewport(x, y, width, height);
 }
 /**
@@ -17591,8 +17046,7 @@ static inline void glViewport(GLint x, GLint y, GLsizei width, GLsizei height)
  * parameters.
  */
 static inline void glViewportArrayv(GLuint first, GLsizei count,
-                                    const GLfloat *v)
-{
+                                    const GLfloat *v) {
   glad_glViewportArrayv(first, count, v);
 }
 /**
@@ -17611,8 +17065,7 @@ static inline void glViewportArrayv(GLuint first, GLsizei count,
  * containing the viewport parameters.
  */
 static inline void glViewportIndexedf(GLuint index, GLfloat x, GLfloat y,
-                                      GLfloat w, GLfloat h)
-{
+                                      GLfloat w, GLfloat h) {
   glad_glViewportIndexedf(index, x, y, w, h);
 }
 /**
@@ -17630,8 +17083,7 @@ static inline void glViewportIndexedf(GLuint index, GLfloat x, GLfloat y,
  * @param [v] For glViewportIndexedfv, specifies the address of an array
  * containing the viewport parameters.
  */
-static inline void glViewportIndexedfv(GLuint index, const GLfloat *v)
-{
+static inline void glViewportIndexedfv(GLuint index, const GLfloat *v) {
   glad_glViewportIndexedfv(index, v);
 }
 /**
@@ -17646,9 +17098,6 @@ static inline void glViewportIndexedfv(GLuint index, const GLfloat *v)
  * @param [timeout] Specifies the timeout that the server should wait before
  * continuing. timeout must be GL_TIMEOUT_IGNORED.
  */
-static inline void glWaitSync(GLsync sync, GLbitfield flags, GLuint64 timeout)
-{
+static inline void glWaitSync(GLsync sync, GLbitfield flags, GLuint64 timeout) {
   glad_glWaitSync(sync, flags, timeout);
 }
-
-#endif // GL_DOC_HPP
